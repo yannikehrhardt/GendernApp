@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682DDC9F2912746B002067B3 /* QuizTemplate.swift */; };
 		684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684B92A329116D6B00D32031 /* SettingsHandler.swift */; };
 		68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE629112C3300E1572B /* GendernAppApp.swift */; };
 		68797AE929112C3300E1572B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE829112C3300E1572B /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		682DDC9F2912746B002067B3 /* QuizTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTemplate.swift; sourceTree = "<group>"; };
 		684B92A329116D6B00D32031 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68797AE629112C3300E1572B /* GendernAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GendernAppApp.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				68797AEA29112C3300E1572B /* Assets.xcassets */,
 				68797AEC29112C3300E1572B /* Preview Content */,
 				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
+				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
 			);
 			path = GendernApp;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */,
 				68797AE929112C3300E1572B /* ContentView.swift in Sources */,
+				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
 				68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
