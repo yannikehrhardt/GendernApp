@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+var difficulty = 0
+var thema = 0
+
+
 @main
 struct GendernAppApp: App {
     var body: some Scene {
