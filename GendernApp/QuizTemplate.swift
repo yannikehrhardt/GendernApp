@@ -39,4 +39,6 @@ struct Quiz {
         self.wrongAnswer3 = wrongAnswer3
     }
     
+    //wenn ein neues Struct einer Quizfrage erstellt wird (Z.B. var x = Quiz(<Parameter)), kann eine Variable mit bspw. x.topic ausgelesen werden
+    //ggf. brauchen wir aber set-Methoden, wenn wir leergelassene Antworten mit einem Lückenfüller oder nil füllen wollen, damit es nicht zum Fehler kommt.
 }
