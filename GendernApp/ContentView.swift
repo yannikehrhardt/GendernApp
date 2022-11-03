@@ -14,7 +14,10 @@ struct ContentView: View {
         
         NavigationView{
             Text("Spielerisch das Gendern lernen")
-                .navigationTitle("Gendern App")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(Color.purple)
+                .multilineTextAlignment(.center)
         }
 
     }
