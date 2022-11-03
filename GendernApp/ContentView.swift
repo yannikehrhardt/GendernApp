@@ -20,9 +20,21 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
                 .navigationTitle("Gendern")
         }
-
+        Button("Hier klicken") {
+        }
+        .accessibilityAddTraits([.isButton])
+        .frame(width: 200.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/200.0)
+        .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+        
     }
 }
+
+        
+        
+        
+        
+        
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

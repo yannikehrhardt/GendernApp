@@ -40,7 +40,7 @@
 		684B92A329116D6B00D32031 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68797AE629112C3300E1572B /* GendernAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GendernAppApp.swift; sourceTree = "<group>"; };
-		68797AE829112C3300E1572B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68797AE829112C3300E1572B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
 		68797AEA29112C3300E1572B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68797AED29112C3300E1572B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		68797AF329112C3300E1572B /* GendernAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GendernAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,12 +98,12 @@
 		68797AE529112C3300E1572B /* GendernApp */ = {
 			isa = PBXGroup;
 			children = (
-				68797AE629112C3300E1572B /* GendernAppApp.swift */,
 				68797AE829112C3300E1572B /* ContentView.swift */,
+				68797AE629112C3300E1572B /* GendernAppApp.swift */,
+				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
+				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
 				68797AEA29112C3300E1572B /* Assets.xcassets */,
 				68797AEC29112C3300E1572B /* Preview Content */,
-				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
-				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
 			);
 			path = GendernApp;
 			sourceTree = "<group>";
@@ -422,6 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GendernApp/Preview Content\"";
@@ -453,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GendernApp/Preview Content\"";
