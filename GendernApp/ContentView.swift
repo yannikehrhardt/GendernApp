@@ -13,11 +13,12 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            Text("Spielerisch das Gendern lernen")
+            Text("Spielerisch Gendern lernen")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
                 .foregroundColor(Color.purple)
                 .multilineTextAlignment(.center)
+                .navigationTitle("Gendern")
         }
 
     }
