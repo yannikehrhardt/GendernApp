@@ -21,6 +21,8 @@ struct ContentView: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/Color(red: 0.833, green: 0.615, blue: 0.984)/*@END_MENU_TOKEN@*/)
                     .multilineTextAlignment(.center)
             Button("Hier klicken") {
+                print("Hello")
+                //hier kann man coden, was der Button tun soll
             }
             .accessibilityAddTraits([.isButton])
             .frame(width: 200.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/200.0)
