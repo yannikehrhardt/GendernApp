@@ -29,7 +29,7 @@ struct ContentView: View {
                     Text ("Wähle eine Kategorie")
                 NavigationLink(destination: Text("ThirdView"), isActive: $thirdView) {
                     var Uni : [Quiz] = [quiz1, quiz2, quiz3]
-                    //hallo
+                    //hall
                     var NumberofQuestions = Uni.capacity
                     
                     
