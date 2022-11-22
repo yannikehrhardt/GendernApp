@@ -15,12 +15,26 @@ struct ContentView: View {
     @State private var fourthView = false
     @State private var fithtView = false
     
+    @State var allQuestions : [Quiz] = []
+    
+    var quiz1 = Quiz(type: "gapText", topic: "Uni", answered: false, question: "Dummy", correctAnswer: "Dummy")
+    var quiz2 = Quiz(type: "gapText" , topic: "Uni", answered: false, question: "Dummy2", correctAnswer: "Dummy")
+    var quiz3 = Quiz(type: "gapText" , topic: "Uni", answered: false, question: "Dummy3", correctAnswer: "Dummy")
+    
+    
     var body: some View {
         NavigationView {
             VStack {
                 NavigationLink(destination:  VStack {
                     Text ("Wähle eine Kategorie")
-                NavigationLink(destination: Text("ThirdView"), isActive: $thirdView) {EmptyView()}
+                NavigationLink(destination: Text("ThirdView"), isActive: $thirdView) {
+                    var Uni : [Quiz] = [quiz1, quiz2, quiz3]
+                    
+                    var NumberofQuestions = Uni.capacity
+                    
+                    
+                    
+                }
                 NavigationLink(destination: Text("fourthView"), isActive: $fourthView) {EmptyView()}
                 NavigationLink(destination: Text("fithtView"), isActive: $fithtView) {EmptyView()}
                     

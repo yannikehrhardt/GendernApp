@@ -14,29 +14,32 @@ struct Quiz {
     //type: Art der Frage als bspw. quiz-Frage, Lückentext usw. je nachdem was wir unterstützen wollen / können
     //idealerweise soll der Spieler später aus einem Drop-Down Menü wählen, wenn er eine neue Frage einreichen möchte
     let type : String
-    let topic : Int
+    let topic : String
     
     // wir könnten statt nach Schwierigkeitsgrad zu unterschieden (siehe Figma) auch einfach alle in eine Liste hinzufügen, die zum Thema passen
-    let difficulty : Int
+   // let difficulty : Int
     
     let question : String
     let correctAnswer : String
-    
+    let answered : Bool
     //wir brauchen einen Handler, der nil in die falschen Antworten einfügt, wenn bspw. ein Lückentext oder eine offene Frage gestellt wird, sosnt wird ggf ein Fehler geworfen -> Error Handling
-    let wrongAnswer1 : String
-    let wrongAnswer2: String
-    let wrongAnswer3: String
+    //let wrongAnswer1 : String
+    //let wrongAnswer2: String
+    //let wrongAnswer3: String
     
     //besagter init
-    init(type: String, topic: Int, difficulty: Int, question: String, correctAnswer: String, wrongAnswer1: String, wrongAnswer2: String, wrongAnswer3: String) {
+    
+
+    init(type: String, topic: String, answered: Bool, question: String, correctAnswer: String) {
         self.type = type
         self.topic = topic
-        self.difficulty = difficulty
+        //self.difficulty = difficulty
+        self.answered = answered
         self.question = question
         self.correctAnswer = correctAnswer
-        self.wrongAnswer1 = wrongAnswer1
-        self.wrongAnswer2 = wrongAnswer2
-        self.wrongAnswer3 = wrongAnswer3
+        //self.wrongAnswer1 = wrongAnswer1
+        //self.wrongAnswer2 = wrongAnswer2
+        //self.wrongAnswer3 = wrongAnswer3
     }
     
     //wenn ein neues Struct einer Quizfrage erstellt wird (Z.B. var x = Quiz(<Parameter)), kann eine Variable mit bspw. x.topic ausgelesen werden
