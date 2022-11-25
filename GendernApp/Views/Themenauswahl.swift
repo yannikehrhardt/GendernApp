@@ -20,7 +20,7 @@ struct Themenauswahl: View {
                 NavigationLink{
                     Quizauswahl_Universitat()
                 }label: {
-                    Universita_tButton(text: "Universität")
+                    UniversitatButton(text: "Universität")
                 }
                 
                 NavigationLink{
