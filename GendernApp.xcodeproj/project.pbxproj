@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E882292F9AF20012851F /* Themenauswahl.swift */; };
+		5924E885292FA0640012851F /* Quizauswahl_Universität.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E884292FA0640012851F /* Quizauswahl_Universität.swift */; };
+		5924E889292FA4050012851F /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E888292FA4050012851F /* QuizView.swift */; };
+		5924E88E292FB1490012851F /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E88D292FB1490012851F /* Questions.swift */; };
 		5949138D292CD33A00953C66 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5949138C292CD33A00953C66 /* View.xib */; };
+		597877342931038800D1C086 /* GenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877332931038700D1C086 /* GenderView.swift */; };
+		597877372931047100D1C086 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877362931047100D1C086 /* PlayButton.swift */; };
+		597877392931082F00D1C086 /* UniversitätButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877382931082F00D1C086 /* UniversitätButton.swift */; };
+		5978773B2931096F00D1C086 /* SchuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5978773A2931096F00D1C086 /* SchuleButton.swift */; };
+		5978773D29310A2A00D1C086 /* AlltagButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5978773C29310A2A00D1C086 /* AlltagButton.swift */; };
 		682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682DDC9F2912746B002067B3 /* QuizTemplate.swift */; };
 		684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684B92A329116D6B00D32031 /* SettingsHandler.swift */; };
 		68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE629112C3300E1572B /* GendernAppApp.swift */; };
@@ -37,7 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5924E882292F9AF20012851F /* Themenauswahl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themenauswahl.swift; sourceTree = "<group>"; };
+		5924E884292FA0640012851F /* Quizauswahl_Universität.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quizauswahl_Universität.swift"; sourceTree = "<group>"; };
+		5924E888292FA4050012851F /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		5924E88D292FB1490012851F /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		5949138C292CD33A00953C66 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		597877332931038700D1C086 /* GenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderView.swift; sourceTree = "<group>"; };
+		597877362931047100D1C086 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		597877382931082F00D1C086 /* UniversitätButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UniversitätButton.swift"; sourceTree = "<group>"; };
+		5978773A2931096F00D1C086 /* SchuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchuleButton.swift; sourceTree = "<group>"; };
+		5978773C29310A2A00D1C086 /* AlltagButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlltagButton.swift; sourceTree = "<group>"; };
 		682DDC9F2912746B002067B3 /* QuizTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTemplate.swift; sourceTree = "<group>"; };
 		684B92A329116D6B00D32031 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +95,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5924E87E292F93150012851F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68797AE829112C3300E1572B /* ContentView.swift */,
+				5924E882292F9AF20012851F /* Themenauswahl.swift */,
+				5924E884292FA0640012851F /* Quizauswahl_Universität.swift */,
+				5924E888292FA4050012851F /* QuizView.swift */,
+				597877332931038700D1C086 /* GenderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5924E88B292FA4ED0012851F /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		5924E88C292FAECF0012851F /* Klassen */ = {
+			isa = PBXGroup;
+			children = (
+				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
+			);
+			path = Klassen;
+			sourceTree = "<group>";
+		};
+		597877352931044F00D1C086 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				597877362931047100D1C086 /* PlayButton.swift */,
+				597877382931082F00D1C086 /* UniversitätButton.swift */,
+				5978773A2931096F00D1C086 /* SchuleButton.swift */,
+				5978773C29310A2A00D1C086 /* AlltagButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		68797ADA29112C3300E1572B = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +157,12 @@
 		68797AE529112C3300E1572B /* GendernApp */ = {
 			isa = PBXGroup;
 			children = (
-				68797AE829112C3300E1572B /* ContentView.swift */,
 				68797AE629112C3300E1572B /* GendernAppApp.swift */,
-				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
-				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
+				5924E88D292FB1490012851F /* Questions.swift */,
+				597877352931044F00D1C086 /* Components */,
+				5924E88C292FAECF0012851F /* Klassen */,
+				5924E88B292FA4ED0012851F /* Structs */,
+				5924E87E292F93150012851F /* Views */,
 				68797AEA29112C3300E1572B /* Assets.xcassets */,
 				68797AEC29112C3300E1572B /* Preview Content */,
 				5949138C292CD33A00953C66 /* View.xib */,
@@ -267,9 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597877342931038800D1C086 /* GenderView.swift in Sources */,
+				5978773B2931096F00D1C086 /* SchuleButton.swift in Sources */,
 				684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */,
+				597877392931082F00D1C086 /* UniversitätButton.swift in Sources */,
+				5978773D29310A2A00D1C086 /* AlltagButton.swift in Sources */,
+				597877372931047100D1C086 /* PlayButton.swift in Sources */,
 				68797AE929112C3300E1572B /* ContentView.swift in Sources */,
+				5924E885292FA0640012851F /* Quizauswahl_Universität.swift in Sources */,
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
+				5924E889292FA4050012851F /* QuizView.swift in Sources */,
+				5924E88E292FB1490012851F /* Questions.swift in Sources */,
+				5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */,
 				68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

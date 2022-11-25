@@ -6,6 +6,7 @@
 //struct for creating quizes that will be loaded on the different level depending on their topic and their difficulty
 
 import Foundation
+import SwiftUI
 
 struct Quiz {
     //if you create structs all the variables muss be inilized via init{}
@@ -19,8 +20,9 @@ struct Quiz {
     // wir könnten statt nach Schwierigkeitsgrad zu unterschieden (siehe Figma) auch einfach alle in eine Liste hinzufügen, die zum Thema passen
    // let difficulty : Int
     
+    
     let question : String
-    let correctAnswer : String
+    @State var correctAnswer : String
     let answered : Bool
     //wir brauchen einen Handler, der nil in die falschen Antworten einfügt, wenn bspw. ein Lückentext oder eine offene Frage gestellt wird, sosnt wird ggf ein Fehler geworfen -> Error Handling
     //let wrongAnswer1 : String
