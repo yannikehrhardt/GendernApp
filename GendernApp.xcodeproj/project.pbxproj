@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E882292F9AF20012851F /* Themenauswahl.swift */; };
-		5924E885292FA0640012851F /* Quizauswahl_Universität.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E884292FA0640012851F /* Quizauswahl_Universität.swift */; };
+		5924E885292FA0640012851F /* Quizauswahl_Universitat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E884292FA0640012851F /* Quizauswahl_Universitat.swift */; };
 		5924E889292FA4050012851F /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E888292FA4050012851F /* QuizView.swift */; };
 		5924E88E292FB1490012851F /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5924E88D292FB1490012851F /* Questions.swift */; };
 		5949138D292CD33A00953C66 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5949138C292CD33A00953C66 /* View.xib */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		5924E882292F9AF20012851F /* Themenauswahl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themenauswahl.swift; sourceTree = "<group>"; };
-		5924E884292FA0640012851F /* Quizauswahl_Universität.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quizauswahl_Universität.swift"; sourceTree = "<group>"; };
+		5924E884292FA0640012851F /* Quizauswahl_Universitat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizauswahl_Universitat.swift; sourceTree = "<group>"; };
 		5924E888292FA4050012851F /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		5924E88D292FB1490012851F /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		5949138C292CD33A00953C66 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			children = (
 				68797AE829112C3300E1572B /* ContentView.swift */,
 				5924E882292F9AF20012851F /* Themenauswahl.swift */,
-				5924E884292FA0640012851F /* Quizauswahl_Universität.swift */,
+				5924E884292FA0640012851F /* Quizauswahl_Universitat.swift */,
 				5924E888292FA4050012851F /* QuizView.swift */,
 				597877332931038700D1C086 /* GenderView.swift */,
 			);
@@ -333,7 +333,7 @@
 				5978773D29310A2A00D1C086 /* AlltagButton.swift in Sources */,
 				597877372931047100D1C086 /* PlayButton.swift in Sources */,
 				68797AE929112C3300E1572B /* ContentView.swift in Sources */,
-				5924E885292FA0640012851F /* Quizauswahl_Universität.swift in Sources */,
+				5924E885292FA0640012851F /* Quizauswahl_Universitat.swift in Sources */,
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
 				5924E889292FA4050012851F /* QuizView.swift in Sources */,
 				5924E88E292FB1490012851F /* Questions.swift in Sources */,

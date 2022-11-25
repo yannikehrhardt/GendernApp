@@ -18,18 +18,18 @@ struct Themenauswahl: View {
                     .padding(.bottom, 20.0)
                  
                 NavigationLink{
-                    Quizauswahl_Universität()
+                    Quizauswahl_Universitat()
                 }label: {
                     Universita_tButton(text: "Universität")
                 }
                 
                 NavigationLink{
-                    Quizauswahl_Universität()
+                    Quizauswahl_Universitat()
                 }label: {
                     SchuleButton(text: "Schule")
                 }
                 NavigationLink{
-                    Quizauswahl_Universität()
+                    Quizauswahl_Universitat()
                 }label: {
                     AlltagButton(text: "Alltag")
                 }
