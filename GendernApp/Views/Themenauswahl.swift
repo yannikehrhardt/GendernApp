@@ -24,12 +24,12 @@ struct Themenauswahl: View {
                 }
                 
                 NavigationLink{
-                    Quizauswahl_Universitat()
+                    Quizauswahl_Schule()
                 }label: {
                     SchuleButton(text: "Schule")
                 }
                 NavigationLink{
-                    Quizauswahl_Universitat()
+                    Quizauswahl_Alltag()
                 }label: {
                     AlltagButton(text: "Alltag")
                 }

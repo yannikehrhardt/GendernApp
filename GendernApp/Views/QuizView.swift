@@ -20,14 +20,18 @@ struct QuizView: View {
                         .foregroundColor(Color("TextColor"))
                         .padding(.bottom, 50.0)
                 }
-                TextField(
-                    "Please type your answer...",
-                    text: quiz1.$correctAnswer) //aus quiz1
-                .padding(.leading, 40.0)
-                .frame(width: 300.0, height: 30.0)
-                .background(Color.white)
-                .shadow(radius: 10)
-                .cornerRadius(20)
+                //TextField(
+                  //  "Please type your answer...",
+                  //  text: quiz1.$correctAnswer) //aus quiz1
+                //.padding(.leading, 40.0)
+                //.frame(width: 300.0, height: 30.0)
+                //.background(Color.white)
+                //.shadow(radius: 10)
+               // .cornerRadius(20)
+                
+                AnswerRow(answer: Answer(text: "dummy1", isCorrect: true))
+                AnswerRow(answer: Answer(text: "dummy2", isCorrect: false))
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }

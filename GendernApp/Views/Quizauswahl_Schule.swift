@@ -1,5 +1,5 @@
 //
-//  Quizauswahl_Universitat.swift
+//  Quizauswahl_Schule.swift
 //  GendernApp
 //
 //  Created by Hannah Gürsching on 27.11.22.
@@ -7,17 +7,15 @@
 
 import SwiftUI
 
-struct Quizauswahl_Universitat: View {
+struct Quizauswahl_Schule: View {
     var body: some View {
         VStack(spacing: 20){
             
-            Text("Pick a Quiz")
+            Text("Pick a Quiz :)")
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
             //hier kommen die Quizze rein hin
-            
-            
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -25,8 +23,8 @@ struct Quizauswahl_Universitat: View {
     }
 }
 
-struct Quizauswahl_Universitat_Previews: PreviewProvider {
+struct Quizauswahl_Schule_Previews: PreviewProvider {
     static var previews: some View {
-        Quizauswahl_Universitat()
+        Quizauswahl_Schule()
     }
 }
