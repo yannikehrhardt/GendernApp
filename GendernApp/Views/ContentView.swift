@@ -13,7 +13,7 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 40) {
                 VStack(spacing: 20){
-                    Image("Genderzeichen 2")
+                    Image("Genderzeichen 1")
                     Text("GenderApp")
                         .font(.title)
                         .fontWeight(.heavy)
