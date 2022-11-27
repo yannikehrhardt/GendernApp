@@ -1,5 +1,5 @@
 //
-//  PrimaryButton.swift
+//  PlayButton.swift
 //  GendernApp
 //
 //  Created by Hannah Gürsching on 25.11.22.

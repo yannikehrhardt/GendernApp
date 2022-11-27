@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GenderView: View {
     var body: some View {
+        ContentView()
         Themenauswahl()
         Quizauswahl_Universitat()
         QuizView()

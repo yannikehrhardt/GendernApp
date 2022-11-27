@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct QuizView: View {
-    @State private var answer: String = "" // Test Variable (so wird kein Fehler ausgeworfen)
     
     var body: some View {
         VStack(spacing:40){
-            ProgressView(value: 0.5) // zeigt an wie viele Fragen man noch vor sich hat (Fortschritt)
-                .padding()
             VStack(spacing:20){
                 VStack(spacing:40){
+                    
                     Text(quiz1.question) // aus Questions quiz1
                         .font(.largeTitle)
                         .fontWeight(.bold)
@@ -24,12 +22,12 @@ struct QuizView: View {
                 }
                 TextField(
                     "Please type your answer...",
-                    text: quiz1.$correctAnswer) // funktioniert nicht für quiz1
-                    .padding(.leading, 40.0)
-                    .frame(width: /*@START_MENU_TOKEN@*/300.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
-                    .background(Color.white)
-                    .shadow(radius: 10)
-                    .cornerRadius(20)
+                    text: quiz1.$correctAnswer) //aus quiz1
+                .padding(.leading, 40.0)
+                .frame(width: 300.0, height: 30.0)
+                .background(Color.white)
+                .shadow(radius: 10)
+                .cornerRadius(20)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
