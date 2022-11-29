@@ -14,7 +14,7 @@ struct QuizView: View {
             VStack(spacing:20){
                 VStack(spacing:40){
                     
-                    Text(quiz1.question) // aus Questions quiz1
+                    Text("dummy?") // aus Questions quiz1
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color("TextColor"))

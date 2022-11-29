@@ -8,4 +8,3 @@
 import Foundation
 import SwiftUI
 
-let quiz1 = Quiz(type: "gap text", topic: "Uni", answered: false, question: "dummy?", correctAnswer: "dummy")
