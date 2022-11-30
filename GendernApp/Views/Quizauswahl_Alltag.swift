@@ -15,7 +15,8 @@ struct Quizauswahl_Alltag: View {
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
-            //hier kommen die Quizze rein hin
+            
+            QuizButton(givenQuiz: AlltagQuizze)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

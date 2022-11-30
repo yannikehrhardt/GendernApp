@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct QuizButton: View {
-    
+    var givenQuiz : [Quiz] = []
+    init(givenQuiz: [Quiz]) {
+        self.givenQuiz = givenQuiz
+    }
     var body: some View {
         ScrollView{
             VStack(spacing: 15){
-                ForEach(quizze, id: \.self.id) { quiz in
+                ForEach(givenQuiz, id: \.self.id) { quiz in
                     NavigationLink(destination: QuizView()){
                         Text(quiz.question)
                             .foregroundColor(Color.white)
@@ -29,9 +32,9 @@ struct QuizButton: View {
         }
         .padding(.top)
     }
-    struct QuizButton_Previews: PreviewProvider {
-        static var previews: some View {
-            QuizButton()
-        }
-    }
+//    struct QuizButton_Previews: PreviewProvider {
+//        static var previews: some View {
+//            QuizButton()
+//        }
+//    }
 }

@@ -15,7 +15,8 @@ struct Quizauswahl_Schule: View {
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
-            //hier kommen die Quizze rein hin
+            
+            QuizButton(givenQuiz: SchuleQuizze)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
