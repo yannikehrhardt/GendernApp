@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct QuizView: View {
+    var givenQuiz : Quiz
+    init(givenQuiz: Quiz) {
+        self.givenQuiz = givenQuiz
+    }
     
     var body: some View {
         VStack(spacing:40){
             VStack(spacing:20){
                 VStack(spacing:40){
                     
-                    Text("dummy?") // aus Questions quiz1
+                    Text(givenQuiz.question) // aus Questions quiz1
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(Color("TextColor"))
+                        .foregroundColor(Color.white)
                         .padding(.bottom, 50.0)
                 }
                 //TextField(
@@ -42,6 +46,6 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView()
+        QuizView(givenQuiz: quiz1)
     }
 }

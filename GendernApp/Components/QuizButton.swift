@@ -16,7 +16,7 @@ struct QuizButton: View {
         ScrollView{
             VStack(spacing: 15){
                 ForEach(givenQuiz, id: \.self.id) { quiz in
-                    NavigationLink(destination: QuizView()){
+                    NavigationLink(destination: QuizView(givenQuiz: quiz)){
                         Text(quiz.question)
                             .foregroundColor(Color.white)
                             .padding()
