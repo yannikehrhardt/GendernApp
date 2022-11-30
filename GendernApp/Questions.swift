@@ -23,3 +23,19 @@ let quiz12 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "h
 
 
 var quizze : [Quiz] = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz12]
+
+var UniQuizze : [Quiz] = addQuizze("Uni")
+var SchuleQuizze : [Quiz] = addQuizze("Schule")
+var AlltagQuizze : [Quiz] = addQuizze("Alltag")
+
+func addQuizze(_ givenTopic : String) -> [Quiz] {
+    var solution : [Quiz] = []
+    for element in quizze {
+        if (element.topic == givenTopic){
+            solution.append(element)
+        }
+    }
+    return solution
+}
+
+
