@@ -46,6 +46,8 @@ struct Themenauswahl: View {
                 }
                 .padding(.top,100)
                 
+                CurrentScore(text: "")
+                    .padding(.top, 50)
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

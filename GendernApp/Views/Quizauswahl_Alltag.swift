@@ -18,6 +18,10 @@ struct Quizauswahl_Alltag: View {
             
             QuizButton(givenQuiz: AlltagQuizze)
             
+            
+            CurrentScore(text: "")
+                .padding(.top, 50.0)
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
