@@ -37,7 +37,7 @@ struct Themenauswahl: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
-            .navigationBarBackButtonHidden(true)
+         //   .navigationBarBackButtonHidden(true)
         }
     }
 }

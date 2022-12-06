@@ -15,7 +15,7 @@ struct PlayButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Play")
+        Text("Play as \(currentplayer.username)")
             .foregroundColor(Color.white)
             .padding()
             .padding(.horizontal)
