@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)
-let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo2?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)
-let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo3?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)
+let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", incorrectAnswers: ["tschüss", "bye"], answered: false)
+let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo2?", correctAnswer: "richtig", incorrectAnswers: ["falsch", "wrong"], answered: false)
+let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Dumm?", correctAnswer: "ja", incorrectAnswers: ["nein", "wrong"], answered: false)
 let quiz4 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo4?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)
 let quiz5 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo5?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)
 let quiz6 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo6?", correctAnswer: "hallo", incorrectAnswers: ["wrong", "wrong"], answered: false)

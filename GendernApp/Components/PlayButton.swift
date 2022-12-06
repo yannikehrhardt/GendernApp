@@ -5,6 +5,9 @@
 //  Created by Hannah Gürsching on 25.11.22.
 //
 
+// In dieser SwiftUIView wird ein Play-Button implementiert, der aus einem Text und einer Background-Color besteht
+// Der Button wird im Content View verwendet
+
 import SwiftUI
 
 struct PlayButton: View {

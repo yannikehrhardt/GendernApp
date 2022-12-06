@@ -5,6 +5,9 @@
 //  Created by Hannah Gürsching on 27.11.22.
 //
 
+// In dieser SwiftUIView wird der Themen Button "Universität" implementiert, der aus einem Text und einer Background-Color besteht
+// Der Button wird in der Themenauswahl verwendet
+
 import SwiftUI
 
 struct UniversitatButton: View {

@@ -5,47 +5,34 @@
 //  Created by Hannah Gürsching on 27.11.22.
 //
 
+// in dieser SwiftUiView wird die Darstellung der Antwortmöglichkeiten implementiert
+
 import SwiftUI
 
 struct AnswerRow: View {
-    var answer: Answer
+    var givenQuiz : Quiz 
+    init(givenQuiz: Quiz) {
+        self.givenQuiz = givenQuiz
+    }
     @State private var isSelected = false
     
     var green = Color("CorrectAnswer")
     var red = Color ("WrongAnswer")
     
     var body: some View {
-        HStack(spacing: 20){
+        VStack{
             
-            Image(systemName: "circle.fill")
-                .font(.caption)
+            CorrectAnswer(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, incorrectAnswers: givenQuiz.incorrectAnswers, answered: false))
             
-            Text(answer.text)
-                .bold()
+            IncorrectAnswer(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, incorrectAnswers: givenQuiz.incorrectAnswers, answered: false))
             
-            if isSelected{
-                Spacer()
-                
-                Image(systemName: answer.isCorrect ? "checkmark.circle.fill" : "x.circle.fill")
-                    .foregroundColor(answer.isCorrect ? green : red)
-            }
         }
-            .padding()
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .foregroundColor(isSelected ? Color("ButtonColor") : .gray)
-            .background(.white)
-            .cornerRadius(10)
-            .shadow(color: isSelected ? (answer.isCorrect ? green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
-            .onTapGesture {
-                isSelected = true
-            }
-            
-        
     }
 }
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: Answer(text: "Single", isCorrect: false))
+        AnswerRow(givenQuiz: quiz1)
     }
 }
+

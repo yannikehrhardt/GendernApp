@@ -15,6 +15,7 @@ struct Quizauswahl_Universitat: View {
                     .font(.title3)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
+                    .padding(.top)
                
                 QuizButton(givenQuiz: UniQuizze)
                 
