@@ -20,6 +20,7 @@ struct Quizauswahl_Universitat: View {
                 QuizButton(givenQuiz: UniQuizze)
                 
                 
+                
                 CurrentScore(text: "")
                     .padding(.top, 50.0)
                 
