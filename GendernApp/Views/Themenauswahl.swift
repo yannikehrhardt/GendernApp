@@ -17,22 +17,35 @@ struct Themenauswahl: View {
                     .foregroundColor(Color("TextColor"))
                     .padding(.bottom, 20.0)
                  
+                
                 NavigationLink{
                     Quizauswahl_Universitat()
                 }label: {
                     UniversitatButton(text: "Universität")
                 }
                 
+                
                 NavigationLink{
                     Quizauswahl_Schule()
                 }label: {
                     SchuleButton(text: "Schule")
                 }
+                
+                
                 NavigationLink{
                     Quizauswahl_Alltag()
                 }label: {
                     AlltagButton(text: "Alltag")
                 }
+                
+                
+                NavigationLink{
+                    ScoreView()
+                } label: {
+                    ScoreViewButton()
+                }
+                .padding(.top,100)
+                
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

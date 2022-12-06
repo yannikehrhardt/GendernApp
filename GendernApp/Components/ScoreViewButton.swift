@@ -1,5 +1,5 @@
 //
-//  OtherPlayer.swift
+//  ScoreViewButton.swift
 //  GendernApp
 //
 //  Created by Yannik Ehrhardt on 06.12.22.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct OtherPlayer: View {
+struct ScoreViewButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("log in with another player account")
+        Text("Your Score")
             .foregroundColor(Color.white)
             .padding()
             .padding(.horizontal)
@@ -22,8 +22,8 @@ struct OtherPlayer: View {
     }
 }
 
-struct OtherPlayer_Previews: PreviewProvider {
+struct ScoreViewButton_Previews: PreviewProvider {
     static var previews: some View {
-        OtherPlayer()
+        ScoreViewButton()
     }
 }

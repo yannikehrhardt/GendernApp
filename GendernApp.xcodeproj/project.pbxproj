@@ -27,6 +27,9 @@
 		68509FE9293F96E100EE2476 /* PlayerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FE8293F96E100EE2476 /* PlayerTemplate.swift */; };
 		68509FEB293F978500EE2476 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEA293F978500EE2476 /* Players.swift */; };
 		68509FED293F99AA00EE2476 /* OtherPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEC293F99AA00EE2476 /* OtherPlayer.swift */; };
+		68509FEF293F9F7E00EE2476 /* PlayerChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEE293F9F7E00EE2476 /* PlayerChange.swift */; };
+		68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF0293F9FED00EE2476 /* ScoreView.swift */; };
+		68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF2293FA19300EE2476 /* ScoreViewButton.swift */; };
 		68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE629112C3300E1572B /* GendernAppApp.swift */; };
 		68797AE929112C3300E1572B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE829112C3300E1572B /* ContentView.swift */; };
 		68797AEB29112C3300E1572B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68797AEA29112C3300E1572B /* Assets.xcassets */; };
@@ -74,6 +77,9 @@
 		68509FE8293F96E100EE2476 /* PlayerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTemplate.swift; sourceTree = "<group>"; };
 		68509FEA293F978500EE2476 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		68509FEC293F99AA00EE2476 /* OtherPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPlayer.swift; sourceTree = "<group>"; };
+		68509FEE293F9F7E00EE2476 /* PlayerChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerChange.swift; sourceTree = "<group>"; };
+		68509FF0293F9FED00EE2476 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		68509FF2293FA19300EE2476 /* ScoreViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewButton.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68797AE629112C3300E1572B /* GendernAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GendernAppApp.swift; sourceTree = "<group>"; };
 		68797AE829112C3300E1572B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -121,6 +127,8 @@
 				597877442933B45F00D1C086 /* Quizauswahl_Alltag.swift */,
 				5924E888292FA4050012851F /* QuizView.swift */,
 				597877332931038700D1C086 /* GenderView.swift */,
+				68509FEE293F9F7E00EE2476 /* PlayerChange.swift */,
+				68509FF0293F9FED00EE2476 /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				597877492933B83200D1C086 /* AnswerRow.swift */,
 				597877572937A7FD00D1C086 /* AllAnswers.swift */,
 				68509FEC293F99AA00EE2476 /* OtherPlayer.swift */,
+				68509FF2293FA19300EE2476 /* ScoreViewButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 				5978773D29310A2A00D1C086 /* AlltagButton.swift in Sources */,
 				597877372931047100D1C086 /* PlayButton.swift in Sources */,
 				68797AE929112C3300E1572B /* ContentView.swift in Sources */,
+				68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */,
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
 				597877482933B74600D1C086 /* Answer.swift in Sources */,
 				68509FED293F99AA00EE2476 /* OtherPlayer.swift in Sources */,
@@ -366,6 +376,8 @@
 				597877432933B3FE00D1C086 /* Quizauswahl_Schule.swift in Sources */,
 				5924E88E292FB1490012851F /* Questions.swift in Sources */,
 				597877582937A7FD00D1C086 /* AllAnswers.swift in Sources */,
+				68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */,
+				68509FEF293F9F7E00EE2476 /* PlayerChange.swift in Sources */,
 				5978773F2933AC3C00D1C086 /* UniversitatButton.swift in Sources */,
 				597877452933B45F00D1C086 /* Quizauswahl_Alltag.swift in Sources */,
 				5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */,

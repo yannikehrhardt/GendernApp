@@ -28,6 +28,14 @@ struct ContentView: View {
                     PlayButton(text: "Play")
                 }
                 
+                Text("or")
+                    .foregroundColor(Color("TextColor"))
+                
+                NavigationLink{
+                    PlayerChange()
+                } label:{
+                    OtherPlayer()
+                }
                 }
                 
             .frame(maxWidth: .infinity, maxHeight: .infinity)
