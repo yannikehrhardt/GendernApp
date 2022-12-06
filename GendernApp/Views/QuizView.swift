@@ -11,6 +11,18 @@ struct QuizView: View {
     var givenQuiz : Quiz
     init(givenQuiz: Quiz) {
         self.givenQuiz = givenQuiz
+        
+        //funktioniert iwie nicht
+        //mögliche Ursachen: setQuizAnswered geht nicht, View refresht nicht, wenn man den Back-Button betätigt o. Aufruf an dieser Stelle ist nicht korrekt
+        self.setQuizAnswered(givenQuiz)
+    }
+    
+    func setQuizAnswered(_ givenquiz : Quiz) -> Void {
+        if let Offset = quizze.firstIndex(where: {$0.id == givenquiz.id}) {
+            //Offset gibt die Stelle im Array an, für die die beiden IDs übereinstimmen
+            quizze[Offset].answered = true
+        }
+        
     }
     
     var body: some View {
