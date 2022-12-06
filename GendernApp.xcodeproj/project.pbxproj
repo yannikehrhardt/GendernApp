@@ -22,6 +22,7 @@
 		5978774A2933B83300D1C086 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877492933B83200D1C086 /* AnswerRow.swift */; };
 		5978775029364DA900D1C086 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5978774F29364DA900D1C086 /* QuizButton.swift */; };
 		597877582937A7FD00D1C086 /* AllAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877572937A7FD00D1C086 /* AllAnswers.swift */; };
+		5978775A293F9B7100D1C086 /* CurrentScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59787759293F9B7100D1C086 /* CurrentScore.swift */; };
 		682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682DDC9F2912746B002067B3 /* QuizTemplate.swift */; };
 		684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684B92A329116D6B00D32031 /* SettingsHandler.swift */; };
 		68509FE9293F96E100EE2476 /* PlayerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FE8293F96E100EE2476 /* PlayerTemplate.swift */; };
@@ -69,6 +70,7 @@
 		597877492933B83200D1C086 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		5978774F29364DA900D1C086 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
 		597877572937A7FD00D1C086 /* AllAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswers.swift; sourceTree = "<group>"; };
+		59787759293F9B7100D1C086 /* CurrentScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScore.swift; sourceTree = "<group>"; };
 		682DDC9F2912746B002067B3 /* QuizTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTemplate.swift; sourceTree = "<group>"; };
 		684B92A329116D6B00D32031 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		68509FE8293F96E100EE2476 /* PlayerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTemplate.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				597877492933B83200D1C086 /* AnswerRow.swift */,
 				597877572937A7FD00D1C086 /* AllAnswers.swift */,
 				68509FEC293F99AA00EE2476 /* OtherPlayer.swift */,
+				59787759293F9B7100D1C086 /* CurrentScore.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				5924E88E292FB1490012851F /* Questions.swift in Sources */,
 				597877582937A7FD00D1C086 /* AllAnswers.swift in Sources */,
 				5978773F2933AC3C00D1C086 /* UniversitatButton.swift in Sources */,
+				5978775A293F9B7100D1C086 /* CurrentScore.swift in Sources */,
 				597877452933B45F00D1C086 /* Quizauswahl_Alltag.swift in Sources */,
 				5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */,
 				597877412933ACF000D1C086 /* Quizauswahl_Universitat.swift in Sources */,

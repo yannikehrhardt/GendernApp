@@ -34,6 +34,10 @@ struct Themenauswahl: View {
                     AlltagButton(text: "Alltag")
                 }
                 
+                
+                CurrentScore(text: "")
+                    .padding(.top, 50)
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("Backgrounds App"))

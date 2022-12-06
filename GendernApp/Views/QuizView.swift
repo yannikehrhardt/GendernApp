@@ -39,6 +39,10 @@ struct QuizView: View {
                 
                 AnswerRow(givenQuiz: givenQuiz)
                 
+                
+                CurrentScore(text: "")
+                    .padding(.top, 50.0)
+                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }

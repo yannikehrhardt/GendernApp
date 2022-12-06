@@ -27,7 +27,7 @@ struct ContentView: View {
                 }label: {
                     PlayButton(text: "Play")
                 }
-                
+
                 }
                 
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -36,17 +36,6 @@ struct ContentView: View {
         
     }
 }
-
-// juhu!!!
-
-
-
-    
-        
-        
-        
-        
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
