@@ -9,24 +9,30 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct AnswerRow: View {
-    var givenQuiz : Quiz 
+    var givenQuiz : Quiz
     init(givenQuiz: Quiz) {
         self.givenQuiz = givenQuiz
+                
     }
+    
     @State private var isSelected = false
     
     var green = Color("CorrectAnswer")
     var red = Color ("WrongAnswer")
     
+
+
+    
     var body: some View {
         VStack{
             
-            CorrectAnswer(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, incorrectAnswers: givenQuiz.incorrectAnswers, answered: false))
-            
-            IncorrectAnswer(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, incorrectAnswers: givenQuiz.incorrectAnswers, answered: false))
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, allAnswers: givenQuiz.allAnswers.shuffled(), answered: false))
             
         }
+        
     }
 }
 

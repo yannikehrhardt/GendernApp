@@ -17,34 +17,19 @@ struct Quiz {
     var topic : String
     var question : String
     var correctAnswer : String
-    var incorrectAnswers: [String]
+    var allAnswers: [String]
     var answered : Bool
-
     
-
-    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, incorrectAnswers: [String], answered: Bool) {
+    
+    
+    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: Bool) {
         self.type = type
         self.topic = topic
         self.answered = answered
         self.question = question
         self.correctAnswer = correctAnswer
-        self.incorrectAnswers = incorrectAnswers
-
+        self.allAnswers = allAnswers
+        
     }
-    
-    var answers: [Answer] {
-        do {
-            let correct = [Answer(text: try AttributedString(markdown: correctAnswer), isCorrect: true)]
-            let incorrects = try incorrectAnswers.map {answer in Answer(text: try AttributedString(markdown: answer), isCorrect: false)
-            }
-            let allAnswers = correct + incorrects
-            
-            return allAnswers.shuffled()
-        }
-        catch {
-            print("Error setting answers: \(error)")
-            return []
-        }
-    }
-    
 }
+    
