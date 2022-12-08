@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ScoreView: View {
     var body: some View {
-        
-        VStack{
-            Text("under construction")
-                .padding(.top, 100)
-                
-            Text("hier werden die Scores verschiedener Spieler verglichen")
-                .padding(.top, 100)
+        VStack(spacing: 10){
+            
+            //CurrentScore(text: "")
+            //Score wird allerdings nicht angezigt kp warum
+            Text("your current Score:\(currentplayer.currentscore)")
+             .font(.title)
+             .fontWeight(.heavy)
+             .foregroundColor(Color("TextColor"))
+            
+            List {
+                ScoreComparison(givenPlayers: players)
+                    //andere Farbe wäre noch gut
+                    .listRowBackground(Color.white)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Image("Backgrounds App"))
+            .scrollContentBackground(.hidden)
         }
     }
 }

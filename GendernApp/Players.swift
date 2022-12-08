@@ -14,4 +14,11 @@ var  players : [PlayerTemplate] = [player1, player2]
 
 var currentplayer = player1
 
+
+
+func appendPlayer(_ Player: PlayerTemplate) -> Void {
+    players.append(Player)
+}
+
+
  

@@ -31,6 +31,7 @@
 		68509FEF293F9F7E00EE2476 /* PlayerChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEE293F9F7E00EE2476 /* PlayerChange.swift */; };
 		68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF0293F9FED00EE2476 /* ScoreView.swift */; };
 		68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF2293FA19300EE2476 /* ScoreViewButton.swift */; };
+		68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF42940CA8000EE2476 /* ScoreComparison.swift */; };
 		68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE629112C3300E1572B /* GendernAppApp.swift */; };
 		68797AE929112C3300E1572B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE829112C3300E1572B /* ContentView.swift */; };
 		68797AEB29112C3300E1572B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68797AEA29112C3300E1572B /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		68509FEE293F9F7E00EE2476 /* PlayerChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerChange.swift; sourceTree = "<group>"; };
 		68509FF0293F9FED00EE2476 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		68509FF2293FA19300EE2476 /* ScoreViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewButton.swift; sourceTree = "<group>"; };
+		68509FF42940CA8000EE2476 /* ScoreComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComparison.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68797AE629112C3300E1572B /* GendernAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GendernAppApp.swift; sourceTree = "<group>"; };
 		68797AE829112C3300E1572B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -166,6 +168,7 @@
 				68509FEC293F99AA00EE2476 /* OtherPlayer.swift */,
 				68509FF2293FA19300EE2476 /* ScoreViewButton.swift */,
 				59787759293F9B7100D1C086 /* CurrentScore.swift */,
+				68509FF42940CA8000EE2476 /* ScoreComparison.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
 				597877482933B74600D1C086 /* Answer.swift in Sources */,
 				68509FED293F99AA00EE2476 /* OtherPlayer.swift in Sources */,
+				68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */,
 				5924E889292FA4050012851F /* QuizView.swift in Sources */,
 				5978775029364DA900D1C086 /* QuizButton.swift in Sources */,
 				597877432933B3FE00D1C086 /* Quizauswahl_Schule.swift in Sources */,

@@ -19,17 +19,18 @@ struct Quiz {
     var correctAnswer : String
     var allAnswers: [String]
     var answered : Bool
+    var furtherInformation : String
     
     
     
-    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: Bool) {
+    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: Bool, furtherInformation : String) {
         self.type = type
         self.topic = topic
         self.answered = answered
         self.question = question
         self.correctAnswer = correctAnswer
         self.allAnswers = allAnswers
-        
+        self.furtherInformation = furtherInformation
     }
 }
     
