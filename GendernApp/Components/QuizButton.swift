@@ -29,6 +29,7 @@ struct QuizButton: View {
                             .background(Color("ButtonColor"))
                             .cornerRadius(20)
                             .shadow(radius:10)
+                            .padding(.top)
                         
                         //if(quiz.answered == true){
                         //Image(systemName: "checkmark.circle.fill")
