@@ -12,15 +12,16 @@ struct Quizauswahl_Schule: View {
         VStack(spacing: 20){
             
             Text("Pick a Quiz :)")
-                .font(.headline)
+                .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
+                .padding(.top, 50)
             
             QuizButton(givenQuiz: SchuleQuizze)
             
             
             CurrentScore(text: "")
-                .padding(.top, 50.0)
+                .padding(.bottom)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -16,13 +16,14 @@ struct PlayButton: View {
     
     var body: some View {
         Text("Play as \(currentplayer.username)")
+            .font(.title2)
+            .fontWeight(.medium)
             .foregroundColor(Color.white)
             .padding()
             .padding(.horizontal)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
             .shadow(radius: 10)
-        
     }
 }
 

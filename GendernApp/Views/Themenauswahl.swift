@@ -11,11 +11,12 @@ struct Themenauswahl: View {
     var body: some View {
         HStack {
             VStack(spacing: 20) {
-                Text("Select a topic")
-                    .font(.title)
+                Text("Please select a topic")
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
-                    .padding(.bottom, 20.0)
+                    .padding(.bottom, 50.0)
+                    .padding(.top, 50)
                  
                 
                 NavigationLink{
@@ -44,12 +45,12 @@ struct Themenauswahl: View {
                 } label: {
                     ScoreViewButton()
                 }
-                .padding(.top,100)
+                .padding(.top, 150)
                 
                 
                 
                 CurrentScore(text: "")
-                    .padding(.top, 50)
+                    .padding(.top, 10)
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

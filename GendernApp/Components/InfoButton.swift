@@ -1,31 +1,32 @@
 //
-//  ScoreViewButton.swift
+//  InfoButton.swift
 //  GendernApp
 //
-//  Created by Yannik Ehrhardt on 06.12.22.
+//  Created by Hannah Gürsching on 09.12.22.
 //
 
 import SwiftUI
 
-struct ScoreViewButton: View {
+struct InfoButton: View {
+    var text: String
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Your Score")
+        Text("Info")
             .font(.title3)
             .fontWeight(.medium)
             .foregroundColor(Color.white)
             .padding()
             .padding(.horizontal)
             .background(Color("ButtonColor"))
-            .cornerRadius(20)
+            .cornerRadius(200)
             .shadow(radius: 10)
-        
+            .bold()
     }
 }
 
-struct ScoreViewButton_Previews: PreviewProvider {
+struct InfoButton_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreViewButton()
+        InfoButton(text: "")
     }
 }

@@ -23,13 +23,17 @@ struct AnswerRow: View {
     var green = Color("CorrectAnswer")
     var red = Color ("WrongAnswer")
     
-
-
-    
     var body: some View {
         VStack{
             
             AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, allAnswers: givenQuiz.allAnswers.shuffled(), answered: false, furtherInformation: ""))
+            
+            NavigationLink {
+                InfoView()
+            }label: {
+                InfoButton(text: "")
+                    .padding(.top)
+            }
             
         }
         

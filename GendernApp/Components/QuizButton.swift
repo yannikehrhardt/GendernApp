@@ -18,9 +18,11 @@ struct QuizButton: View {
     var body: some View {
         ScrollView{
             VStack(spacing: 15){
-                ForEach(givenQuiz, id: \.self.id) { quiz in   // for-Schleife zum durchsuchen des Array given Quiz, der mit Quizzen beladen ist
-                    NavigationLink(destination: QuizView(givenQuiz: quiz)){ // der NavigationLink der beim Klicken des Buttons zur QuizView führt
+                ForEach(givenQuiz, id: \.self.id) { quiz in   // foreach-Schleife zum durchsuchen des Array givenQuiz, der mit Quizzen beladen ist. Für jedes Quiz in givenquiz wird ein Button erstellt, den die question des Quizzes als Text übergeben bekommt
+                    NavigationLink(destination: QuizView(givenQuiz: quiz)){ //NavigationLink der beim Klicken des Buttons zur QuizView führt
                         Text(quiz.question)
+                            .font(.title3)
+                            .fontWeight(.medium)
                             .foregroundColor(Color.white)
                             .padding()
                             .padding(.horizontal)
@@ -28,9 +30,9 @@ struct QuizButton: View {
                             .cornerRadius(20)
                             .shadow(radius:10)
                         
-                        if(quiz.answered == true){
-                            Image(systemName: "checkmark.circle.fill")
-                        }
+                        //if(quiz.answered == true){
+                        //Image(systemName: "checkmark.circle.fill")
+                        //  }
                         
                     }
                 }
@@ -39,9 +41,10 @@ struct QuizButton: View {
         }
         .padding(.top)
     }
+}
  //   struct QuizButton_Previews: PreviewProvider {
  //      static var previews: some View {
 //            QuizButton(givenQuiz: givenQuiz)
 //       }
 //    }
-}
+

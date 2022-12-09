@@ -14,8 +14,8 @@ struct ContentView: View {
             VStack(spacing: 40) {
                 VStack(spacing: 20){
                     Image("Genderzeichen 1")
-                    Text("GenderApp")
-                        .font(.title)
+                    Text("GendernApp")
+                        .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("TextColor"))
                     Text("Gendern lernen leicht gemacht")

@@ -12,17 +12,17 @@ struct Quizauswahl_Universitat: View {
     var body: some View {
             VStack(spacing: 40){
                 Text("Pick a Quiz")
-                    .font(.title3)
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
-                    .padding(.top)
+                    .padding(.top, 50)
                
                 QuizButton(givenQuiz: UniQuizze)
                 
                 
                 
                 CurrentScore(text: "")
-                    .padding(.top, 50.0)
+                    .padding(.bottom)
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

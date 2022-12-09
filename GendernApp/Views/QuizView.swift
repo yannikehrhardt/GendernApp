@@ -41,7 +41,7 @@ struct QuizView: View {
                 
                 
                 CurrentScore(text: "")
-                    .padding(.top, 50.0)
+                    .padding(.top, 200.0)
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
