@@ -24,10 +24,15 @@ struct ScoreComparison: View {
         ForEach(givenPlayers, id: \.self.id) { player in
             VStack(spacing: 20){
             
+                //damit eine Unterschiedung möglich ist, muss der Username allerdings einzigartig sein
+                if(currentplayer.username == player.username){
+                    /*@START_MENU_TOKEN@*/Text(player.username)/*@END_MENU_TOKEN@*/
+                        .font(.largeTitle)
+                }
                 
-                /*@START_MENU_TOKEN@*/Text(player.username)/*@END_MENU_TOKEN@*/
-                    .font(.largeTitle)
-                    
+                else if(currentplayer.username != player.username){
+                    Text(player.username)
+                }
                 
                 HStack(spacing:10){
                     Text("Current Score: \(player.currentscore)")

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ScoreView: View {
     var body: some View {
-        VStack(spacing: 10){
+        VStack(spacing: 30){
             
             //CurrentScore(text: "")
             //Score wird allerdings nicht angezigt kp warum
@@ -23,10 +23,11 @@ struct ScoreView: View {
                     //andere Farbe wäre noch gut
                     .listRowBackground(Color.white)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Image("Backgrounds App"))
-            .scrollContentBackground(.hidden)
+        
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Image("Backgrounds App"))
+        .scrollContentBackground(.hidden)
     }
 }
 
