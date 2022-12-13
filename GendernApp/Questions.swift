@@ -10,8 +10,8 @@
 import Foundation
 import SwiftUI
 
-let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie wird 'Studenten' richtig gegendert?", correctAnswer: "Studierende", allAnswers: ["Studierende", "ist richtig so", "Studentinnen"], answered: true, furtherInformation: "")
-let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "dummyQuestion?", correctAnswer: "richtig", allAnswers: ["richtig", "falsch", "wrong"], answered: true, furtherInformation: "")
+let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie wird 'Studenten' richtig gegendert?", correctAnswer: "Studierende", allAnswers: ["Studierende", "ist richtig so", "Studentinnen"], answered: true, furtherInformation: "hello")
+let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "dummyQuestion?", correctAnswer: "richtig", allAnswers: ["richtig", "falsch", "wrong"], answered: true, furtherInformation: "hello2")
 let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Uni-Frage", correctAnswer: "ja", allAnswers: ["ja","nein", "wrong"], answered: false, furtherInformation: "")
 let quiz4 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo4?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
 let quiz5 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo5?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")

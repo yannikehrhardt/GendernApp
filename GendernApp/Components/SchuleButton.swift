@@ -15,7 +15,7 @@ struct SchuleButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Schule      ")
+        Text("Schule       ")
             .font(.title2)
             .fontWeight(.medium)
             .foregroundColor(Color.white)

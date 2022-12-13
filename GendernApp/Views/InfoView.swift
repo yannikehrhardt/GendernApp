@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct InfoView: View {
+    
+    var givenQuiz : Quiz
+    init(givenQuiz: Quiz) {
+        self.givenQuiz = givenQuiz
+    }
+    
     var body: some View {
         VStack(spacing:20){
             Text("Info")
@@ -15,7 +21,7 @@ struct InfoView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
             
-            Text("Studiernde ist korrekt weil: lkjhlkjhjqehwlkrjhlqkjrhelkqwjehrlkqjwehrlkqwjerhqwkljerhqököqehrqökehröqkhreöqkjhjhöqjhörjhöqjkerhökqwejrhöqwkejrhöqkjwrhökjwehöqkjrheöqkjwrehöqjwkehröwqjkrhöqwjrhqökjerhöqwjerhöq")
+            Text(givenQuiz.furtherInformation)
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color("TextColor2"))
@@ -30,8 +36,8 @@ struct InfoView: View {
     }
 }
 
-struct InfoView_Previews: PreviewProvider {
-    static var previews: some View {
-        InfoView()
-    }
-}
+//struct InfoView_Previews: PreviewProvider {
+ //   static var previews: some View {
+ //       InfoView(givenQuiz: quiz1)
+  //  }
+//}
