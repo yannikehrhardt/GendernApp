@@ -15,13 +15,17 @@ struct SchuleButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Schule")
+        Text("Schule      ")
+            .font(.title2)
+            .fontWeight(.medium)
             .foregroundColor(Color.white)
+            .multilineTextAlignment(.center)
             .padding()
             .padding(.horizontal)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
             .shadow(radius: 10)
+            .frame(maxWidth: .infinity)
     }
 }
 

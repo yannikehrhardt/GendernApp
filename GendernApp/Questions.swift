@@ -5,11 +5,13 @@
 //  Created by Hannah Gürsching on 24.11.22.
 //
 
+// In diesem File werden die hard gecodeden Quizze angelegt. Alle Quizze werden in einem Array namens quizze gespeichert.
+
 import Foundation
 import SwiftUI
 
 let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie wird 'Studenten' richtig gegendert?", correctAnswer: "Studierende", allAnswers: ["Studierende", "ist richtig so", "Studentinnen"], answered: true, furtherInformation: "")
-let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "dummyQuestion?", correctAnswer: "richtig", allAnswers: ["richig", "falsch", "wrong"], answered: true, furtherInformation: "")
+let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "dummyQuestion?", correctAnswer: "richtig", allAnswers: ["richtig", "falsch", "wrong"], answered: true, furtherInformation: "")
 let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Uni-Frage", correctAnswer: "ja", allAnswers: ["ja","nein", "wrong"], answered: false, furtherInformation: "")
 let quiz4 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo4?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
 let quiz5 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo5?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
@@ -24,11 +26,11 @@ let quiz12 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question:
 
 var quizze : [Quiz] = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz12]
 
-var UniQuizze : [Quiz] = addQuizze("Uni")
-var SchuleQuizze : [Quiz] = addQuizze("Schule")
-var AlltagQuizze : [Quiz] = addQuizze("Alltag")
+var UniQuizze : [Quiz] = addQuizze("Uni")  //Array mit allen Quizzen der Kategorie Uni
+var SchuleQuizze : [Quiz] = addQuizze("Schule") //Array mit allen Quizzen der Kategorie Schule
+var AlltagQuizze : [Quiz] = addQuizze("Alltag") //Array mit allen Quizzen der Kategorie Alltag
 
-func addQuizze(_ givenTopic : String) -> [Quiz] {
+func addQuizze(_ givenTopic : String) -> [Quiz] { //Diese Funktion sortiert die Quizze im Array quizze in den passenden Array mit dem entprechend angegebenen Topic ein
     var solution : [Quiz] = []
     for element in quizze {
         if (element.topic == givenTopic){

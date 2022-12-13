@@ -9,15 +9,13 @@ import SwiftUI
 
 struct ScoreView: View {
     var body: some View {
-        VStack(spacing: 30){
-            
+        VStack(spacing: 20){
             //CurrentScore(text: "")
-            //Score wird allerdings nicht angezigt kp warum
-            Text("your current Score:\(currentplayer.currentscore)")
-             .font(.title)
-             .fontWeight(.heavy)
-             .foregroundColor(Color("TextColor"))
-            
+            Text("Your current score: \(currentplayer.currentscore)")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .padding(.top, 50)
             List {
                 ScoreComparison(givenPlayers: players)
                     //andere Farbe wäre noch gut

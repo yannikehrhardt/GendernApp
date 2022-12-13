@@ -5,6 +5,8 @@
 //  Created by Hannah Gürsching on 06.12.22.
 //
 
+// In dieser SwiftUIFile wird die Darstellung des CurrentScore implementiert
+
 import SwiftUI
 
 struct CurrentScore: View {

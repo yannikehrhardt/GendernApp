@@ -5,6 +5,8 @@
 //  Created by Hannah Gürsching on 30.11.22.
 //
 
+// In dieser SwiftUIFile wird die Darstellung und Interaktion der Antwortmöglichkeiten implementiert. Es gibt eine richtige und zwei falsche Antworten.
+
 import SwiftUI
 
 struct AllAnswers: View {
@@ -19,15 +21,15 @@ struct AllAnswers: View {
     
     var body: some View {
         VStack{
-            HStack(spacing: 20){
+            HStack(spacing: 20){ // erste Antwortmöglichkeit
                 
                 Image(systemName: "circle.fill")
                     .font(.caption)
                 
                 Text(answer.allAnswers[0])
                     .bold()
-                
-                if isSelected3 && answer.allAnswers[0] == answer.correctAnswer {
+               // wenn der Button ausgewählt wurde und wenn die korrkete Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint eine grüne checkmark, ansonsten erscheint ein rotes x
+                if isSelected3 && answer.allAnswers[0] ==  answer.correctAnswer {
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
@@ -47,13 +49,13 @@ struct AllAnswers: View {
                     .foregroundColor(isSelected3 ? Color("ButtonColor") : .gray)
                     .background(.white)
                     .cornerRadius(10)
-                    .shadow(color: isSelected3 ? ( answer.allAnswers[0] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
+                    .shadow(color: isSelected3 ? ( answer.allAnswers[0] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrketen Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
                     .onTapGesture {
                         isSelected3 = true
                     }
 
             
-            HStack(spacing: 20){
+            HStack(spacing: 20){ // zweite Antwortmöglichkeit
                 Image(systemName: "circle.fill")
                     .font(.caption)
                 
@@ -86,7 +88,7 @@ struct AllAnswers: View {
                 isSelected = true
             }
             
-            HStack(spacing: 20){
+            HStack(spacing: 20){ // dritte Antwortmöglichkeit
                 Image(systemName: "circle.fill")
                     .font(.caption)
                 

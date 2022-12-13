@@ -11,7 +11,9 @@ struct OtherPlayer: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("log in with another player account")
+        Text("Other Player")
+            .font(.title2)
+            .fontWeight(.medium)
             .foregroundColor(Color.white)
             .padding()
             .padding(.horizontal)
