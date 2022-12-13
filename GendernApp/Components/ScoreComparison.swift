@@ -30,6 +30,7 @@ struct ScoreComparison: View {
                         .font(.largeTitle)
                 }
                 
+                //fremder Nutzer
                 else if(currentplayer.username != player.username){
                     Text(player.username)
                 }
