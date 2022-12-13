@@ -28,12 +28,15 @@ struct AllAnswers: View {
                 
                 Text(answer.allAnswers[0])
                     .bold()
-               // wenn der Button ausgewählt wurde und wenn die korrkete Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint eine grüne checkmark, ansonsten erscheint ein rotes x
+               // wenn der Button ausgewählt wurde und wenn die korrekte Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint eine grüne checkmark, ansonsten erscheint ein rotes x
                 if isSelected3 && answer.allAnswers[0] ==  answer.correctAnswer {
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
+                        .onAppear(){
+                            addScore()
+                        }
                 }
                 else {
                     if isSelected3{

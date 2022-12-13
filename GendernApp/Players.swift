@@ -18,5 +18,7 @@ func appendPlayer(_ Player: PlayerTemplate) -> Void {
     players.append(Player)
 }
 
-
+func addScore () -> Void {
+    currentplayer.currentscore = currentplayer.currentscore + 10
+}
  

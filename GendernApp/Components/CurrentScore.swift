@@ -17,7 +17,7 @@ struct CurrentScore: View {
         Text("Score: \(currentplayer.currentscore)")
             .font(.title2)
             .fontWeight(.heavy)
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .padding()
             .padding(.horizontal)
         }
