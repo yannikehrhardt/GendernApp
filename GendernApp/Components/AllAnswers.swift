@@ -36,9 +36,7 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            players.addScore()
-                            players.currentplayer.currentscore += 10
-                            setQuizAnswered(self.answer)
+                            self.players.addScore()
                         }
 
                 }
@@ -59,7 +57,6 @@ struct AllAnswers: View {
                     .shadow(color: isSelected3 ? ( answer.allAnswers[0] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrketen Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
                     .onTapGesture {
                         isSelected3 = true
-                        players.addScore()
                     }
 
 
@@ -77,7 +74,7 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            players.addScore()
+                            self.players.addScore()
                             setQuizAnswered(self.answer)
                         }
                 }
@@ -114,8 +111,7 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            players.currentplayer.currentscore += 10
-                            players.addScore()
+                            self.players.addScore()
                             setQuizAnswered(self.answer)
                         }
                 }
@@ -138,6 +134,7 @@ struct AllAnswers: View {
             .onTapGesture {
                 isSelected2 = true
             }
+            Text("your score: \(players.currentplayer.currentscore)")
         }
     }
     
