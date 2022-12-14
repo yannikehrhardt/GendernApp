@@ -39,7 +39,14 @@ struct ContentView: View {
                 } label:{
                     OtherPlayer()
                 }
+                
+                NavigationLink{
+                    AddQuestionsView(players: self.players)
+                }label: { AddQuizButton(text: "")
                 }
+                .padding(.top)
+                
+            }
                 
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("Backgrounds App"))

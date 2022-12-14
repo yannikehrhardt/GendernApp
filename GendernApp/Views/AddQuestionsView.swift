@@ -16,6 +16,8 @@ struct AddQuestionsView: View {
     @State var falscheAntwort2: String = ""
     @State var weitereInformationen: String = ""
     
+    @State private var isSelected = false
+    
     var body: some View {
         VStack(spacing: 40){
             
@@ -27,7 +29,7 @@ struct AddQuestionsView: View {
                 .padding(.top, 50)
             
             TextField(
-                "Please type a topic...", text: $thema)
+                "Please type a topic (Uni, Schule, Alltag) ...", text: $thema)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -73,33 +75,28 @@ struct AddQuestionsView: View {
             .background(Color.white)
             .shadow(radius: 10)
             .cornerRadius(20)
-                   
+            
             let quizNew = Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen)
-        
-            NavigationLink{
-                Themenauswahl(players: players)
-            }label: {
-                AddQuizButton(text: "")
-                    .onTapGesture() {
-                    quizze.append(quizNew)
-                        
-                    if (thema == "Uni") {
-                            UniQuizze = addQuizze("Uni")
-                        }
-                    else if (thema == "Schule"){
-                            SchuleQuizze = addQuizze("Schule")
-                        }
-                    else if (thema == "Alltag") {
-                            AlltagQuizze = addQuizze("Alltag")
-                        }
-                    else {
-                            print("Unexpected error: Topic is wrong")
-                        }
-                    }
-                    //lol
-                        
+            
+            AddQuizButton(text: "")
+                .shadow(color: isSelected && (thema == "Uni" || thema == "Schule" || thema == "Alltag") ? .green : .red, radius: 5, x: 0.5, y: 0.5)
+                .onTapGesture() {
                     
-            }
+                    isSelected = true
+                    
+                    quizze.append(quizNew)
+                    
+                    if (thema == "Uni") {
+                        UniQuizze = addQuizze("Uni")
+                    }
+                    else if (thema == "Schule"){
+                        SchuleQuizze = addQuizze("Schule")
+                    }
+                    else if (thema == "Alltag") {
+                        AlltagQuizze = addQuizze("Alltag")
+                    }
+                }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))

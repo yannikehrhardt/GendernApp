@@ -20,11 +20,6 @@ struct Quizauswahl_Universitat: View {
 
                 QuizButton(givenQuiz: UniQuizze, players: players)
                 
-                NavigationLink{
-                    AddQuestionsView(players: self.players)
-                }label: { AddQuizButton(text: "")
-                }
-                
                 CurrentScore(players: players, text: "")
 
                     .padding(.bottom)
