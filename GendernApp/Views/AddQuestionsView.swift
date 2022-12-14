@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct AddQuestionsView: View {
-    @State private var topic: String = ""
-    @State private var question: String = ""
-    @State private var correctAnswer: String = ""
-    @State private var wrongAnswer1: String = ""
-    @State private var wrongAnswer2: String = ""
-    @State private var furtherInformation: String = ""
+    @ObservedObject var players: Players
+    @State var thema: String = ""
+    @State var frage: String = ""
+    @State var richtigeAntwort: String = ""
+    @State var falscheAntwort1: String = ""
+    @State var falscheAntwort2: String = ""
+    @State var weitereInformationen: String = ""
+    
     var body: some View {
         VStack(spacing: 40){
             
@@ -25,7 +27,7 @@ struct AddQuestionsView: View {
                 .padding(.top, 50)
             
             TextField(
-                "Please type a topic...", text: $topic)
+                "Please type a topic...", text: $thema)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -33,7 +35,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a question...", text: $question)
+                "Please type a question...", text: $frage)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -41,7 +43,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a correct answer...", text: $correctAnswer)
+                "Please type a correct answer...", text: $richtigeAntwort)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -49,7 +51,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type the first wrong answer...", text: $wrongAnswer1)
+                "Please type the first wrong answer...", text: $falscheAntwort1)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -57,7 +59,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type the second wrong answer...", text: $wrongAnswer2)
+                "Please type the second wrong answer...", text: $falscheAntwort2)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -65,16 +67,22 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a explanation...", text: $furtherInformation)
+                "Please type a explanation...", text: $weitereInformationen)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
             .shadow(radius: 10)
             .cornerRadius(20)
-            
-            let quiz = Quiz(id: UUID.init(), type: "gap text", topic: topic, question: question, correctAnswer: correctAnswer, allAnswers: [correctAnswer, wrongAnswer1, wrongAnswer2], answered: false, furtherInformation: furtherInformation)
-            
-            
+                        
+            NavigationLink{
+                Themenauswahl(players: players)
+            }label: {
+                AddQuizButton(text: "")
+                    .onTapGesture(count: 0) {
+                        UniQuizze.append(Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen))
+                        
+                    }
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
@@ -84,6 +92,6 @@ struct AddQuestionsView: View {
 
 struct AddQuestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddQuestionsView()
+        AddQuestionsView(players: Players())
     }
 }

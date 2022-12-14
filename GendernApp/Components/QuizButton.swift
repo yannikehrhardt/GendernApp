@@ -35,16 +35,18 @@ struct QuizButton: View {
                             .shadow(radius:10)
                             .padding(.top)
                         
-                        if(quiz.answered == true){
-                        Image(systemName: "checkmark.circle.fill")
-                        }
+                        //if(quiz.answered == true){
+                        //Image(systemName: "checkmark.circle.fill")
+                       // }
                         
                     }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
         }
         .padding(.top)
+        .background(.white)
     }
 }
  //   struct QuizButton_Previews: PreviewProvider {

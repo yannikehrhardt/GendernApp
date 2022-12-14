@@ -22,9 +22,10 @@ let quiz9 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: 
 let quiz10 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
 let quiz11 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
 let quiz12 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
+let quiz13 = Quiz(id: UUID.init(), type: "gap text", topic: "Uni", question: "Wer bist du?" , correctAnswer: "ich", allAnswers: ["ich", "du", "er"], answered: false, furtherInformation: "weil")
 
 
-var quizze : [Quiz] = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz12]
+var quizze : [Quiz] = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz12, quiz13]
 
 var UniQuizze : [Quiz] = addQuizze("Uni")  //Array mit allen Quizzen der Kategorie Uni
 var SchuleQuizze : [Quiz] = addQuizze("Schule") //Array mit allen Quizzen der Kategorie Schule
@@ -47,5 +48,9 @@ func setQuizAnswered(_ givenquiz : Quiz) -> Void {
     }
     
 }
+
+
+
+
 
 

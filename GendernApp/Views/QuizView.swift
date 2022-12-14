@@ -41,7 +41,6 @@ struct QuizView: View {
                 
                 AnswerRow(givenQuiz: givenQuiz)
                 
-                Text("your current score: \(players.currentplayer.currentscore)")
                 
                CurrentScore(players: players, text: "")
                     .padding(.top, 200.0)
