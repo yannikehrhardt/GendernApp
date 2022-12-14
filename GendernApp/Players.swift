@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+//der Typ ObservableObject sorgt dafür, dass Änderungen an einer mit dem Tag "published" versehenen Variablen ein Neuladen aller Views, die dieses Objekt nutzen erzwungen wird
 class Players : ObservableObject{
     
     var player1 : PlayerTemplate
     var player2: PlayerTemplate
+    
+    //s.o.: wenn eine der Variablen verändert wird, laden die Views neu
     @Published var players : [PlayerTemplate]
     @Published var currentplayer : PlayerTemplate
     
@@ -24,12 +27,17 @@ class Players : ObservableObject{
 
     
     
-    
-    func appendPlayer(_ Player: PlayerTemplate) -> Void {
-        players.append(Player)
+    //Neuen Spieler anfügen
+    func appendPlayer(_ newPlayer: PlayerTemplate) -> Void {
+        players.append(newPlayer)
     }
     
-    //ggf. muss ich den Score auch in players anpassen
+    //Aktuellen Player setzen
+    func setCurrentPlayer(_ changedPlayer: PlayerTemplate) -> Void {
+        self.currentplayer = changedPlayer
+    }
+    
+    //Score des aktuellen Spielers erhöhen
     func addScore () -> Void {
         currentplayer.currentscore = currentplayer.currentscore + 10
     }

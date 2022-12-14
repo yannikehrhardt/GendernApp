@@ -11,7 +11,6 @@ struct ScoreComparison: View {
     var givenPlayers : [PlayerTemplate]
     @ObservedObject var playersObjects: Players
     init(givenPlayers: [PlayerTemplate], playersObjects: Players) {
-//        self.givenPlayers = givenPlayers.sorted(using: <#T##SortComparator#>)
         self.givenPlayers = givenPlayers
         self.playersObjects = playersObjects
         
@@ -36,6 +35,7 @@ struct ScoreComparison: View {
                     Text(player.username)
                 }
                 
+                //angezeigter Score
                 HStack(spacing:10){
                     Text("Current Score: \(player.currentscore)")
                         .font(.system(size: 16, weight: .light, design: .default))
