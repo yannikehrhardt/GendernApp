@@ -46,7 +46,6 @@ struct QuizButton: View {
             
         }
         .padding(.top)
-        .background(.white)
     }
 }
  //   struct QuizButton_Previews: PreviewProvider {

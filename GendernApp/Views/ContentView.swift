@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 40) {
+            VStack(spacing: 30) {
                 VStack(spacing: 20){
                     Image("Genderzeichen 1")
                     Text("GendernApp")
@@ -56,7 +56,7 @@ struct ContentView: View {
                 NavigationLink{
                     PlayerChange()
                 } label:{
-                    OtherPlayer()
+                    SignUp()
                 }
                 
                 NavigationLink{
@@ -67,7 +67,7 @@ struct ContentView: View {
                 
             }
                 
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
         }
         

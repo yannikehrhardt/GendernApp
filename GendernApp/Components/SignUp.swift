@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct OtherPlayer: View {
+struct SignUp: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Other Player")
+        Text("Sign Up")
             .font(.title2)
             .fontWeight(.medium)
             .foregroundColor(Color.white)
@@ -26,6 +26,6 @@ struct OtherPlayer: View {
 
 struct OtherPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        OtherPlayer()
+        SignUp()
     }
 }

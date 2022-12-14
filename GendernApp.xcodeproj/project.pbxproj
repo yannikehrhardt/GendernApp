@@ -29,7 +29,7 @@
 		684B92A429116D6B00D32031 /* SettingsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684B92A329116D6B00D32031 /* SettingsHandler.swift */; };
 		68509FE9293F96E100EE2476 /* PlayerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FE8293F96E100EE2476 /* PlayerTemplate.swift */; };
 		68509FEB293F978500EE2476 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEA293F978500EE2476 /* Players.swift */; };
-		68509FED293F99AA00EE2476 /* OtherPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEC293F99AA00EE2476 /* OtherPlayer.swift */; };
+		68509FED293F99AA00EE2476 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEC293F99AA00EE2476 /* SignUp.swift */; };
 		68509FEF293F9F7E00EE2476 /* PlayerChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEE293F9F7E00EE2476 /* PlayerChange.swift */; };
 		68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF0293F9FED00EE2476 /* ScoreView.swift */; };
 		68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF2293FA19300EE2476 /* ScoreViewButton.swift */; };
@@ -83,7 +83,7 @@
 		684B92A329116D6B00D32031 /* SettingsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHandler.swift; sourceTree = "<group>"; };
 		68509FE8293F96E100EE2476 /* PlayerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTemplate.swift; sourceTree = "<group>"; };
 		68509FEA293F978500EE2476 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
-		68509FEC293F99AA00EE2476 /* OtherPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPlayer.swift; sourceTree = "<group>"; };
+		68509FEC293F99AA00EE2476 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		68509FEE293F9F7E00EE2476 /* PlayerChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerChange.swift; sourceTree = "<group>"; };
 		68509FF0293F9FED00EE2476 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		68509FF2293FA19300EE2476 /* ScoreViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewButton.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 				5978773A2931096F00D1C086 /* SchuleButton.swift */,
 				5978773C29310A2A00D1C086 /* AlltagButton.swift */,
 				5978774F29364DA900D1C086 /* QuizButton.swift */,
-				68509FEC293F99AA00EE2476 /* OtherPlayer.swift */,
+				68509FEC293F99AA00EE2476 /* SignUp.swift */,
 				597877492933B83200D1C086 /* AnswerRow.swift */,
 				597877572937A7FD00D1C086 /* AllAnswers.swift */,
 				59787759293F9B7100D1C086 /* CurrentScore.swift */,
@@ -382,7 +382,7 @@
 				590272EB2949E14B009F721A /* AddQuizButton.swift in Sources */,
 				68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */,
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
-				68509FED293F99AA00EE2476 /* OtherPlayer.swift in Sources */,
+				68509FED293F99AA00EE2476 /* SignUp.swift in Sources */,
 				68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */,
 				5924E889292FA4050012851F /* QuizView.swift in Sources */,
 				5978775029364DA900D1C086 /* QuizButton.swift in Sources */,
