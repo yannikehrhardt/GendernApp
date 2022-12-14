@@ -15,7 +15,7 @@ var thema = 0
 struct GendernAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(givenusername: "", givenpassword: "")
         }
     }
 }

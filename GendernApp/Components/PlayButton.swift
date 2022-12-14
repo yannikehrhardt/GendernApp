@@ -17,7 +17,7 @@ struct PlayButton: View {
     
     
     var body: some View {
-        Text("Play as \(players.currentplayer.username)")
+        Text("Log In")
             .font(.title2)
             .fontWeight(.medium)
             .foregroundColor(Color.white)
