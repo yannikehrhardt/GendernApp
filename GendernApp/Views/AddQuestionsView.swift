@@ -73,15 +73,32 @@ struct AddQuestionsView: View {
             .background(Color.white)
             .shadow(radius: 10)
             .cornerRadius(20)
-                        
+                   
+            let quizNew = Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen)
+        
             NavigationLink{
                 Themenauswahl(players: players)
             }label: {
                 AddQuizButton(text: "")
-                    .onTapGesture(count: 0) {
-                        UniQuizze.append(Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen))
+                    .onTapGesture() {
+                    quizze.append(quizNew)
                         
+                    if (thema == "Uni") {
+                            UniQuizze = addQuizze("Uni")
+                        }
+                    else if (thema == "Schule"){
+                            SchuleQuizze = addQuizze("Schule")
+                        }
+                    else if (thema == "Alltag") {
+                            AlltagQuizze = addQuizze("Alltag")
+                        }
+                    else {
+                            print("Unexpected error: Topic is wrong")
+                        }
                     }
+                    
+                        
+                    
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
