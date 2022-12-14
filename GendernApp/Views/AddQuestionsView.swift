@@ -78,7 +78,7 @@ struct AddQuestionsView: View {
                 Themenauswahl(players: players)
             }label: {
                 AddQuizButton(text: "")
-                    .onTapGesture(count: 0) {
+                    .onTapGesture(count: 1) {
                         UniQuizze.append(Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen))
                         
                     }
