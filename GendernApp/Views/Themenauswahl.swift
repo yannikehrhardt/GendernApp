@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Themenauswahl: View {
+    @ObservedObject var players: Players
     var body: some View {
         HStack {
             VStack(spacing: 20) {
@@ -20,28 +21,28 @@ struct Themenauswahl: View {
                  
                 
                 NavigationLink{
-                    Quizauswahl_Universitat()
+                    Quizauswahl_Universitat(players: self.players)
                 }label: {
                     UniversitatButton(text: "Universität")
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Schule()
+                    Quizauswahl_Schule(players: self.players)
                 }label: {
                     SchuleButton(text: "Schule")
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Alltag()
+                    Quizauswahl_Alltag(players: self.players)
                 }label: {
                     AlltagButton(text: "Alltag")
                 }
                 
                 
                 NavigationLink{
-                    ScoreView()
+                    ScoreView(playersObject: players)
                 } label: {
                     ScoreViewButton()
                 }
@@ -49,7 +50,7 @@ struct Themenauswahl: View {
                 
                 
                 
-                CurrentScore(text: "")
+                CurrentScore(players: players, text: "")
                     .padding(.top, 10)
                 
             }
@@ -62,6 +63,6 @@ struct Themenauswahl: View {
 
 struct Themenauswahl_Previews: PreviewProvider {
     static var previews: some View {
-        Themenauswahl()
+        Themenauswahl(players: Players())
     }
 }

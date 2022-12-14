@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct QuizView: View {
+    @ObservedObject var players: Players
     var givenQuiz : Quiz
-    init(givenQuiz: Quiz) {
+    init(givenQuiz: Quiz, players: Players) {
         self.givenQuiz = givenQuiz
+        self.players = players
         
         //funktioniert iwie nicht
         //mögliche Ursachen: setQuizAnswered geht nicht, View refresht nicht, wenn man den Back-Button betätigt o. Aufruf an dieser Stelle ist nicht korrekt
-        self.setQuizAnswered(givenQuiz)
+       // self.setQuizAnswered(givenQuiz)
     }
     
     func setQuizAnswered(_ givenquiz : Quiz) -> Void {
@@ -39,8 +41,9 @@ struct QuizView: View {
                 
                 AnswerRow(givenQuiz: givenQuiz)
                 
+                Text("your current score: \(players.currentplayer.currentscore)")
                 
-                CurrentScore(text: "")
+               CurrentScore(players: players, text: "")
                     .padding(.top, 200.0)
                 
             }
@@ -53,7 +56,7 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView(givenQuiz: quiz1)
+        QuizView(givenQuiz: quiz1, players: Players())
     }
 }
 

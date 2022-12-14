@@ -40,5 +40,12 @@ func addQuizze(_ givenTopic : String) -> [Quiz] { //Diese Funktion sortiert die 
     return solution
 }
 
+func setQuizAnswered(_ givenquiz : Quiz) -> Void {
+    if let Offset = quizze.firstIndex(where: {$0.question == givenquiz.question}) {
+        // do something with fooOffset
+        quizze[Offset].answered = true
+    }
+    
+}
 
 

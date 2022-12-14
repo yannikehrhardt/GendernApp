@@ -9,6 +9,9 @@ import SwiftUI
 
 
 struct ContentView: View {
+    //hier wird der Typ Players mit den entsprechenden Variablen initialisiert und muss dann an die entsprechenden Screens weitergegeben werden
+    @StateObject var players = Players()
+    
     var body: some View {
         NavigationView {
             VStack(spacing: 40) {
@@ -23,9 +26,9 @@ struct ContentView: View {
                 }
                 
                 NavigationLink {
-                    Themenauswahl()
+                    Themenauswahl(players: self.players)
                 }label: {
-                    PlayButton(text: "Play")
+                    PlayButton(text: "Play", players: self.players)
                 }
                 
                 Text("or")

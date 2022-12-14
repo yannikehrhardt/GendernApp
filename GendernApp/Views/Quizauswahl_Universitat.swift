@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Quizauswahl_Universitat: View {
-    
+    @ObservedObject var players: Players
     var body: some View {
             VStack(spacing: 40){
                 Text("Pick a Quiz")
@@ -17,11 +17,12 @@ struct Quizauswahl_Universitat: View {
                     .foregroundColor(Color("TextColor"))
                     .padding(.top, 50)
                
-                QuizButton(givenQuiz: UniQuizze)
+
+                QuizButton(givenQuiz: UniQuizze, players: players)
                 
                 
-                
-                CurrentScore(text: "")
+                CurrentScore(players: players, text: "")
+
                     .padding(.bottom)
                 
             }
@@ -33,7 +34,7 @@ struct Quizauswahl_Universitat: View {
     
     struct Quizauswahl_Universitat_Previews: PreviewProvider {
         static var previews: some View {
-            Quizauswahl_Universitat()
+            Quizauswahl_Universitat(players: Players())
         }
     }
 
