@@ -13,9 +13,11 @@ import SwiftUI
 struct PlayButton: View {
     var text: String
     var background: Color = Color("ButtonColor")
+    @ObservedObject var players: Players
+    
     
     var body: some View {
-        Text("Play as \(currentplayer.username)")
+        Text("Play as \(players.currentplayer.username)")
             .font(.title2)
             .fontWeight(.medium)
             .foregroundColor(Color.white)
@@ -29,6 +31,6 @@ struct PlayButton: View {
 
 struct PlayButton_Previews: PreviewProvider {
     static var previews: some View {
-        PlayButton(text: "Play")
+        PlayButton(text: "Play", players: Players())
     }
 }

@@ -12,6 +12,7 @@ import SwiftUI
 struct AllAnswers: View {
     
     var answer: Quiz
+    @ObservedObject var players: Players
     @State private var isSelected = false
     @State private var isSelected2 = false
     @State private var isSelected3 = false
@@ -28,15 +29,18 @@ struct AllAnswers: View {
                 
                 Text(answer.allAnswers[0])
                     .bold()
-               // wenn der Button ausgewählt wurde und wenn die korrekte Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint eine grüne checkmark, ansonsten erscheint ein rotes x
+               // wenn der Button ausgewählt wurde und wenn die korrekte Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint ein grüner checkmark, ansonsten erscheint ein rotes x
                 if isSelected3 && answer.allAnswers[0] ==  answer.correctAnswer {
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            addScore()
+                            players.addScore()
+                            players.currentplayer.currentscore += 10
+                            setQuizAnswered(self.answer)
                         }
+
                 }
                 else {
                     if isSelected3{
@@ -55,7 +59,9 @@ struct AllAnswers: View {
                     .shadow(color: isSelected3 ? ( answer.allAnswers[0] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrketen Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
                     .onTapGesture {
                         isSelected3 = true
+                        players.addScore()
                     }
+
 
             
             HStack(spacing: 20){ // zweite Antwortmöglichkeit
@@ -70,6 +76,10 @@ struct AllAnswers: View {
                     
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
+                        .onAppear(){
+                            players.addScore()
+                            setQuizAnswered(self.answer)
+                        }
                 }
                 else {
                     if isSelected{
@@ -103,6 +113,11 @@ struct AllAnswers: View {
                     
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
+                        .onAppear(){
+                            players.currentplayer.currentscore += 10
+                            players.addScore()
+                            setQuizAnswered(self.answer)
+                        }
                 }
                 else {
                     if isSelected2{
@@ -129,7 +144,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""))
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""), players: Players())
         }
     }
     

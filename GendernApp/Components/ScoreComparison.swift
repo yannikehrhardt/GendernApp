@@ -9,10 +9,11 @@ import SwiftUI
 
 struct ScoreComparison: View {
     var givenPlayers : [PlayerTemplate]
-    
-    init(givenPlayers: [PlayerTemplate]) {
+    @ObservedObject var playersObjects: Players
+    init(givenPlayers: [PlayerTemplate], playersObjects: Players) {
 //        self.givenPlayers = givenPlayers.sorted(using: <#T##SortComparator#>)
         self.givenPlayers = givenPlayers
+        self.playersObjects = playersObjects
         
     }
     
@@ -25,13 +26,13 @@ struct ScoreComparison: View {
             VStack(spacing: 20){
             
                 //damit eine Unterschiedung möglich ist, muss der Username allerdings einzigartig sein
-                if(currentplayer.username == player.username){
+                if(self.playersObjects.currentplayer.username == player.username){
                     /*@START_MENU_TOKEN@*/Text(player.username)/*@END_MENU_TOKEN@*/
                         .font(.largeTitle)
                 }
                 
                 //fremder Nutzer
-                else if(currentplayer.username != player.username){
+                else if(self.playersObjects.currentplayer.username != player.username){
                     Text(player.username)
                 }
                 
@@ -52,6 +53,6 @@ struct ScoreComparison: View {
 
 struct ScoreComparison_Previews: PreviewProvider {
    static var previews: some View {
-       ScoreComparison(givenPlayers: players)
+       ScoreComparison(givenPlayers: Players().players, playersObjects: Players())
     }
 }
