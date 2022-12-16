@@ -59,7 +59,7 @@ struct ContentView: View {
                 
                 NavigationLink{
                     AddQuestionsView(players: self.players)
-                }label: { AddQuizButton(text: "")
+                }label: { AddQuizButton()
                 }
                 .padding(.top)
                 

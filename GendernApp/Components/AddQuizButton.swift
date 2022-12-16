@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct AddQuizButton: View {
-    var text: String
     var background: Color = Color("ButtonColor")
     
 var body: some View {
@@ -28,6 +27,6 @@ var body: some View {
 
 struct AddQuizButton_Previews: PreviewProvider {
     static var previews: some View {
-        AddQuizButton(text: "")
+        AddQuizButton()
     }
 }

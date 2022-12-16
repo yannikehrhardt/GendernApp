@@ -43,9 +43,16 @@ class Players : ObservableObject{
         self.currentplayer = changedPlayer
     }
     
+    
     //Score des aktuellen Spielers erhöhen
     func addScore () -> Void {
         currentplayer.currentscore = currentplayer.currentscore + 10
+        
+        //Score des aktuellen Spielers ebenfalls erhöhen in players
+        if let Offset = players.firstIndex(where: {$0.username == currentplayer.username}){
+            
+            players[Offset].currentscore += 10
+        }
     }
     
     //Prüft, ob ein Username vergeben ist. Wenn ja, wird true zurückgegeben.

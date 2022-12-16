@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct SchuleButton: View {
-    var text: String
+
     var background: Color = Color("ButtonColor")
     
     var body: some View {
@@ -31,6 +31,6 @@ struct SchuleButton: View {
 
 struct SchuleButton_Previews: PreviewProvider {
     static var previews: some View {
-        SchuleButton(text: "Schule")
+        SchuleButton()
     }
 }

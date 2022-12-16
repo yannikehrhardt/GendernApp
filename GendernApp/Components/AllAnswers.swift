@@ -12,7 +12,7 @@ import SwiftUI
 struct AllAnswers: View {
     
     var answer: Quiz
-    @ObservedObject var players: Players
+    @State var players: Players
     @State private var isSelected = false
     @State private var isSelected2 = false
     @State private var isSelected3 = false

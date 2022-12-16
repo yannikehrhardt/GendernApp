@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddQuestionsView: View {
-    @ObservedObject var players: Players
+    @State var players: Players
     @State var thema: String = ""
     @State var frage: String = ""
     @State var richtigeAntwort: String = ""
@@ -19,7 +19,9 @@ struct AddQuestionsView: View {
     @State private var isSelected = false
     
     var body: some View {
-        VStack(spacing: 40){
+        VStack(spacing: 30){
+            
+            
             
             Text("Fill in the Textfields")
                 .font(.largeTitle)
@@ -78,7 +80,7 @@ struct AddQuestionsView: View {
             
             let quizNew = Quiz.init(id: UUID.init(), type: "gap text", topic: thema, question: frage, correctAnswer: richtigeAntwort, allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], answered: false, furtherInformation: weitereInformationen)
             
-            AddQuizButton(text: "")
+            AddQuizButton()
                 .shadow(color: isSelected && (thema == "Uni" || thema == "Schule" || thema == "Alltag") ? .green : .red, radius: 5, x: 0.5, y: 0.5)
                 .onTapGesture() {
                     

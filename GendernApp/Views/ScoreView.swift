@@ -20,9 +20,7 @@ struct ScoreView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 50)
-                .onAppear(){
-                    currentplayer.currentscore += 10
-                }
+
             List {
                ScoreComparison(givenPlayers: givenplayers, currentplayer: currentplayer)
 

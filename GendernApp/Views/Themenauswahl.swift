@@ -22,23 +22,23 @@ struct Themenauswahl: View {
                  
                 
                 NavigationLink{
-                    Quizauswahl_Universitat(players: self.players)
+                    Quizauswahl_Universitat(players: players)
                 }label: {
-                    UniversitatButton(text: "Universität")
+                    UniversityButton()
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Schule(players: self.players)
+                    Quizauswahl_Schule(players: players)
                 }label: {
-                    SchuleButton(text: "Schule")
+                    SchuleButton()
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Alltag(players: self.players)
+                    Quizauswahl_Alltag(players: players)
                 }label: {
-                    AlltagButton(text: "Alltag")
+                    AlltagButton()
                 }
                 
                 

@@ -32,7 +32,7 @@ struct AnswerRow: View {
             NavigationLink {
                 InfoView(givenQuiz: givenQuiz)
             }label: {
-                InfoButton(text: "")
+                InfoButton()
                     .padding(.top)
             }
             

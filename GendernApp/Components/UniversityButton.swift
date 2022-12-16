@@ -10,9 +10,9 @@
 
 import SwiftUI
 
-struct UniversitatButton: View {
-        var text: String
-        var background: Color = Color("ButtonColor")
+struct UniversityButton: View {
+
+    var background: Color = Color("ButtonColor")
         
     var body: some View {
         Text("Universität")
@@ -32,6 +32,6 @@ struct UniversitatButton: View {
 
 struct UniversitatButton_Previews: PreviewProvider {
     static var previews: some View {
-        UniversitatButton(text: "Universität")
+        UniversityButton()
     }
 }

@@ -11,7 +11,7 @@
 import SwiftUI
 
 struct AlltagButton: View {
-    var text: String
+
     var background: Color = Color("ButtonColor")
     var body: some View {
         Text("Alltag       ")
@@ -30,6 +30,6 @@ struct AlltagButton: View {
 
 struct AlltagButton_Previews: PreviewProvider {
     static var previews: some View {
-        AlltagButton(text: "Alltag")
+        AlltagButton()
     }
 }
