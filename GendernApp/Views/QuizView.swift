@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizView: View {
-    @ObservedObject var players: Players
+    @State var players: Players
     var givenQuiz : Quiz
     init(givenQuiz: Quiz, players: Players) {
         self.givenQuiz = givenQuiz
@@ -39,10 +39,10 @@ struct QuizView: View {
                         .padding(.bottom, 50.0)
                 }
                 
-                AnswerRow(givenQuiz: givenQuiz)
+                AnswerRow(players: players, givenQuiz: givenQuiz)
                 
                 
-               CurrentScore(players: players, text: "")
+                CurrentScore(score: players.currentplayer.currentscore)
                     .padding(.top, 200.0)
                 
             }

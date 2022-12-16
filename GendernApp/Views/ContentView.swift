@@ -42,17 +42,15 @@ struct ContentView: View {
                     if(self.players.usernameUnavailable(givenusername) && self.players.passwordCorrect(givenusername: self.givenusername, givenpassword: self.givenpassword)){
                         Themenauswahl(players: self.players)
                     }
+                    
+                    //currentuser wechseln
+                    
                 }label: {
                     PlayButton(text: "Log In", players: self.players)
                 }
                 
                 Text("or")
-                    .foregroundColor(Color("TextColor"))
-                    .onAppear(){
-                        //players.self.addScore()
-                        self.players.addScore()
-                    }
-                
+                    .foregroundColor(Color("TextColor"))                
                 NavigationLink{
                     PlayerChange()
                 } label:{

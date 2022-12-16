@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Quizauswahl_Universitat: View {
-    @ObservedObject var players: Players
+    @State var players: Players
     var body: some View {
             VStack(spacing: 40){
                 Text("Pick a Quiz")
@@ -20,7 +20,7 @@ struct Quizauswahl_Universitat: View {
 
                 QuizButton(givenQuiz: UniQuizze, players: players)
                 
-                CurrentScore(players: players, text: "")
+                CurrentScore(score: players.currentplayer.currentscore)
 
                     .padding(.bottom)
                 

@@ -10,12 +10,11 @@
 import SwiftUI
 
 struct CurrentScore: View {
-    @ObservedObject var players: Players
-    var text: String
+    @State var score : Int
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Score: \(players.currentplayer.currentscore)")
+        Text("Score: \(score)")
             .font(.title2)
             .fontWeight(.heavy)
             .foregroundColor(.black)
@@ -27,6 +26,6 @@ struct CurrentScore: View {
 
 struct CurrentScore_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentScore(players: Players(), text: "")
+        CurrentScore(score: 10)
     }
 }

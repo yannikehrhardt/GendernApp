@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Themenauswahl: View {
-    @ObservedObject var players: Players
+    @State var players: Players
+    
     var body: some View {
         HStack {
             VStack(spacing: 20) {
@@ -42,7 +43,7 @@ struct Themenauswahl: View {
                 
                 
                 NavigationLink{
-                    ScoreView(playersObject: players)
+                    ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
                 } label: {
                     ScoreViewButton()
                 }
@@ -50,7 +51,7 @@ struct Themenauswahl: View {
                 
                 
                 
-                CurrentScore(players: players, text: "")
+                CurrentScore(score: players.currentplayer.currentscore)
                     .padding(.top, 10)
                 
             }

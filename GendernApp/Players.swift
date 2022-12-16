@@ -19,6 +19,8 @@ class Players : ObservableObject{
     @Published var players : [PlayerTemplate]
     @Published var currentplayer : PlayerTemplate
     
+   // public static var shared : Players = Players()
+    
     
     init() {
         self.player1 = PlayerTemplate(id: UUID.init(), username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)

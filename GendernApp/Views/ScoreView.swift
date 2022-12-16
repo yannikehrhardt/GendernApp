@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ScoreView: View {
-    @ObservedObject var playersObject: Players
+    //curr
+    @State var currentplayer: PlayerTemplate
+    @State var givenplayers : [PlayerTemplate]
+    @State var playerscore : Int
     var body: some View {
         VStack(spacing: 20){
             //CurrentScore(text: "")
-            Text("Your current score: \(playersObject.currentplayer.currentscore)")
+            Text("Your current score: \(currentplayer.currentscore)")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 50)
+                .onAppear(){
+                    currentplayer.currentscore += 10
+                }
             List {
-                ScoreComparison(givenPlayers: playersObject.players, playersObjects: playersObject)
+               ScoreComparison(givenPlayers: givenplayers, currentplayer: currentplayer)
 
                     //andere Farbe wäre noch gut
                     .listRowBackground(Color.white)
@@ -33,6 +39,7 @@ struct ScoreView: View {
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView(playersObject: Players())
+        var player = Players()
+        ScoreView(currentplayer: player.currentplayer, givenplayers: player.players, playerscore: 10)
     }
 }
