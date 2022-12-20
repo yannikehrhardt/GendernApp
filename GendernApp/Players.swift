@@ -56,17 +56,24 @@ class Players : ObservableObject{
     }
     
     //Prüft, ob ein Username vergeben ist. Wenn ja, wird true zurückgegeben.
-    func usernameUnavailable (_ givenusername: String) -> Int {
-        var offset = 0
+    func usernameAvailable (_ givenusername: String) -> Bool {
+        var correct = false
         for player in self.players{
             if (player.username == givenusername){
+                correct = true
                 break
             }
-            offset += 1
         }
-        return offset
+        return correct
     }
     
     //prüft, ob das übergebene Passwort zu dem übergebenen Nutzeraccount passt
-  
+    func usernameOffset (_ givenusername : String) -> Int {
+        if let Offset = players.firstIndex(where: {$0.username == givenusername}){
+            return Offset
+        }
+        else{
+            return -1
+        }
+    }
 }

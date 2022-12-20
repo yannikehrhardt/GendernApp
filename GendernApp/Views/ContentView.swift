@@ -32,23 +32,34 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(5.0)
                     .padding(.bottom, 1)
+                    .disableAutocorrection(true)
                 SecureField("Password", text: $givenpassword)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5.0)
                     .padding(.bottom, 1)
+                    .disableAutocorrection(true)
                 
                 NavigationLink {
-                    if(self.players.players[self.players.usernameUnavailable(givenusername)].password == givenpassword){
-                        Themenauswahl()
+                    
+                    if(self.players.usernameAvailable(givenusername)){
+                        if(self.players.players[self.players.usernameOffset(givenusername)]
+                            .password == givenpassword){
+                            Themenauswahl()
                             .onAppear(){
-                                self.players.setCurrentPlayer(self.players.usernameUnavailable(givenusername))
+                                self.players.setCurrentPlayer(self.players.usernameOffset(givenusername))
+                            
                             }
+                        }
+                        else{
+                            Text("wrong password or username, try again or sign up")
+                        }
+                        
+                    
                     }
-                    
-                    //else mit Fehlerausgabe
-                    //currentuser wechseln
-                    
+                    else{
+                        Text("wrong password or username, try again or sign up")
+                    }
                 }label: {
                     PlayButton(text: "Log In", players: self.players)
                 }
