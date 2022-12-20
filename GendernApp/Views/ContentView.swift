@@ -39,8 +39,11 @@ struct ContentView: View {
                     .padding(.bottom, 1)
                 
                 NavigationLink {
-                    if(self.players.usernameUnavailable(givenusername) && self.players.passwordCorrect(givenusername: self.givenusername, givenpassword: self.givenpassword)){
+                    if(self.players.players[self.players.usernameUnavailable(givenusername)].password == givenpassword){
                         Themenauswahl()
+                            .onAppear(){
+                                self.players.setCurrentPlayer(self.players.usernameUnavailable(givenusername))
+                            }
                     }
                     
                     //else mit Fehlerausgabe

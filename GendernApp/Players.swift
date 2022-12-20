@@ -25,7 +25,7 @@ class Players : ObservableObject{
     init() {
         self.player1 = PlayerTemplate(id: UUID.init(), username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
         self.player2 = PlayerTemplate(id: UUID.init(), username: "Hannah", password: "1234", currentscore: 10, averagescore: 10)
-        self.player3 = PlayerTemplate(id: UUID.init(), username: "1", password: "1", currentscore: 10, averagescore: 10)
+        self.player3 = PlayerTemplate(id: UUID.init(), username: "1", password: "1", currentscore: 5, averagescore: 10)
         self.player4 = PlayerTemplate(id: UUID.init(), username: "", password: "", currentscore: 10, averagescore: 10)
         self.players = [player1, player2, player3, player4]
         self.currentplayer = player1
@@ -39,8 +39,8 @@ class Players : ObservableObject{
     }
     
     //Aktuellen Player setzen
-    func setCurrentPlayer(_ changedPlayer: PlayerTemplate) -> Void {
-        self.currentplayer = changedPlayer
+    func setCurrentPlayer(_ offset : Int) -> Void {
+        self.currentplayer = players[offset]
     }
     
     
@@ -56,19 +56,17 @@ class Players : ObservableObject{
     }
     
     //Prüft, ob ein Username vergeben ist. Wenn ja, wird true zurückgegeben.
-    func usernameUnavailable (_ givenusername: String) -> Bool {
-        var contained = false
+    func usernameUnavailable (_ givenusername: String) -> Int {
+        var offset = 0
         for player in self.players{
             if (player.username == givenusername){
-                contained = true
                 break
             }
+            offset += 1
         }
-        return contained
+        return offset
     }
     
     //prüft, ob das übergebene Passwort zu dem übergebenen Nutzeraccount passt
-    func passwordCorrect (givenusername : String, givenpassword: String) -> Bool {
-        return true
-    }
+  
 }
