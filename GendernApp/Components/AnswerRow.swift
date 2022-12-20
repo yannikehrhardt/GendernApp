@@ -40,7 +40,7 @@ struct AnswerRow: View {
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(givenQuiz: quiz1)
+        AnswerRow(givenQuiz: quiz1).environmentObject(Players())
     }
 }
 

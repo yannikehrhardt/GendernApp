@@ -32,6 +32,6 @@ struct Quizauswahl_Alltag: View {
 
 struct Quizauswahl_Alltag_Previews: PreviewProvider {
     static var previews: some View {
-        Quizauswahl_Alltag()
+        Quizauswahl_Alltag().environmentObject(Players())
     }
 }

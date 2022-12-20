@@ -65,6 +65,6 @@ struct Themenauswahl: View {
 
 struct Themenauswahl_Previews: PreviewProvider {
     static var previews: some View {
-        Themenauswahl()
+        Themenauswahl().environmentObject(Players())
     }
 }

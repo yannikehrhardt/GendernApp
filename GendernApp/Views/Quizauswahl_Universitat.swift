@@ -34,7 +34,7 @@ struct Quizauswahl_Universitat: View {
     
     struct Quizauswahl_Universitat_Previews: PreviewProvider {
         static var previews: some View {
-            Quizauswahl_Universitat()
+            Quizauswahl_Universitat().environmentObject(Players())
         }
     }
 

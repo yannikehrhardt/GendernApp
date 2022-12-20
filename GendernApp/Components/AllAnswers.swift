@@ -141,7 +141,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""))
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: "")).environmentObject(Players())
         }
     }
     

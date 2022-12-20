@@ -26,6 +26,6 @@ struct CurrentScore: View {
 
 struct CurrentScore_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentScore()
+        CurrentScore().environmentObject(Players())
     }
 }
