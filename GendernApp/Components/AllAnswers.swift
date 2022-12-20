@@ -12,7 +12,7 @@ import SwiftUI
 struct AllAnswers: View {
     
     var answer: Quiz
-    @State var players: Players
+    @EnvironmentObject var players: Players
     @State private var isSelected = false
     @State private var isSelected2 = false
     @State private var isSelected3 = false
@@ -141,7 +141,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""), players: Players())
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""))
         }
     }
     

@@ -12,12 +12,8 @@ import SwiftUI
 import SwiftUI
 
 struct AnswerRow: View {
-    @State var players : Players
+    @EnvironmentObject var players : Players
     var givenQuiz : Quiz
-    init(players: Players, givenQuiz: Quiz) {
-        self.players = players
-        self.givenQuiz = givenQuiz
-    }
     
     @State private var isSelected = false
     
@@ -27,7 +23,7 @@ struct AnswerRow: View {
     var body: some View {
         VStack{
             
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, allAnswers: givenQuiz.allAnswers.shuffled(), answered: false, furtherInformation: ""), players: players)
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, allAnswers: givenQuiz.allAnswers.shuffled(), answered: false, furtherInformation: ""))
             
             NavigationLink {
                 InfoView(givenQuiz: givenQuiz)
@@ -37,13 +33,14 @@ struct AnswerRow: View {
             }
             
         }
-        
+        .environmentObject(players)
+
     }
 }
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(players: Players(), givenQuiz: quiz1)
+        AnswerRow(givenQuiz: quiz1)
     }
 }
 

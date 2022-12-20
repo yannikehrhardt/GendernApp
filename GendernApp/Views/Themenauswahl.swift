@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Themenauswahl: View {
-    @State var players: Players
+    @EnvironmentObject var players: Players
     
     var body: some View {
         HStack {
@@ -22,21 +22,21 @@ struct Themenauswahl: View {
                  
                 
                 NavigationLink{
-                    Quizauswahl_Universitat(players: players)
+                    Quizauswahl_Universitat()
                 }label: {
                     UniversityButton()
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Schule(players: players)
+                    Quizauswahl_Schule()
                 }label: {
                     SchuleButton()
                 }
                 
                 
                 NavigationLink{
-                    Quizauswahl_Alltag(players: players)
+                    Quizauswahl_Alltag()
                 }label: {
                     AlltagButton()
                 }
@@ -51,7 +51,7 @@ struct Themenauswahl: View {
                 
                 
                 
-                CurrentScore(score: players.currentplayer.currentscore)
+                CurrentScore()
                     .padding(.top, 10)
                 
             }
@@ -59,11 +59,12 @@ struct Themenauswahl: View {
             .background(Image("Backgrounds App"))
          //   .navigationBarBackButtonHidden(true)
         }
+        .environmentObject(players)
     }
 }
 
 struct Themenauswahl_Previews: PreviewProvider {
     static var previews: some View {
-        Themenauswahl(players: Players())
+        Themenauswahl()
     }
 }

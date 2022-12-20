@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Quizauswahl_Schule: View {
-    @State var players: Players
+    @EnvironmentObject var players: Players
     var body: some View {
         VStack(spacing: 20){
             
@@ -18,19 +18,20 @@ struct Quizauswahl_Schule: View {
                 .foregroundColor(Color("TextColor"))
                 .padding(.top, 50)
             
-            QuizButton(givenQuiz: SchuleQuizze, players: players)
+            QuizButton(givenQuiz: SchuleQuizze)
             
-            CurrentScore(score: players.currentplayer.currentscore)
+            CurrentScore()
                 .padding(.bottom)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
+        .environmentObject(players)
     }
 }
 
 struct Quizauswahl_Schule_Previews: PreviewProvider {
     static var previews: some View {
-        Quizauswahl_Schule(players: Players())
+        Quizauswahl_Schule()
     }
 }

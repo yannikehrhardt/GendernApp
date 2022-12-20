@@ -40,9 +40,10 @@ struct ContentView: View {
                 
                 NavigationLink {
                     if(self.players.usernameUnavailable(givenusername) && self.players.passwordCorrect(givenusername: self.givenusername, givenpassword: self.givenpassword)){
-                        Themenauswahl(players: self.players)
+                        Themenauswahl()
                     }
                     
+                    //else mit Fehlerausgabe
                     //currentuser wechseln
                     
                 }label: {
@@ -68,8 +69,9 @@ struct ContentView: View {
             .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
         }
-        
+        .environmentObject(players)
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

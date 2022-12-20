@@ -11,19 +11,15 @@
 import SwiftUI
 
 struct QuizButton: View {
-    var givenQuiz : [Quiz] = []
-    @ObservedObject var players: Players
+    var givenQuiz : [Quiz]
+    @EnvironmentObject var players: Players
     
-    init(givenQuiz: [Quiz], players: Players) {
-        self.givenQuiz = givenQuiz
-        self.players = players
-    }
     
     var body: some View {
         ScrollView{
             VStack(spacing: 15){
                 ForEach(givenQuiz, id: \.self.id) { quiz in   // foreach-Schleife zum durchsuchen des Array givenQuiz, der mit Quizzen beladen ist. Für jedes Quiz in givenquiz wird ein Button erstellt, den die question des Quizzes als Text übergeben bekommt
-                    NavigationLink(destination: QuizView(givenQuiz: quiz, players: players)){ //NavigationLink der beim Klicken des Buttons zur QuizView führt
+                    NavigationLink(destination: QuizView(givenQuiz: quiz)){ //NavigationLink der beim Klicken des Buttons zur QuizView führt
                         Text(quiz.question)
                             .font(.title3)
                             .fontWeight(.medium)
@@ -43,6 +39,7 @@ struct QuizButton: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .environmentObject(players)
             
         }
         .padding(.top)

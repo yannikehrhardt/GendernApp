@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Quizauswahl_Alltag: View {
-    @State var players: Players
+    @EnvironmentObject var players: Players
     var body: some View {
         VStack(spacing: 20){
             
@@ -18,19 +18,20 @@ struct Quizauswahl_Alltag: View {
                 .foregroundColor(Color("TextColor"))
                 .padding(.top, 50)
             
-            QuizButton(givenQuiz: AlltagQuizze, players: players)
+            QuizButton(givenQuiz: AlltagQuizze)
             
-            CurrentScore(score: players.currentplayer.currentscore)
+            CurrentScore()
                 .padding(.bottom)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
+        .environmentObject(players)
     }
 }
 
 struct Quizauswahl_Alltag_Previews: PreviewProvider {
     static var previews: some View {
-        Quizauswahl_Alltag(players: Players())
+        Quizauswahl_Alltag()
     }
 }

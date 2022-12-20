@@ -37,7 +37,7 @@ struct ScoreView: View {
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        var player = Players()
+        let player = Players()
         ScoreView(currentplayer: player.currentplayer, givenplayers: player.players, playerscore: 10)
     }
 }
