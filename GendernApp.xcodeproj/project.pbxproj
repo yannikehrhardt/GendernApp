@@ -154,6 +154,7 @@
 		5924E88C292FAECF0012851F /* Klassen */ = {
 			isa = PBXGroup;
 			children = (
+				68509FEA293F978500EE2476 /* Players.swift */,
 				684B92A329116D6B00D32031 /* SettingsHandler.swift */,
 			);
 			path = Klassen;
@@ -203,7 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				68797AE629112C3300E1572B /* GendernAppApp.swift */,
-				68509FEA293F978500EE2476 /* Players.swift */,
 				5924E88D292FB1490012851F /* Questions.swift */,
 				597877352931044F00D1C086 /* Components */,
 				5924E88C292FAECF0012851F /* Klassen */,
