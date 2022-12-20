@@ -14,6 +14,7 @@ import SwiftUI
 struct AnswerRow: View {
     @EnvironmentObject var players : Players
     var givenQuiz : Quiz
+
     
     @State private var isSelected = false
     
@@ -23,15 +24,8 @@ struct AnswerRow: View {
     var body: some View {
         VStack{
             
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: givenQuiz.question, correctAnswer: givenQuiz.correctAnswer, allAnswers: givenQuiz.allAnswers.shuffled(), answered: false, furtherInformation: ""))
-            
-            NavigationLink {
-                InfoView(givenQuiz: givenQuiz)
-            }label: {
-                InfoButton()
-                    .padding(.top)
-            }
-            
+            AllAnswers(answer: givenQuiz)
+                        
         }
         .environmentObject(players)
 

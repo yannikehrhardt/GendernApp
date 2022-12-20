@@ -29,7 +29,7 @@ struct Quiz {
         self.answered = answered
         self.question = question
         self.correctAnswer = correctAnswer
-        self.allAnswers = allAnswers
+        self.allAnswers = allAnswers.shuffled()
         self.furtherInformation = furtherInformation
     }
 }

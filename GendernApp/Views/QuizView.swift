@@ -34,9 +34,16 @@ struct QuizView: View {
                 
                 AnswerRow(givenQuiz: givenQuiz)
                 
-                
+                NavigationLink {
+                    InfoView(givenQuiz: givenQuiz)
+                }label: {
+                    InfoButton()
+                        .padding(.top)
+                }
                 CurrentScore()
-                    .padding(.top, 200.0)
+                    .padding(.top, 200)
+                
+                
 
                 
             }

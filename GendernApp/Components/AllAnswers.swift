@@ -134,7 +134,6 @@ struct AllAnswers: View {
             .onTapGesture {
                 isSelected2 = true
             }
-            Text("your score: \(players.currentplayer.currentscore)")
         }
     }
     
