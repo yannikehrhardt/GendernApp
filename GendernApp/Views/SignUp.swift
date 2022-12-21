@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PlayerChange: View {
+struct SignUp: View {
     @EnvironmentObject var players: Players
     @State var givenUsername = ""
     @State var givenPassword = ""
@@ -86,7 +86,7 @@ struct PlayerChange: View {
 
 struct PlayerChange_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerChange().environmentObject(Players())
+        SignUp().environmentObject(Players())
     }
 }
 

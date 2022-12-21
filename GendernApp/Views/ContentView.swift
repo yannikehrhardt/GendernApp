@@ -78,9 +78,9 @@ struct ContentView: View {
                 Text("or")
                     .foregroundColor(Color("TextColor"))                
                 NavigationLink{
-                    PlayerChange()
-                } label:{
                     SignUp()
+                } label:{
+                    SignUpButton()
                 }
                 
                 NavigationLink{

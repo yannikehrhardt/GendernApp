@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignUp: View {
+struct SignUpButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
@@ -26,6 +26,6 @@ struct SignUp: View {
 
 struct OtherPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp()
+        SignUpButton()
     }
 }
