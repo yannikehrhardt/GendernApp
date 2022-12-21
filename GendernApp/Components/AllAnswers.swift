@@ -54,6 +54,7 @@ struct AllAnswers: View {
             }
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .frame(width: 400, height: 80)
                     .foregroundColor(isSelected3 ? Color("ButtonColor") : .gray)
                     .background(.white)
                     .cornerRadius(10)
@@ -94,6 +95,7 @@ struct AllAnswers: View {
             .padding()
             .foregroundColor(isSelected ? Color("ButtonColor") : .gray)
             .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(width: 400, height: 80)
             .background(.white)
             .cornerRadius(10)
             .shadow(color: isSelected ? (answer.allAnswers[1] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
@@ -130,6 +132,7 @@ struct AllAnswers: View {
             }
             .padding()
             .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(width: 400, height: 80)
             .foregroundColor(isSelected2 ? Color("ButtonColor") : .gray)
             .background(.white)
             .cornerRadius(10)

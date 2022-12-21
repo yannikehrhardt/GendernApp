@@ -20,10 +20,12 @@ struct QuizView: View {
                 VStack(spacing:40){
                     
                     Text(givenQuiz.question) // aus Questions quiz1
-                        .font(.largeTitle)
+                        .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.bottom, 50.0)
+                        .padding(.bottom)
+                        .padding(.top, 150)
+                        .frame(width: 400, height: 300)
                 }
                 
                 AnswerRow(givenQuiz: givenQuiz)
@@ -35,7 +37,7 @@ struct QuizView: View {
                         .padding(.top)
                 }
                 CurrentScore()
-                    .padding(.top, 200)
+                    .padding(.top, 50)
                 
                 
 
