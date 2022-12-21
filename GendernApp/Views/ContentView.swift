@@ -30,13 +30,15 @@ struct ContentView: View {
                     Text("Gendern lernen leicht gemacht")
                         .foregroundColor(Color("TextColor"))
                 }
-                
+                //Textfeld für den Benutzernamen
                 TextField("Username", text: $givenusername)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5.0)
                     .padding(.bottom, 1)
                     .disableAutocorrection(true)
+                
+                //Textfeld bzw. SecureFeld der die Eingabe verdeckt für das Passwort
                 SecureField("Password", text: $givenpassword)
                     .padding()
                     .background(Color.white)
@@ -46,6 +48,7 @@ struct ContentView: View {
                 
                 NavigationLink {
                     
+                    //nur, wenn der Nutzername vergeben ist, kann geprüft werden, ob das zugehörige Passwort ebenfalls stimmt. Die erste if-Abfrage schließt somit eine Out-of-Bounds Exception aus
                     if(self.players.usernameAvailable(givenusername)){
                         if(self.players.players[self.players.usernameOffset(givenusername)]
                             .password == givenpassword){
@@ -55,6 +58,7 @@ struct ContentView: View {
                             //
                             //}
                         }
+                        //stimmt das PW nicht, so wird
                         else{
                             Text("wrong password or username, try again or sign up")
                         }

@@ -78,6 +78,9 @@ class Questions : ObservableObject{
         if let Offset = self.quizze.firstIndex(where: {$0.question == givenquiz.question}) {
             // do something with fooOffset
             quizze[Offset].answered = true
+            self.UniQuizze = addQuizze("Uni")
+            self.SchuleQuizze = addQuizze("Schule")
+            self.AlltagQuizze = addQuizze("Alltag")
         }
         
     }
