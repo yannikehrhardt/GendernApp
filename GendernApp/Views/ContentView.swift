@@ -11,6 +11,10 @@ import SwiftUI
 struct ContentView: View {
     //hier wird der Typ Players mit den entsprechenden Variablen initialisiert und muss dann an die entsprechenden Screens weitergegeben werden
     @StateObject var players = Players()
+    
+    //hier wird der Typ Questions mit den entsprechenden Variablen initialisiert und wird dann an die Screens weitergegeben
+    @StateObject var questions = Questions()
+    
     @State var givenusername : String
     @State var givenpassword : String
     
@@ -83,11 +87,6 @@ struct ContentView: View {
                     SignUpButton()
                 }
                 
-                NavigationLink{
-                    AddQuestionsView(players: self.players)
-                }label: { AddQuizButton()
-                }
-                .padding(.top)
                 
             }
                 
@@ -95,6 +94,7 @@ struct ContentView: View {
             .background(Image("Backgrounds App"))
         }
         .environmentObject(players)
+        .environmentObject(questions)
     }
 
 }

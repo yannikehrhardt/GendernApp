@@ -13,6 +13,7 @@ import SwiftUI
 struct QuizButton: View {
     var givenQuiz : [Quiz]
     @EnvironmentObject var players: Players
+    @EnvironmentObject var questions : Questions
     
     
     var body: some View {
@@ -32,23 +33,27 @@ struct QuizButton: View {
                             .padding(.top)
                         
                         
-                       // if(quiz.answered == true){
-                         //   Image(systemName: "checkmark.circle.fill")
-                        //}
+                       if(quiz.answered == true){
+                         Image(systemName: "checkmark.circle.fill")
+                        }
                         
                     }
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .environmentObject(players)
+            .environmentObject(questions)
             
         }
         .padding(.top)
     }
 }
- //   struct QuizButton_Previews: PreviewProvider {
- //      static var previews: some View {
-//            QuizButton(givenQuiz: givenQuiz)
-//       }
-//    }
+ 
+struct QuizButton_Previews: PreviewProvider {
+  static var previews: some View {
+      QuizButton(givenQuiz: Questions().AlltagQuizze)
+          .environmentObject(Players())
+          .environmentObject(Questions())
+}
+}
 

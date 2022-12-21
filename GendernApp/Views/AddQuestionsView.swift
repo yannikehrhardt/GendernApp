@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct AddQuestionsView: View {
-    @State var players: Players
+    
+    @EnvironmentObject var questions : Questions
+    
+    @EnvironmentObject var players: Players
+    
     @State var thema: String = ""
     @State var frage: String = ""
     @State var richtigeAntwort: String = ""
@@ -86,28 +90,36 @@ struct AddQuestionsView: View {
                     
                     isSelected = true
                     
-                    quizze.append(quizNew)
+                    questions.quizze.append(quizNew)
+                    //quizze.append(quizNew)
                     
                     if (thema == "Uni") {
-                        UniQuizze = addQuizze("Uni")
+                        questions.UniQuizze = questions.addQuizze("Uni")
+                        //UniQuizze = addQuizze("Uni")
                     }
                     else if (thema == "Schule"){
-                        SchuleQuizze = addQuizze("Schule")
+                        questions.SchuleQuizze = questions.addQuizze("Schule")
+                        //SchuleQuizze = addQuizze("Schule")
                     }
                     else if (thema == "Alltag") {
-                        AlltagQuizze = addQuizze("Alltag")
+                        questions.AlltagQuizze = questions.addQuizze("Alltag")
+                        //AlltagQuizze = addQuizze("Alltag")
                     }
                 }
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
+        .environmentObject(players)
         
     }
 }
 
 struct AddQuestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        AddQuestionsView(players: Players())
+        
+        AddQuestionsView()
+            .environmentObject(Players())
+            .environmentObject(Questions())
     }
 }

@@ -9,16 +9,10 @@ import SwiftUI
 
 struct QuizView: View {
     @EnvironmentObject var players: Players
+    @EnvironmentObject var questions : Questions
+    
     var givenQuiz : Quiz
 
-    
-    func setQuizAnswered(_ givenquiz : Quiz) -> Void {
-        if let Offset = quizze.firstIndex(where: {$0.id == givenquiz.id}) {
-            //Offset gibt die Stelle im Array an, für die die beiden IDs übereinstimmen
-            quizze[Offset].answered = true
-        }
-        
-    }
     
     var body: some View {
         VStack(spacing:40){
@@ -52,12 +46,15 @@ struct QuizView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
         .environmentObject(players)
+        .environmentObject(questions)
     }
 }
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView(givenQuiz: quiz1).environmentObject(Players())
+        QuizView(givenQuiz: Questions().quiz1)
+            .environmentObject(Players())
+            .environmentObject(Questions())
     }
 }
 

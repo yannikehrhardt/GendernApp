@@ -13,6 +13,8 @@ import SwiftUI
 
 struct AnswerRow: View {
     @EnvironmentObject var players : Players
+    @EnvironmentObject var questions : Questions
+    
     var givenQuiz : Quiz
 
     
@@ -28,13 +30,15 @@ struct AnswerRow: View {
                         
         }
         .environmentObject(players)
-
+        .environmentObject(questions)
     }
 }
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(givenQuiz: quiz1).environmentObject(Players())
+        AnswerRow(givenQuiz: Questions().quiz1)
+            .environmentObject(Players())
+            .environmentObject(Questions())
     }
 }
 

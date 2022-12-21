@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Themenauswahl: View {
     @EnvironmentObject var players: Players
+    @EnvironmentObject var questions : Questions
     
     
     var body: some View {
@@ -51,6 +52,13 @@ struct Themenauswahl: View {
                 .padding(.top, 150)
                 
                 
+                NavigationLink{
+                    AddQuestionsView()
+                }label: { AddQuizButton()
+                }
+                .padding(.top)
+                
+                
                 
                 CurrentScore()
                     .padding(.top, 10)
@@ -62,11 +70,14 @@ struct Themenauswahl: View {
          //   .navigationBarBackButtonHidden(true)
         }
         .environmentObject(players)
+        .environmentObject(questions)
     }
 }
 
 struct Themenauswahl_Previews: PreviewProvider {
     static var previews: some View {
-        Themenauswahl().environmentObject(Players())
+        Themenauswahl()
+            .environmentObject(Players())
+            .environmentObject(Questions())
     }
 }

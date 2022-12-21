@@ -21,6 +21,9 @@ struct Quiz {
     var answered : Bool
     var furtherInformation : String
     
+    //gibt an, welcher Spieler die Frage schon beantwortet hat. Wenn ein Spieler die Frage beantwortet hat, so wird die UUID des Spielers zum Array hinzugefügt
+    var answeredFromPlayer : [UUID]
+    
     
     
     init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: Bool, furtherInformation : String) {
@@ -31,6 +34,7 @@ struct Quiz {
         self.correctAnswer = correctAnswer
         self.allAnswers = allAnswers.shuffled()
         self.furtherInformation = furtherInformation
+        self.answeredFromPlayer = []
     }
 }
     

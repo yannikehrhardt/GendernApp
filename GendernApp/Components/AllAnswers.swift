@@ -13,6 +13,8 @@ struct AllAnswers: View {
     
     var answer: Quiz
     @EnvironmentObject var players: Players
+    @EnvironmentObject var questions : Questions
+    
     @State private var isSelected = false
     @State private var isSelected2 = false
     @State private var isSelected3 = false
@@ -37,6 +39,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
+                            questions.setQuizAnswered(self.answer)
                         }
 
                 }
@@ -75,7 +78,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
-                            setQuizAnswered(self.answer)
+                            questions.setQuizAnswered(self.answer)
                         }
                 }
                 else {
@@ -112,7 +115,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
-                            setQuizAnswered(self.answer)
+                            questions.setQuizAnswered(self.answer)
                         }
                 }
                 else {
@@ -133,14 +136,19 @@ struct AllAnswers: View {
             .shadow(color: isSelected2 ? (answer.allAnswers[2] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 isSelected2 = true
+            
             }
+            .environmentObject(questions)
+            .environmentObject(players)
         }
     }
     
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: "")).environmentObject(Players())
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""))
+                .environmentObject(Players())
+                .environmentObject(Questions())
         }
     }
     
