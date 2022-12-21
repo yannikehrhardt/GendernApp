@@ -10,6 +10,7 @@ import SwiftUI
 struct Themenauswahl: View {
     @EnvironmentObject var players: Players
     
+    
     var body: some View {
         HStack {
             VStack(spacing: 20) {
@@ -57,6 +58,7 @@ struct Themenauswahl: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
+            
          //   .navigationBarBackButtonHidden(true)
         }
         .environmentObject(players)
