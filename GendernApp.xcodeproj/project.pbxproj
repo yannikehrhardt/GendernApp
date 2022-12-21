@@ -136,7 +136,6 @@
 				597877422933B3FE00D1C086 /* Quizauswahl_Schule.swift */,
 				597877442933B45F00D1C086 /* Quizauswahl_Alltag.swift */,
 				5924E888292FA4050012851F /* QuizView.swift */,
-				68509FEE293F9F7E00EE2476 /* PlayerChange.swift */,
 				68509FF0293F9FED00EE2476 /* ScoreView.swift */,
 				590272E629433D0E009F721A /* InfoView.swift */,
 				590272E82948AC2A009F721A /* AddQuestionsView.swift */,
@@ -179,6 +178,7 @@
 				590272E429433981009F721A /* InfoButton.swift */,
 				590272EA2949E14B009F721A /* AddQuizButton.swift */,
 				6883194E2952070F001FD36F /* NewPlayerButton.swift */,
+				68509FEE293F9F7E00EE2476 /* PlayerChange.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
