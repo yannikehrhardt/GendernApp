@@ -12,36 +12,36 @@ import SwiftUI
 
 class Questions : ObservableObject{
     //Uni Quizze
-    let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie wird 'Studenten' richtig gegendert?", correctAnswer: "Studierende", allAnswers: ["Studierende", "ist richtig so", "Studentinnen"], answered: true, furtherInformation: "hello")
+    let quiz1 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie wird 'Studenten' richtig gegendert?", correctAnswer: "Studierende", allAnswers: ["Studierende", "ist richtig so", "Studentinnen"], answered: [], furtherInformation: "hello")
     
-    let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie können alle Geschlechtsidentitäten angesprochen werden?", correctAnswer: "Student*innen", allAnswers: ["Student*innen", "StudentIinnen", "Studenten und Studentinnen"], answered: true, furtherInformation: "Der Stern wird in den letzten Jahren zunehmend verwendet, da das Geschlecht nicht mehr nur als binäres System verstanden wird. Diese Lösung steht allerdings nicht im Einklang mit der amtlichen Orthographie.")
+    let quiz2 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie können alle Geschlechtsidentitäten angesprochen werden?", correctAnswer: "Student*innen", allAnswers: ["Student*innen", "StudentIinnen", "Studenten und Studentinnen"], answered: [], furtherInformation: "Der Stern wird in den letzten Jahren zunehmend verwendet, da das Geschlecht nicht mehr nur als binäres System verstanden wird. Diese Lösung steht allerdings nicht im Einklang mit der amtlichen Orthographie.")
     
-    let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie kann man Mitarbeiter richtig gendern, um alle Geschlechtsidentitäten anzusprechen", correctAnswer: "Mitarbieter_innen", allAnswers: ["Mitarbieter_innen","Mitarbeiter und Mitarbeiterinnen", "MitarbeiterInnen"], answered: false, furtherInformation: "Ähnlich wie das * hat der Unterstrich die Intention, alle existierenden Geschlechter anzusprechen")
+    let quiz3 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Wie kann man Mitarbeiter richtig gendern, um alle Geschlechtsidentitäten anzusprechen", correctAnswer: "Mitarbieter_innen", allAnswers: ["Mitarbieter_innen","Mitarbeiter und Mitarbeiterinnen", "MitarbeiterInnen"], answered: [], furtherInformation: "Ähnlich wie das * hat der Unterstrich die Intention, alle existierenden Geschlechter anzusprechen")
     
-    let quiz4 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Welche Berufsbezeichung ist geschlechtsindifferent?", correctAnswer: "Reinigungskraft", allAnswers: ["Reinigungskraft", "Doktorant", "Professor"], answered: false, furtherInformation: "Reinigungskraft ist geschlechtsindifferent. Sowohl Doktorant als auch Professor beziehen sich nur auf das männliche Geschlecht.")
+    let quiz4 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Welche Berufsbezeichung ist geschlechtsindifferent?", correctAnswer: "Reinigungskraft", allAnswers: ["Reinigungskraft", "Doktorant", "Professor"], answered: [], furtherInformation: "Reinigungskraft ist geschlechtsindifferent. Sowohl Doktorant als auch Professor beziehen sich nur auf das männliche Geschlecht.")
     
-    let quiz5 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Welche Lösung ist heute unüblich?", correctAnswer: "Professor[in]", allAnswers: ["Professor[in]", "Professor/-in", "Professor und Professorin"], answered: false, furtherInformation: "Die Klammerlösung ist zwar amtlich abgesegnet, heute kaum noch üblich, da sie den Eindruck erweckt, die feminine Form sei zweitrangig und weniger wichtig.")
+    let quiz5 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "Welche Lösung ist heute unüblich?", correctAnswer: "Professor[in]", allAnswers: ["Professor[in]", "Professor/-in", "Professor und Professorin"], answered: [], furtherInformation: "Die Klammerlösung ist zwar amtlich abgesegnet, heute kaum noch üblich, da sie den Eindruck erweckt, die feminine Form sei zweitrangig und weniger wichtig.")
     
-    let quiz6 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo6?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
+    let quiz6 = Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo6?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: [], furtherInformation: "")
     
     
     
     //SchulQuizze
-    let quiz7 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "Welche der genannten Lösungen ist heute kaum noch üblich?", correctAnswer: "Schüler[in]", allAnswers: ["Schüler[in]", "Schüler/Schülerin", "Schüler/-in"], answered: false, furtherInformation: "Die Klammerlösung ist zwar amtlich abgesegnet, heute kaum noch üblich, da sie den Eindruck erweckt, die feminine Form sei zweitrangig und weniger wichtig.")
+    let quiz7 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "Welche der genannten Lösungen ist heute kaum noch üblich?", correctAnswer: "Schüler[in]", allAnswers: ["Schüler[in]", "Schüler/Schülerin", "Schüler/-in"], answered: [], furtherInformation: "Die Klammerlösung ist zwar amtlich abgesegnet, heute kaum noch üblich, da sie den Eindruck erweckt, die feminine Form sei zweitrangig und weniger wichtig.")
     
-    let quiz8 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
+    let quiz8 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: [], furtherInformation: "")
     
-    let quiz9 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
+    let quiz9 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: [], furtherInformation: "")
     
-    let quiz10 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: false, furtherInformation: "")
+    let quiz10 = Quiz(id: UUID.init(), type: "gap text" , topic: "Schule", question: "hallo2?", correctAnswer: "hallo", allAnswers: ["hallo", "wrong", "wrong"], answered: [], furtherInformation: "")
     
     
     //AlltagsQuizze
-    let quiz11 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "Welche ist die geeignetste Bezeichnung?", correctAnswer: "Ersatzperson", allAnswers: ["Ersatzperson", "Ersatzmann", "Erstazfrau"], answered: false, furtherInformation: "In bestimmten Zusammenhängen ist es geeigneter geschlechtsindifferente Formen der Berufs-, Amts- und Funktionsbezeichung zu verwenden.")
+    let quiz11 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "Welche ist die geeignetste Bezeichnung?", correctAnswer: "Ersatzperson", allAnswers: ["Ersatzperson", "Ersatzmann", "Erstazfrau"], answered: [], furtherInformation: "In bestimmten Zusammenhängen ist es geeigneter geschlechtsindifferente Formen der Berufs-, Amts- und Funktionsbezeichung zu verwenden.")
     
-    let quiz12 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "Was ist hier korrekte verkürzte Doppelnennung?", correctAnswer: "Masseur/Masseurin", allAnswers: ["Masseur/Masseurin", "Masseur/Masseuse", "Masseure"], answered: false, furtherInformation: "Bei Masseure handelt es sich nicht und eine Doppelnennung, es wird nur das männliche Geschlecht angesprochen. Masseur/Masseuse ist nicht korrekte, da Masseuse heute meist die Bedeutung >Prostituierte in einem Massagesalon< hat.")
+    let quiz12 = Quiz(id: UUID.init(), type: "gap text" , topic: "Alltag", question: "Was ist hier korrekte verkürzte Doppelnennung?", correctAnswer: "Masseur/Masseurin", allAnswers: ["Masseur/Masseurin", "Masseur/Masseuse", "Masseure"], answered: [], furtherInformation: "Bei Masseure handelt es sich nicht und eine Doppelnennung, es wird nur das männliche Geschlecht angesprochen. Masseur/Masseuse ist nicht korrekte, da Masseuse heute meist die Bedeutung >Prostituierte in einem Massagesalon< hat.")
     
-    let quiz13 = Quiz(id: UUID.init(), type: "gap text", topic: "Uni", question: "Wer bist du?" , correctAnswer: "ich", allAnswers: ["ich", "du", "er"], answered: false, furtherInformation: "weil")
+    let quiz13 = Quiz(id: UUID.init(), type: "gap text", topic: "Uni", question: "Wer bist du?" , correctAnswer: "ich", allAnswers: ["ich", "du", "er"], answered: [], furtherInformation: "weil")
     
     
     
@@ -67,17 +67,16 @@ class Questions : ObservableObject{
         return solution
     }
     
-    //fügt einem übrgebenen Quiz die UUID des Spielers hinzu, der die Frage korrekt beantwortet hat
-    //func setQuizAnswered(_ givenQuiz: Quiz, _ playerUUID: UUID){
-        //kommt noch
-    //}
     
-    
-    
-    func setQuizAnswered(_ givenquiz : Quiz) -> Void {
+    //bekommt ein Quiz und einen Nutzernamen übergeben
+    //Das Array quizze, das alle Quizze umfasst wird daraufhin durchsucht, bis die Position (im Array) des übergebenen Quiz gefunden wurde (=Variable Offset)
+    //für dieses Quiz wird der Benutzername des Spielers hinzugefügt, der die Frage beantwortet hat. Somit kann unterschieden werden, welcher Spieler die Frage bereits beantwortet hat
+    func setQuizAnswered(_ givenquiz : Quiz, _ givenUsername : String) -> Void {
         if let Offset = self.quizze.firstIndex(where: {$0.question == givenquiz.question}) {
-            // do something with fooOffset
-            quizze[Offset].answered = true
+            
+            quizze[Offset].answered.append(givenUsername)
+            
+            //die Sub-Arrays für die Themen müssen neu geladen werden, damit die Änderungen in den Views Quizauswahl_Universität, Quizauswahl-Schule und Quizauswahl_Alltag übernommen werden
             self.UniQuizze = addQuizze("Uni")
             self.SchuleQuizze = addQuizze("Schule")
             self.AlltagQuizze = addQuizze("Alltag")

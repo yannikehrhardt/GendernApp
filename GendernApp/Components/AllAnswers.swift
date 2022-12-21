@@ -39,7 +39,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
-                            questions.setQuizAnswered(self.answer)
+                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
                         }
 
                 }
@@ -78,7 +78,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
-                            questions.setQuizAnswered(self.answer)
+                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
                         }
                 }
                 else {
@@ -115,7 +115,7 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             self.players.addScore()
-                            questions.setQuizAnswered(self.answer)
+                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
                         }
                 }
                 else {
@@ -146,7 +146,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: false, furtherInformation: ""))
+            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: [], furtherInformation: ""))
                 .environmentObject(Players())
                 .environmentObject(Questions())
         }

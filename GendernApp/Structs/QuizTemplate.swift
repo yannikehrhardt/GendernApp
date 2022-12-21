@@ -19,8 +19,8 @@ struct Quiz {
     var correctAnswer : String
     var allAnswers: [String]
     
-    //gibt an, welcher Spieler die Frage schon beantwortet hat. Wenn ein Spieler die Frage beantwortet hat, so wird die UUID des Spielers zum Array hinzugefügt
-    var answered : Bool
+    //gibt an, welcher Spieler die Frage schon beantwortet hat. Wenn ein Spieler die Frage beantwortet hat, so wird der (einzigartige) Benutzername des Spielers zum Array hinzugefügt
+    var answered : [String]
     
     //Erklärung, wieso die Antwort einer Frage korrekt ist -> wird im Info-Screen ausgelesen
     var furtherInformation : String
@@ -29,7 +29,7 @@ struct Quiz {
     
     
     
-    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: Bool, furtherInformation : String) {
+    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: [String], furtherInformation : String) {
         self.type = type
         self.topic = topic
         self.question = question

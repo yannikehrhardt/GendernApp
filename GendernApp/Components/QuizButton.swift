@@ -33,7 +33,7 @@ struct QuizButton: View {
                             .padding(.top)
                         
                         
-                       if(quiz.answered == true){
+                        if(quiz.answered.contains(players.currentplayer.username)){
                          Image(systemName: "checkmark.circle.fill")
                         }
                         
