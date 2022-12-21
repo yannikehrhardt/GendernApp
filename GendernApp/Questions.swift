@@ -74,6 +74,17 @@ class Questions : ObservableObject{
         return solution
     }
     
+    func getQuizOffset(_ givenQuiz : Quiz) -> Int {
+        if let Offset = self.quizze.firstIndex(where: {$0.question == givenQuiz.question}){
+            return Offset
+        }
+        
+        //else sollte nicht benötigt werden, wenn der Aufruf dann erfolgt, wenn klar ist, dass das übergebene Quiz exisitert.
+        else{
+            return -1
+        }
+    }
+    
     
     //bekommt ein Quiz und einen Nutzernamen übergeben
     //Das Array quizze, das alle Quizze umfasst wird daraufhin durchsucht, bis die Position (im Array) des übergebenen Quiz gefunden wurde (=Variable Offset)

@@ -38,8 +38,11 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.players.addScore()
-                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
+                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                                self.players.addScore()
+                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            }
                         }
 
                 }
@@ -78,8 +81,11 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.players.addScore()
-                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
+                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                                self.players.addScore()
+                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            }
                         }
                 }
                 else {
@@ -116,8 +122,12 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.players.addScore()
-                            questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            
+                            //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
+                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                                self.players.addScore()
+                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                            }
                         }
                 }
                 else {

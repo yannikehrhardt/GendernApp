@@ -32,7 +32,7 @@ class Players : ObservableObject{
         self.player1 = PlayerTemplate(id: UUID.init(), username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
         self.player2 = PlayerTemplate(id: UUID.init(), username: "Hannah", password: "1234", currentscore: 10, averagescore: 10)
         self.player3 = PlayerTemplate(id: UUID.init(), username: "1", password: "1", currentscore: 5, averagescore: 10)
-        self.player4 = PlayerTemplate(id: UUID.init(), username: "", password: "", currentscore: 10, averagescore: 10)
+        self.player4 = PlayerTemplate(id: UUID.init(), username: "", password: "", currentscore: 7, averagescore: 10)
         self.players = [player1, player2, player3, player4]
         self.currentplayer = player1
     }
