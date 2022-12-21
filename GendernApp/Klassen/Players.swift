@@ -15,12 +15,16 @@ class Players : ObservableObject{
     var player3: PlayerTemplate
     var player4: PlayerTemplate
     
-    //s.o.: wenn eine der Variablen verändert wird, laden die Views neu
+    //s.o.: wenn eine der Variablen verändert wird, laden die Views neu:
+    
+    //Array mit allen existierenden Spielern
     @Published var players : [PlayerTemplate]
+    
+    //Aktueller Spieler: wird für den Score referenziert. Wird beim Einloggen neu gesetzt (in ContentView)
     @Published var currentplayer : PlayerTemplate
     
-   // public static var shared : Players = Players()
     
+    //
     
     init() {
         self.player1 = PlayerTemplate(id: UUID.init(), username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
