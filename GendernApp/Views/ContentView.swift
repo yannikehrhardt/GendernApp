@@ -46,10 +46,10 @@ struct ContentView: View {
                         if(self.players.players[self.players.usernameOffset(givenusername)]
                             .password == givenpassword){
                             Themenauswahl()
-                            .onAppear(){
-                                self.players.setCurrentPlayer(self.players.usernameOffset(givenusername))
-                            
-                            }
+                            //.onAppear(){
+                            //
+                            //
+                            //}
                         }
                         else{
                             Text("wrong password or username, try again or sign up")
@@ -62,6 +62,17 @@ struct ContentView: View {
                     }
                 }label: {
                     PlayButton(text: "Log In", players: self.players)
+                        .onTapGesture {
+                            if(self.players.usernameAvailable(givenusername)){
+                                if(self.players.players[self.players.usernameOffset(givenusername)]
+                                    .password == givenpassword){
+                                    self.players.setCurrentPlayer(self.players.usernameOffset(givenusername))
+                                }
+                            }
+                            else {
+                                Text("wrong password or username, try again or sign up")
+                            }
+                        }
                 }
                 
                 Text("or")
