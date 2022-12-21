@@ -19,6 +19,9 @@ struct AddQuestionsView: View {
     @State var falscheAntwort1: String = ""
     @State var falscheAntwort2: String = ""
     @State var weitereInformationen: String = ""
+    @State private var hiddenFailure = true
+    @State private var hiddenSuccess = true
+    
     
     @State private var isSelected = false
     
@@ -90,22 +93,40 @@ struct AddQuestionsView: View {
                     
                     isSelected = true
                     
-                    questions.quizze.append(quizNew)
-                    //quizze.append(quizNew)
-                    
-                    if (thema == "Uni") {
-                        questions.UniQuizze = questions.addQuizze("Uni")
-                        //UniQuizze = addQuizze("Uni")
+                    if(thema != "" && frage != "" && richtigeAntwort != "" && falscheAntwort1 != "" && falscheAntwort2 != "" && weitereInformationen != "" && !questions.questionAvailable(frage)){
+                        
+                        questions.quizze.append(quizNew)
+                        //quizze.append(quizNew)
+                        
+                        if (thema == "Uni") {
+                            questions.UniQuizze = questions.addQuizze("Uni")
+                            //UniQuizze = addQuizze("Uni")
+                        }
+                        else if (thema == "Schule"){
+                            questions.SchuleQuizze = questions.addQuizze("Schule")
+                            //SchuleQuizze = addQuizze("Schule")
+                        }
+                        else if (thema == "Alltag") {
+                            questions.AlltagQuizze = questions.addQuizze("Alltag")
+                            //AlltagQuizze = addQuizze("Alltag")
+                        }
+                        
+                        self.hiddenSuccess = false
+                        self.hiddenFailure = true
                     }
-                    else if (thema == "Schule"){
-                        questions.SchuleQuizze = questions.addQuizze("Schule")
-                        //SchuleQuizze = addQuizze("Schule")
-                    }
-                    else if (thema == "Alltag") {
-                        questions.AlltagQuizze = questions.addQuizze("Alltag")
-                        //AlltagQuizze = addQuizze("Alltag")
+                    else {
+                        self.hiddenFailure = false
+                        self.hiddenSuccess = true
+                        
                     }
                 }
+            
+            if (self.hiddenFailure == false) {
+                Text("Falsche Eingaben: Deine neue Quizfrage wurde nicht erstellt. Versuche es erneut.")
+            }   
+            if (!self.hiddenSuccess){
+                Text("Dein Quizfrage wurde erfolgreich erstellt.")
+            }
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

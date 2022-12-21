@@ -85,6 +85,17 @@ class Questions : ObservableObject{
         }
     }
     
+    //prüft, ob eine gegebene Frage bereits gestellt wurde
+    func questionAvailable(_ quizQuestion : String) -> Bool {
+        var available = false
+        for quiz in quizze{
+            if(quiz.question == quizQuestion){
+                available = true
+                break
+            }
+        }
+        return available
+    }
     
     //bekommt ein Quiz und einen Nutzernamen übergeben
     //Das Array quizze, das alle Quizze umfasst wird daraufhin durchsucht, bis die Position (im Array) des übergebenen Quiz gefunden wurde (=Variable Offset)

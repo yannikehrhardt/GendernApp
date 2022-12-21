@@ -12,8 +12,8 @@ struct SignUp: View {
     @State var givenUsername = ""
     @State var givenPassword = ""
     @State var passwordRetry = ""
-    @State private var hidden = true
-    @State private var hiddenErfolg = true
+    @State private var hiddenFailure = true
+    @State private var hiddenSuccess = true
     
     var body: some View {
         VStack(spacing: 30){
@@ -60,20 +60,20 @@ struct SignUp: View {
                     
                     if(givenPassword == passwordRetry && givenPassword != "" && !self.players.usernameAvailable(givenUsername)){
                         players.appendPlayer(newPlayer)
-                        self.hidden = true
-                        self.hiddenErfolg = false
+                        self.hiddenFailure = true
+                        self.hiddenSuccess = false
                     }
                     else {
-                        self.hidden = false
-                        self.hiddenErfolg = true
+                        self.hiddenFailure = false
+                        self.hiddenSuccess = true
                     }
                     
                 }
                 
-            if (self.hidden == false) {
+            if (self.hiddenFailure == false) {
                 Text("Falsche Eingaben: Benutzer wurde nicht erstellt. Versuche es erneut")
             }
-            if (!self.hiddenErfolg){
+            if (!self.hiddenSuccess){
                 Text("Dein Account wurde erstellt. Kehre in den Log-In Screen zurück um dich anzumelden")
             }
         }
