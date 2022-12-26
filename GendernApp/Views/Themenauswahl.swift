@@ -11,6 +11,8 @@ struct Themenauswahl: View {
     @EnvironmentObject var players: Players
     @EnvironmentObject var questions : Questions
     
+    var givenUsername : String
+    
     
     var body: some View {
         HStack {
@@ -66,8 +68,11 @@ struct Themenauswahl: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
-            
-         //   .navigationBarBackButtonHidden(true)
+        }
+        
+        //wenn der Screen aufgerufen wird, wird der aktuelle Spieler gesetzt
+        .onAppear(){
+            self.players.setCurrentPlayer(self.players.usernameOffset(self.givenUsername))
         }
         .environmentObject(players)
         .environmentObject(questions)
@@ -76,7 +81,7 @@ struct Themenauswahl: View {
 
 struct Themenauswahl_Previews: PreviewProvider {
     static var previews: some View {
-        Themenauswahl()
+        Themenauswahl(givenUsername: "Yannik")
             .environmentObject(Players())
             .environmentObject(Questions())
     }
