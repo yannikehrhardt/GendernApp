@@ -15,18 +15,18 @@ struct UniversityButton: View {
     var background: Color = Color("ButtonColor")
         
     var body: some View {
-        Text("Universität")
-            .font(.title2)
-            .fontWeight(.medium)
-            .foregroundColor(Color.white)
-            .multilineTextAlignment(.center)
-            .padding()
-            .padding(.horizontal)
+            VStack(spacing:20){
+                Text("Universität")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color.white)
+                    
+                
+            }
+            .frame(width: 250, height: 80)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
-            .shadow(radius: 10)
-            .frame(maxWidth: .infinity)
-        
+            .shadow(radius: 20)
     }
     }
 
@@ -35,3 +35,6 @@ struct UniversitatButton_Previews: PreviewProvider {
         UniversityButton()
     }
 }
+
+
+// Button größer machen

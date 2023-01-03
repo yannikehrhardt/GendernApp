@@ -19,7 +19,7 @@ struct InfoButton: View {
             .padding(.horizontal)
             .background(Color("ButtonColor"))
             .cornerRadius(200)
-            .shadow(radius: 10)
+            .shadow(radius: 20)
             .bold()
     }
 }

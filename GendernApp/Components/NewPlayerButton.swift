@@ -18,7 +18,7 @@ struct NewPlayerButton: View {
             .padding(.horizontal)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
-            .shadow(radius: 10)
+            .shadow(radius: 20)
             .frame(maxWidth: .infinity)
         }
     }

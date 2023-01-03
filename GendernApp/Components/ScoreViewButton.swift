@@ -11,16 +11,17 @@ struct ScoreViewButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Your Score")
-            .font(.title3)
-            .fontWeight(.medium)
-            .foregroundColor(Color.white)
-            .padding()
-            .padding(.horizontal)
-            .background(Color("ButtonColor"))
-            .cornerRadius(20)
-            .shadow(radius: 10)
-        
+        VStack(spacing:20){
+            Text("Your Score")
+                .font(.title2)
+                .fontWeight(.medium)
+                .foregroundColor(Color.white)
+                
+        }
+        .frame(width:200, height: 70)
+        .background(Color("ButtonColor"))
+        .cornerRadius(20)
+        .shadow(radius: 20)
     }
 }
 

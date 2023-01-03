@@ -21,7 +21,7 @@ struct Themenauswahl: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
-                    .padding(.bottom, 50.0)
+                    .padding(.bottom)
                     .padding(.top, 50)
                  
                 
@@ -51,7 +51,7 @@ struct Themenauswahl: View {
                 } label: {
                     ScoreViewButton()
                 }
-                .padding(.top, 150)
+                .padding(.top, 50)
                 
                 
                 NavigationLink{
@@ -86,3 +86,5 @@ struct Themenauswahl_Previews: PreviewProvider {
             .environmentObject(Questions())
     }
 }
+
+// Darstellung der Buttons verändern --> größer machen
