@@ -25,6 +25,7 @@ struct InfoView: View {
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color("TextColor2"))
+                .padding(.horizontal)
                 .frame(width: 380.0, height: 400.0)
                 .background(.white)
                 .cornerRadius(20)
