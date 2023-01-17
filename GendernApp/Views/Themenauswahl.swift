@@ -10,6 +10,7 @@ import SwiftUI
 struct Themenauswahl: View {
     @EnvironmentObject var players: Players
     @EnvironmentObject var questions : Questions
+    @EnvironmentObject var rules: Rules
     
     var givenUsername : String
     
@@ -76,6 +77,7 @@ struct Themenauswahl: View {
         }
         .environmentObject(players)
         .environmentObject(questions)
+        .environmentObject(rules)
     }
 }
 
@@ -84,6 +86,7 @@ struct Themenauswahl_Previews: PreviewProvider {
         Themenauswahl(givenUsername: "Yannik")
             .environmentObject(Players())
             .environmentObject(Questions())
+            .environmentObject(Rules())
     }
 }
 

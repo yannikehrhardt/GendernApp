@@ -15,6 +15,8 @@ struct ContentView: View {
     //hier wird der Typ Questions mit den entsprechenden Variablen initialisiert und wird dann an die Screens weitergegeben
     @StateObject var questions = Questions()
     
+    @StateObject var rules = Rules()
+    
     @State var givenusername : String
     @State var givenpassword : String
     
@@ -89,6 +91,7 @@ struct ContentView: View {
         }
         .environmentObject(players)
         .environmentObject(questions)
+        .environmentObject(rules)
     }
 
 }

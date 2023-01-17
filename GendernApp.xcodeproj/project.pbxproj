@@ -33,6 +33,11 @@
 		68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF0293F9FED00EE2476 /* ScoreView.swift */; };
 		68509FF3293FA19300EE2476 /* ScoreViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF2293FA19300EE2476 /* ScoreViewButton.swift */; };
 		68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FF42940CA8000EE2476 /* ScoreComparison.swift */; };
+		686C927D2976D26900EFFDC7 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C927C2976D26900EFFDC7 /* Rules.swift */; };
+		686C927F2976D36500EFFDC7 /* RuleTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C927E2976D36500EFFDC7 /* RuleTemplate.swift */; };
+		686C92812976DED300EFFDC7 /* RuleScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C92802976DED300EFFDC7 /* RuleScroll.swift */; };
+		686C92832976E5BB00EFFDC7 /* RuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C92822976E5BB00EFFDC7 /* RuleView.swift */; };
+		686C92852976E79400EFFDC7 /* RuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C92842976E79400EFFDC7 /* RuleButton.swift */; };
 		68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE629112C3300E1572B /* GendernAppApp.swift */; };
 		68797AE929112C3300E1572B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68797AE829112C3300E1572B /* ContentView.swift */; };
 		68797AEB29112C3300E1572B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68797AEA29112C3300E1572B /* Assets.xcassets */; };
@@ -87,6 +92,11 @@
 		68509FF0293F9FED00EE2476 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		68509FF2293FA19300EE2476 /* ScoreViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewButton.swift; sourceTree = "<group>"; };
 		68509FF42940CA8000EE2476 /* ScoreComparison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreComparison.swift; sourceTree = "<group>"; };
+		686C927C2976D26900EFFDC7 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		686C927E2976D36500EFFDC7 /* RuleTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTemplate.swift; sourceTree = "<group>"; };
+		686C92802976DED300EFFDC7 /* RuleScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleScroll.swift; sourceTree = "<group>"; };
+		686C92822976E5BB00EFFDC7 /* RuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleView.swift; sourceTree = "<group>"; };
+		686C92842976E79400EFFDC7 /* RuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleButton.swift; sourceTree = "<group>"; };
 		68797AE329112C3300E1572B /* GendernApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GendernApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68797AE629112C3300E1572B /* GendernAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GendernAppApp.swift; sourceTree = "<group>"; };
 		68797AE829112C3300E1572B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -134,11 +144,11 @@
 				597877422933B3FE00D1C086 /* Quizauswahl_Schule.swift */,
 				597877442933B45F00D1C086 /* Quizauswahl_Alltag.swift */,
 				5924E888292FA4050012851F /* QuizView.swift */,
-				68509FEE293F9F7E00EE2476 /* SignUp.swift */,
 				68509FF0293F9FED00EE2476 /* ScoreView.swift */,
 				68509FEE293F9F7E00EE2476 /* SignUp.swift */,
 				590272E629433D0E009F721A /* InfoView.swift */,
 				590272E82948AC2A009F721A /* AddQuestionsView.swift */,
+				686C92822976E5BB00EFFDC7 /* RuleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +158,7 @@
 			children = (
 				682DDC9F2912746B002067B3 /* QuizTemplate.swift */,
 				68509FE8293F96E100EE2476 /* PlayerTemplate.swift */,
+				686C927E2976D36500EFFDC7 /* RuleTemplate.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -155,6 +166,7 @@
 		5924E88C292FAECF0012851F /* Klassen */ = {
 			isa = PBXGroup;
 			children = (
+				686C927C2976D26900EFFDC7 /* Rules.swift */,
 				68509FEA293F978500EE2476 /* Players.swift */,
 			);
 			path = Klassen;
@@ -177,6 +189,8 @@
 				590272E429433981009F721A /* InfoButton.swift */,
 				590272EA2949E14B009F721A /* AddQuizButton.swift */,
 				6883194E2952070F001FD36F /* NewPlayerButton.swift */,
+				686C92802976DED300EFFDC7 /* RuleScroll.swift */,
+				686C92842976E79400EFFDC7 /* RuleButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -384,10 +398,13 @@
 				682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */,
 				68509FED293F99AA00EE2476 /* SignUpButton.swift in Sources */,
 				68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */,
+				686C92852976E79400EFFDC7 /* RuleButton.swift in Sources */,
 				5924E889292FA4050012851F /* QuizView.swift in Sources */,
+				686C927D2976D26900EFFDC7 /* Rules.swift in Sources */,
 				5978775029364DA900D1C086 /* QuizButton.swift in Sources */,
 				597877432933B3FE00D1C086 /* Quizauswahl_Schule.swift in Sources */,
 				6883194F2952070F001FD36F /* NewPlayerButton.swift in Sources */,
+				686C92812976DED300EFFDC7 /* RuleScroll.swift in Sources */,
 				5924E88E292FB1490012851F /* Questions.swift in Sources */,
 				597877582937A7FD00D1C086 /* AllAnswers.swift in Sources */,
 				68509FF1293F9FED00EE2476 /* ScoreView.swift in Sources */,
@@ -396,6 +413,8 @@
 				5978773F2933AC3C00D1C086 /* UniversityButton.swift in Sources */,
 				5978775A293F9B7100D1C086 /* CurrentScore.swift in Sources */,
 				597877452933B45F00D1C086 /* Quizauswahl_Alltag.swift in Sources */,
+				686C92832976E5BB00EFFDC7 /* RuleView.swift in Sources */,
+				686C927F2976D36500EFFDC7 /* RuleTemplate.swift in Sources */,
 				590272E92948AC2A009F721A /* AddQuestionsView.swift in Sources */,
 				5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */,
 				597877412933ACF000D1C086 /* Quizauswahl_Universitat.swift in Sources */,

@@ -10,10 +10,11 @@ import SwiftUI
 struct Quizauswahl_Universitat: View {
     @EnvironmentObject var players: Players
     @EnvironmentObject var questions: Questions
+    @EnvironmentObject var rules: Rules
     
     var body: some View {
-            VStack(spacing: 40){
-                Text("Pick a Quiz")
+            VStack(spacing: 20){
+                Text("Wähle ein Quiz aus")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
@@ -22,9 +23,15 @@ struct Quizauswahl_Universitat: View {
 
                 QuizButton(givenQuiz: questions.UniQuizze)
                 
+                NavigationLink{
+                    RuleView()
+                }label: {
+                    RuleButton()
+                }
+                
                 CurrentScore()
-
                     .padding(.bottom)
+                
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -32,6 +39,7 @@ struct Quizauswahl_Universitat: View {
             .scrollContentBackground(.hidden)
             .environmentObject(players)
             .environmentObject(questions)
+            .environmentObject(rules)
         }
     }
     
@@ -40,6 +48,7 @@ struct Quizauswahl_Universitat: View {
             Quizauswahl_Universitat()
                 .environmentObject(Players())
                 .environmentObject(Questions())
+                .environmentObject(Rules())
         }
     }
 

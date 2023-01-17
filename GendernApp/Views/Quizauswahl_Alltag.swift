@@ -10,6 +10,7 @@ import SwiftUI
 struct Quizauswahl_Alltag: View {
     @EnvironmentObject var players: Players
     @EnvironmentObject var questions : Questions
+    @EnvironmentObject var rules: Rules
     
     var body: some View {
         VStack(spacing: 20){
@@ -22,6 +23,12 @@ struct Quizauswahl_Alltag: View {
             
             QuizButton(givenQuiz: questions.AlltagQuizze)
             
+            NavigationLink{
+                RuleView()
+            }label: {
+                RuleButton()
+            }
+            
             CurrentScore()
                 .padding(.bottom)
             
@@ -30,6 +37,7 @@ struct Quizauswahl_Alltag: View {
         .background(Image("Backgrounds App"))
         .environmentObject(players)
         .environmentObject(questions)
+        .environmentObject(rules)
     }
 }
 
@@ -38,5 +46,6 @@ struct Quizauswahl_Alltag_Previews: PreviewProvider {
         Quizauswahl_Alltag()
             .environmentObject(Players())
             .environmentObject(Questions())
+            .environmentObject(Rules())
     }
 }
