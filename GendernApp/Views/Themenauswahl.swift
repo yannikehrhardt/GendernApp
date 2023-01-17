@@ -18,7 +18,7 @@ struct Themenauswahl: View {
     var body: some View {
         HStack {
             VStack(spacing: 20) {
-                Text("Please select a topic")
+                Text("Wähle ein Thema!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
