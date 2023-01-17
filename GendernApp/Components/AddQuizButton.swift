@@ -12,7 +12,7 @@ struct AddQuizButton: View {
     
     var body: some View {
         VStack(spacing:20){
-            Text("Add new Quiz")
+            Text("Neues Quiz hinzufügen")
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(Color.white)

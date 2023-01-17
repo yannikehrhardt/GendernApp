@@ -15,7 +15,7 @@ struct Quizauswahl_Alltag: View {
     var body: some View {
         VStack(spacing: 20){
             
-            Text("Pick a Quiz :O")
+            Text("Wähle ein Quiz aus!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))

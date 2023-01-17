@@ -12,7 +12,7 @@ struct ScoreViewButton: View {
     
     var body: some View {
         VStack(spacing:20){
-            Text("Your Score")
+            Text("Vergleiche deinen Score")
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(Color.white)
