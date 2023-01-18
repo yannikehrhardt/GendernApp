@@ -11,14 +11,18 @@ struct ScoreViewButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        VStack(spacing:20){
-            Text("Vergleiche deinen Score")
-                .font(.title2)
-                .fontWeight(.light)
-                .foregroundColor(Color.white)
+        HStack(spacing:20){
+//            Text("Score Vergleich")
+//                .font(.title2)
+//                .fontWeight(.light)
+//                .foregroundColor(Color.white)
+            
+            Image(systemName: "person.3")
+                .font(.largeTitle)
+                .foregroundColor(.white)
                 
         }
-        .frame(width:300, height: 70)
+        .frame(width: 80, height: 80)
         .background(Color("ButtonColor"))
         .cornerRadius(20)
         .shadow(radius: 20)

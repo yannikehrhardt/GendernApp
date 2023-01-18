@@ -16,62 +16,83 @@ struct Themenauswahl: View {
     
     
     var body: some View {
-        HStack {
-            VStack(spacing: 20) {
-                Text("Wähle ein Thema!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("TextColor"))
-                    .padding(.bottom)
-                    .padding(.top, 50)
-                    .shadow(radius: 20)
-                 
-                Image(systemName: "gamecontroller")
-                
-                NavigationLink{
-                    Quizauswahl_Universitat()
-                }label: {
-                    UniversityButton()
-                }
-                
-                
-                NavigationLink{
-                    Quizauswahl_Schule()
-                }label: {
-                    SchuleButton()
-                }
-                
-                
-                NavigationLink{
-                    Quizauswahl_Alltag()
-                }label: {
-                    AlltagButton()
-                }
-                
-                Image(systemName: "gamecontroller")
-                
-                
+        VStack(spacing: 20) {
+            Text("Wähle ein Thema!")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(Color("TextColor"))
+                .padding(.bottom)
+                .padding(.top, 50)
+                .shadow(radius: 20)
+            
+            Image(systemName: "gamecontroller")
+                .font(.system(size: 30))
+            
+            NavigationLink{
+                Quizauswahl_Universitat()
+            }label: {
+                UniversityButton()
+            }
+            
+            NavigationLink{
+                Quizauswahl_Schule()
+            }label: {
+                SchuleButton()
+            }
+            
+            NavigationLink{
+                Quizauswahl_Alltag()
+            }label: {
+                AlltagButton()
+            }
+            
+            Image(systemName: "gamecontroller")
+                .font(.system(size: 30))
+            
+//            CurrentScore()
+//                .padding(.top, 10)
+            
+            HStack{
                 NavigationLink{
                     ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
                 } label: {
                     ScoreViewButton()
+                        .padding(.trailing, 20.0)
                 }
+                .padding(.trailing, 50)
+                
+                
                 
                 NavigationLink{
                     AddQuestionsView()
                 }label: { AddQuizButton()
                 }
-                .padding(.top)
                 
-                
-                
-                CurrentScore()
-                    .padding(.top, 10)
                 
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Image("Backgrounds App"))
+            .padding(.top)
+            
         }
+//        .toolbar{
+//            ToolbarItemGroup(placement: .bottomBar) {
+//                NavigationLink{
+//                    ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
+//                } label: {
+//                    ScoreViewButton()
+//                        .padding(.trailing, 20.0)
+//                }
+//
+//
+//                NavigationLink{
+//                    AddQuestionsView()
+//                }label: { AddQuizButton()
+//                }
+//            }
+//        }
+        .frame(maxWidth: 300, maxHeight: .infinity)
+        .background(Image("Backgrounds App"))
+
+        
         
         //wenn der Screen aufgerufen wird, wird der aktuelle Spieler gesetzt
         .onAppear(){

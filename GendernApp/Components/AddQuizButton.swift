@@ -11,14 +11,22 @@ struct AddQuizButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        VStack(spacing:20){
-            Text("Neues Quiz hinzufügen")
-                .font(.title2)
-                .fontWeight(.light)
-                .foregroundColor(Color.white)
+        HStack(spacing:20){
+//            Text("Neues Quiz ")
+//                .font(.title2)
+//                .fontWeight(.light)
+//                .foregroundColor(Color.white)
+//                .padding(.leading)
+                
+            
+            Image(systemName: "plus.circle")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+
+            
                 
         }
-        .frame(width:300, height: 70)
+        .frame(width: 80, height: 80)
         .background(Color("ButtonColor"))
         .cornerRadius(20)
         .shadow(radius: 20)

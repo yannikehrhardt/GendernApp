@@ -22,8 +22,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 30) {
-                VStack(spacing: 20){
+            VStack(spacing: 25) {
                     
                     Image("Genderzeichen 1")
                     
@@ -34,7 +33,7 @@ struct ContentView: View {
                     
                     Text("Gendern lernen leicht gemacht")
                         .foregroundColor(Color("TextColor"))
-                }
+                
                 
                 //Textfeld für den Benutzernamen
                 TextField("Username", text: $givenusername)

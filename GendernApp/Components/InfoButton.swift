@@ -11,16 +11,20 @@ struct InfoButton: View {
     var background: Color = Color("ButtonColor")
     
     var body: some View {
-        Text("Info")
-            .font(.title3)
-            .fontWeight(.medium)
-            .foregroundColor(Color.white)
-            .padding()
-            .padding(.horizontal)
-            .background(Color("ButtonColor"))
-            .cornerRadius(200)
-            .shadow(radius: 20)
-            .bold()
+        HStack{
+            
+            Image(systemName: "info.circle")
+                .font(.title3)
+            
+            Text("Info")
+                .font(.title3)
+                .fontWeight(.medium)
+        }
+        .foregroundColor(Color.white)
+        .padding()
+        .background(Color("ButtonColor"))
+        .cornerRadius(200)
+        .shadow(radius: 20)
     }
 }
 

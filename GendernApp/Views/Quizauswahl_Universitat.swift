@@ -24,14 +24,19 @@ struct Quizauswahl_Universitat: View {
 
                 QuizButton(givenQuiz: questions.UniQuizze)
                 
-                NavigationLink{
-                    RuleView()
-                }label: {
-                    RuleButton()
+                HStack{
+                    
+                    CurrentScore()
+                    
+                    NavigationLink{
+                        RuleView()
+                    }label: {
+                        RuleButton()
+                    }
+                    .padding(.leading, 20)
+                    
+                   
                 }
-                
-                CurrentScore()
-                
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
