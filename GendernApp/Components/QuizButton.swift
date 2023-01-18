@@ -29,8 +29,8 @@ struct QuizButton: View {
                                 .padding()
                                 .padding(.horizontal)
                                 
-                            
-                            if(quiz.answered.contains(players.currentplayer.username)){
+                            if(players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(quiz.id)){
+
                                 Image(systemName: "checkmark.circle.fill")
                             }
                             

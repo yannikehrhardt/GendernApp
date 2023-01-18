@@ -87,6 +87,8 @@ struct ContentView: View {
             }
             .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
+                
+            
         }
         .environmentObject(players)
         .environmentObject(questions)
