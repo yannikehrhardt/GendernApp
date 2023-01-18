@@ -52,7 +52,7 @@ struct SignUp: View {
             .cornerRadius(20)
             
             
-            let newPlayer = PlayerTemplate.init(id: UUID.init(), username: givenUsername, password: givenPassword, currentscore: 0, averagescore: 0)
+            let newPlayer = PlayerTemplate.init(username: givenUsername, password: givenPassword, currentscore: 0, averagescore: 0)
             
             
             NewPlayerButton()

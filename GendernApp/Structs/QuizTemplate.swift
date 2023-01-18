@@ -10,17 +10,12 @@ import SwiftUI
 
 struct Quiz {
     
-    var id: UUID{
-        UUID()
-    }
+    var id: UUID
     var type : String
     var topic : String
     var question : String
     var correctAnswer : String
     var allAnswers: [String]
-    
-    //gibt an, welcher Spieler die Frage schon beantwortet hat. Wenn ein Spieler die Frage beantwortet hat, so wird der (einzigartige) Benutzername des Spielers zum Array hinzugefügt
-    var answered : [String]
     
     //Erklärung, wieso die Antwort einer Frage korrekt ist -> wird im Info-Screen ausgelesen
     var furtherInformation : String
@@ -29,13 +24,13 @@ struct Quiz {
     
     
     
-    init(id: UUID, type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], answered: [String], furtherInformation : String) {
+    init(type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], furtherInformation : String) {
+        self.id = UUID.init()
         self.type = type
         self.topic = topic
         self.question = question
         self.correctAnswer = correctAnswer
         self.allAnswers = allAnswers.shuffled()
-        self.answered = answered
         self.furtherInformation = furtherInformation
     }
 }

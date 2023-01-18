@@ -29,10 +29,10 @@ class Players : ObservableObject{
     //
     
     init() {
-        self.player1 = PlayerTemplate(id: UUID.init(), username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
-        self.player2 = PlayerTemplate(id: UUID.init(), username: "Hannah", password: "1234", currentscore: 10, averagescore: 10)
-        self.player3 = PlayerTemplate(id: UUID.init(), username: "1", password: "1", currentscore: 5, averagescore: 10)
-        self.player4 = PlayerTemplate(id: UUID.init(), username: "", password: "", currentscore: 7, averagescore: 10)
+        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
+        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 10, averagescore: 10)
+        self.player3 = PlayerTemplate(username: "1", password: "1", currentscore: 5, averagescore: 10)
+        self.player4 = PlayerTemplate(username: "", password: "", currentscore: 7, averagescore: 10)
         self.players = [player1, player2, player3, player4]
         self.currentplayer = player1
     }
@@ -81,5 +81,9 @@ class Players : ObservableObject{
         else{
             return -1
         }
+    }
+    
+    func setQuizAnswered(_ givenQuiz : Quiz){
+        players[usernameOffset(currentplayer.username)].answered.append(givenQuiz.id)
     }
 }

@@ -25,7 +25,7 @@ struct RuleView: View {
 
                     .padding(.bottom)
                 
-                Text("Scrolle nach recht um weitere Regeln kennenzulernen")
+                Text("Scrolle nach rechts um weitere Regeln kennenzulernen")
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

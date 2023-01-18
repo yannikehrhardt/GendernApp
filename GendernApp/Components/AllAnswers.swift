@@ -39,9 +39,10 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
-                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                           
                                 self.players.addScore()
-                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                                players.setQuizAnswered(answer)
                             }
                         }
 
@@ -82,9 +83,10 @@ struct AllAnswers: View {
                         .foregroundColor(green)
                         .onAppear(){
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
-                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                           
                                 self.players.addScore()
-                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                                players.setQuizAnswered(answer)
                             }
                         }
                 }
@@ -124,9 +126,10 @@ struct AllAnswers: View {
                         .onAppear(){
                             
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
-                            if(!questions.quizze[questions.getQuizOffset(answer)].answered.contains(players.currentplayer.username)){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                           
                                 self.players.addScore()
-                                questions.setQuizAnswered(self.answer, players.currentplayer.username)
+                                players.setQuizAnswered(answer)
                             }
                         }
                 }
@@ -159,7 +162,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(id: UUID.init(), type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], answered: [], furtherInformation: ""))
+            AllAnswers(answer: Quiz(type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], furtherInformation: ""))
                 .environmentObject(Players())
                 .environmentObject(Questions())
         }
