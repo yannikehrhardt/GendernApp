@@ -14,7 +14,7 @@ struct RuleView: View {
     var body: some View {
             VStack(spacing: 40){
                 Text("Hier kannst du Regeln kennenlernen")
-                    .font(.largeTitle)
+                    .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
                     .padding(.top, 50)

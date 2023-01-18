@@ -24,14 +24,18 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 30) {
                 VStack(spacing: 20){
+                    
                     Image("Genderzeichen 1")
+                    
                     Text("GendernApp")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .foregroundColor(Color("TextColor"))
+                    
                     Text("Gendern lernen leicht gemacht")
                         .foregroundColor(Color("TextColor"))
                 }
+                
                 //Textfeld für den Benutzernamen
                 TextField("Username", text: $givenusername)
                     .padding()
@@ -49,7 +53,6 @@ struct ContentView: View {
                     .disableAutocorrection(true)
                 
                 NavigationLink {
-                    
                     //nur, wenn der Nutzername vergeben ist, kann geprüft werden, ob das zugehörige Passwort ebenfalls stimmt. Die erste if-Abfrage schließt somit eine Out-of-Bounds Exception aus
                     if(self.players.usernameAvailable(givenusername)){
                         if(self.players.players[self.players.usernameOffset(givenusername)]
@@ -57,14 +60,11 @@ struct ContentView: View {
                             
                             //nur wenn PW und Nutzername korrekt ist, wird auf das Hauptmenü aufgerufen, dort wird dann der aktuelle Spieler gesetzt
                             Themenauswahl(givenUsername: givenusername)
-        
                         }
                         //stimmt das PW nicht, so wird ein Screen angezeigt, dass das PW oder ner Nutzername nicht korrekt war
                         else{
                             Text("wrong password or username, try again or sign up")
                         }
-                        
-                    
                     }
                     else{
                         Text("wrong password or username, try again or sign up")
@@ -73,8 +73,8 @@ struct ContentView: View {
                     PlayButton()
                 }
                 
-                Text("or")
-                    .foregroundColor(Color("TextColor"))
+               // Text("or")
+                //    .foregroundColor(Color("TextColor"))
                 
                 //Button zum Sign-Up-Screen
                 NavigationLink{
@@ -85,7 +85,6 @@ struct ContentView: View {
                 
                 
             }
-                
             .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
         }

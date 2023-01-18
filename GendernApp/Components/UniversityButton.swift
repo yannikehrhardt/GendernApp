@@ -15,18 +15,31 @@ struct UniversityButton: View {
     var background: Color = Color("ButtonColor")
         
     var body: some View {
-            VStack(spacing:20){
-                Text("Universität")
-                    .font(.title2)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.white)
-                    
+        VStack(alignment: .leading, spacing:20){
+                HStack{
+                    Image(systemName: "arrowshape.forward")
+                        .foregroundColor(.white)
+                        
+                    Text("Universität")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                        .foregroundColor(Color.white)
+                }
+                .padding(.leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 
-            }
-            .frame(width: 250, height: 80)
+                
+                
+        }
+            .frame(width: 200, height: 80)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
             .shadow(radius: 20)
+            
+        
+  
+        
+        
     }
     }
 

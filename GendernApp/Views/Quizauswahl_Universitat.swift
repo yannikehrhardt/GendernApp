@@ -19,6 +19,7 @@ struct Quizauswahl_Universitat: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color("TextColor"))
                     .padding(.top, 50)
+                    .shadow(radius: 20)
                
 
                 QuizButton(givenQuiz: questions.UniQuizze)
@@ -30,7 +31,6 @@ struct Quizauswahl_Universitat: View {
                 }
                 
                 CurrentScore()
-                    .padding(.bottom)
                 
                 
             }

@@ -20,6 +20,7 @@ struct ScoreView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.top, 50)
+                .shadow(radius: 20)
 
             List {
                ScoreComparison(givenPlayers: givenplayers, currentplayer: currentplayer)

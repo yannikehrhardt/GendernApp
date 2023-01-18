@@ -20,7 +20,11 @@ struct CurrentScore: View {
             .foregroundColor(.black)
             .padding()
             .padding(.horizontal)
+            .background(.white)
+            .cornerRadius(40)
+        
         }
+        
     }
 
 

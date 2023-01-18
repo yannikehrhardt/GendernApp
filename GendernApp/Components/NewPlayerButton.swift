@@ -11,7 +11,7 @@ struct NewPlayerButton: View {
     var body: some View {
         Text("Create a new player account")
             .font(.title2)
-            .fontWeight(.medium)
+            .fontWeight(.light)
             .foregroundColor(Color.white)
             .multilineTextAlignment(.center)
             .padding()

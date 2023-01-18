@@ -16,17 +16,19 @@ struct RuleScroll: View {
             HStack(spacing: 10) {
                 ForEach(givenRules, id: \.self.id) { rule in
                     VStack{
+                        
                         Text(rule.ruleName)
                             .fontWeight(.bold)
                             .foregroundColor(Color("TextColor"))
-                            .padding(.top, 10)
-                            .font(.largeTitle)
+                            .font(.title)
+                            .multilineTextAlignment(.leading)
+                            .underline()
                             
                         
                         Text(rule.ruleText)
                             .fontWeight(.bold)
                             .foregroundColor(Color("TextColor"))
-                            .padding(.top, 10)
+                            .padding([.top, .leading], 10)
                             .font(.callout)
                         if(rule.example != ""){
                             Text("Beispiel: \(rule.example)")
@@ -41,9 +43,11 @@ struct RuleScroll: View {
                     .background(Color("ButtonColor"))
                     .cornerRadius(20)
                     
+                    
                 }
             }
         }
+        .padding(.leading, 7.0)
         .environmentObject(rules)
     }
 }

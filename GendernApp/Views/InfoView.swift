@@ -20,17 +20,26 @@ struct InfoView: View {
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(.white)
+                .shadow(radius: 20)
             
-            Text(givenQuiz.furtherInformation)
-                .fontWeight(.semibold)
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color("TextColor2"))
-                .padding(.horizontal)
-                .frame(width: 380.0, height: 400.0)
-                .background(.white)
-                .cornerRadius(20)
-                .shadow(radius:10)
-            
+            VStack{
+                Image(systemName: "lightbulb")
+                    .foregroundColor(Color("TextColor2"))
+                    .padding(.top)
+                    
+                
+                Text(givenQuiz.furtherInformation)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color("TextColor2"))
+                    .padding(.horizontal)
+                    .frame(width: 380.0, height: 250.0)
+                
+            }
+            .background(.white)
+            .cornerRadius(20)
+            .shadow(radius:10)
+            .frame(width: 380.0, height: 400.0)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))

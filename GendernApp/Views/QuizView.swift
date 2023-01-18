@@ -23,9 +23,9 @@ struct QuizView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.bottom)
-                        .padding(.top, 150)
+                        .padding(.top, 100)
                         .frame(width: 400, height: 300)
+                        .shadow(radius: 20)
                 }
                 
                 AnswerRow(givenQuiz: givenQuiz)
@@ -37,7 +37,8 @@ struct QuizView: View {
                         .padding(.top)
                 }
                 CurrentScore()
-                    .padding(.top, 50)
+                    .padding(.top)
+                
                 
                 
 

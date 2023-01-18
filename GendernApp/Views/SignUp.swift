@@ -25,6 +25,7 @@ struct SignUp: View {
                 .foregroundColor(Color("TextColor"))
                 .padding(.bottom)
                 .padding(.top, 50)
+                .shadow(radius: 20)
             
             TextField(
                 "Type in your new username", text: $givenUsername)

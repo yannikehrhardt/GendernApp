@@ -24,7 +24,9 @@ struct Themenauswahl: View {
                     .foregroundColor(Color("TextColor"))
                     .padding(.bottom)
                     .padding(.top, 50)
+                    .shadow(radius: 20)
                  
+                Image(systemName: "gamecontroller")
                 
                 NavigationLink{
                     Quizauswahl_Universitat()
@@ -46,14 +48,14 @@ struct Themenauswahl: View {
                     AlltagButton()
                 }
                 
+                Image(systemName: "gamecontroller")
+                
                 
                 NavigationLink{
                     ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
                 } label: {
                     ScoreViewButton()
                 }
-                .padding(.top, 50)
-                
                 
                 NavigationLink{
                     AddQuestionsView()

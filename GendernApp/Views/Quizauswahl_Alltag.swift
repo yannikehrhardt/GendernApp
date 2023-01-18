@@ -20,6 +20,7 @@ struct Quizauswahl_Alltag: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
                 .padding(.top, 50)
+                .shadow(radius: 20)
             
             QuizButton(givenQuiz: questions.AlltagQuizze)
             

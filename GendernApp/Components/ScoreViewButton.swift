@@ -14,11 +14,11 @@ struct ScoreViewButton: View {
         VStack(spacing:20){
             Text("Vergleiche deinen Score")
                 .font(.title2)
-                .fontWeight(.medium)
+                .fontWeight(.light)
                 .foregroundColor(Color.white)
                 
         }
-        .frame(width:200, height: 70)
+        .frame(width:300, height: 70)
         .background(Color("ButtonColor"))
         .cornerRadius(20)
         .shadow(radius: 20)
