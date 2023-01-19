@@ -15,7 +15,6 @@ class Players : ObservableObject{
     var player1 : PlayerTemplate
     var player2: PlayerTemplate
     var player3: PlayerTemplate
-    var player4: PlayerTemplate
     
     //s.o.: wenn eine der Variablen verändert wird, laden die Views neu:
     
@@ -29,11 +28,10 @@ class Players : ObservableObject{
     //
     
     init() {
-        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100, averagescore: 0)
-        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 10, averagescore: 10)
-        self.player3 = PlayerTemplate(username: "1", password: "1", currentscore: 5, averagescore: 10)
-        self.player4 = PlayerTemplate(username: "", password: "", currentscore: 7, averagescore: 10)
-        self.players = [player1, player2, player3, player4]
+        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100)
+        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 10)
+        self.player3 = PlayerTemplate(username: "", password: "", currentscore: 0)
+        self.players = [player1, player2, player3]
         self.currentplayer = player1
     }
 
@@ -50,7 +48,7 @@ class Players : ObservableObject{
     }
     
     
-    //Score des aktuellen Spielers erhöhen
+    //Score des aktuellen Spielers um 10 erhöhen
     func addScore () -> Void {
         currentplayer.currentscore = currentplayer.currentscore + 10
         
@@ -73,7 +71,8 @@ class Players : ObservableObject{
         return correct
     }
     
-    //prüft, ob das übergebene Passwort zu dem übergebenen Nutzeraccount passt
+    //Diese Funktion gibt die Stelle zurück, an der ein übergebener Nutzer im Array players steht
+    //wird häufig genutzt um Werte für den entsprechenden Spieler im Array players zu ändern
     func usernameOffset (_ givenusername : String) -> Int {
         if let Offset = players.firstIndex(where: {$0.username == givenusername}){
             return Offset
@@ -83,7 +82,19 @@ class Players : ObservableObject{
         }
     }
     
+    //wenn ein Spieler eine Quizfrage zum ersten Mal korrekt beantwortet, so wird die id der entsprechenden Quizfrage zum Array der beantworteten Fragen des entsprechenden Spielers hinzugefügt
+    //in den Quizauswahl-Views wird die Frage dann mit einem Haken versehen
     func setQuizAnswered(_ givenQuiz : Quiz){
         players[usernameOffset(currentplayer.username)].answered.append(givenQuiz.id)
+    }
+    
+    //Reicht der aktuelle Spieler eine neue Frage ein, so wird über diese Funktion der createdNewQuestion -Wert auf true gesetzt
+    //wird in den Errungenschaften / Badges benötigt
+    func createdQuiz(){
+        players[usernameOffset(currentplayer.username)].createdNewQuestion = true
+    }
+    
+    func setBadge(givenAmountOfBages : Int){
+        players[usernameOffset(currentplayer.username)].badges = givenAmountOfBages
     }
 }

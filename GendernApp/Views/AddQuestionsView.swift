@@ -97,6 +97,7 @@ struct AddQuestionsView: View {
                         
                         questions.quizze.append(quizNew)
                         //quizze.append(quizNew)
+                        players.createdQuiz()
                         
                         if (thema == "Uni") {
                             questions.UniQuizze = questions.addQuizze("Uni")

@@ -36,7 +36,7 @@ struct ScoreComparison: View {
                 HStack(spacing:10){
                     Text("Current Score: \(player.currentscore)")
                         .font(.system(size: 16, weight: .light, design: .default))
-                    Text("Average Score: \(player.averagescore)")
+                    Text("Errungenschaften: \(player.badges)")
                         .font(.system(size: 16, weight: .light, design: .default))
                 }
                 

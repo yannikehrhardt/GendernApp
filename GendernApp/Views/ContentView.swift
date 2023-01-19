@@ -72,8 +72,8 @@ struct ContentView: View {
                     PlayButton()
                 }
                 
-               // Text("or")
-                //    .foregroundColor(Color("TextColor"))
+               Text("or")
+                .foregroundColor(Color("TextColor"))
                 
                 //Button zum Sign-Up-Screen
                 NavigationLink{
@@ -86,12 +86,12 @@ struct ContentView: View {
             }
             .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
-                
             
         }
         .environmentObject(players)
         .environmentObject(questions)
         .environmentObject(rules)
+        
     }
 
 }

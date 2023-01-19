@@ -25,6 +25,9 @@
 		5978775029364DA900D1C086 /* QuizButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5978774F29364DA900D1C086 /* QuizButton.swift */; };
 		597877582937A7FD00D1C086 /* AllAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597877572937A7FD00D1C086 /* AllAnswers.swift */; };
 		5978775A293F9B7100D1C086 /* CurrentScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59787759293F9B7100D1C086 /* CurrentScore.swift */; };
+		680176BC29793B91002A086D /* GeneralGenderInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680176BB29793B91002A086D /* GeneralGenderInfoButton.swift */; };
+		680176BE29793BE2002A086D /* GeneralGenderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680176BD29793BE2002A086D /* GeneralGenderInfo.swift */; };
+		680176C029794543002A086D /* CreateBagdes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680176BF29794543002A086D /* CreateBagdes.swift */; };
 		682DDCA02912746B002067B3 /* QuizTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682DDC9F2912746B002067B3 /* QuizTemplate.swift */; };
 		68509FE9293F96E100EE2476 /* PlayerTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FE8293F96E100EE2476 /* PlayerTemplate.swift */; };
 		68509FEB293F978500EE2476 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68509FEA293F978500EE2476 /* Players.swift */; };
@@ -84,6 +87,9 @@
 		5978774F29364DA900D1C086 /* QuizButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizButton.swift; sourceTree = "<group>"; };
 		597877572937A7FD00D1C086 /* AllAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnswers.swift; sourceTree = "<group>"; };
 		59787759293F9B7100D1C086 /* CurrentScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScore.swift; sourceTree = "<group>"; };
+		680176BB29793B91002A086D /* GeneralGenderInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralGenderInfoButton.swift; sourceTree = "<group>"; };
+		680176BD29793BE2002A086D /* GeneralGenderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralGenderInfo.swift; sourceTree = "<group>"; };
+		680176BF29794543002A086D /* CreateBagdes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBagdes.swift; sourceTree = "<group>"; };
 		682DDC9F2912746B002067B3 /* QuizTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTemplate.swift; sourceTree = "<group>"; };
 		68509FE8293F96E100EE2476 /* PlayerTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTemplate.swift; sourceTree = "<group>"; };
 		68509FEA293F978500EE2476 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
@@ -149,6 +155,7 @@
 				590272E629433D0E009F721A /* InfoView.swift */,
 				590272E82948AC2A009F721A /* AddQuestionsView.swift */,
 				686C92822976E5BB00EFFDC7 /* RuleView.swift */,
+				680176BD29793BE2002A086D /* GeneralGenderInfo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +198,8 @@
 				6883194E2952070F001FD36F /* NewPlayerButton.swift */,
 				686C92802976DED300EFFDC7 /* RuleScroll.swift */,
 				686C92842976E79400EFFDC7 /* RuleButton.swift */,
+				680176BB29793B91002A086D /* GeneralGenderInfoButton.swift */,
+				680176BF29794543002A086D /* CreateBagdes.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -400,6 +409,7 @@
 				68509FF52940CA8000EE2476 /* ScoreComparison.swift in Sources */,
 				686C92852976E79400EFFDC7 /* RuleButton.swift in Sources */,
 				5924E889292FA4050012851F /* QuizView.swift in Sources */,
+				680176C029794543002A086D /* CreateBagdes.swift in Sources */,
 				686C927D2976D26900EFFDC7 /* Rules.swift in Sources */,
 				5978775029364DA900D1C086 /* QuizButton.swift in Sources */,
 				597877432933B3FE00D1C086 /* Quizauswahl_Schule.swift in Sources */,
@@ -414,10 +424,12 @@
 				5978775A293F9B7100D1C086 /* CurrentScore.swift in Sources */,
 				597877452933B45F00D1C086 /* Quizauswahl_Alltag.swift in Sources */,
 				686C92832976E5BB00EFFDC7 /* RuleView.swift in Sources */,
+				680176BE29793BE2002A086D /* GeneralGenderInfo.swift in Sources */,
 				686C927F2976D36500EFFDC7 /* RuleTemplate.swift in Sources */,
 				590272E92948AC2A009F721A /* AddQuestionsView.swift in Sources */,
 				5924E883292F9AF20012851F /* Themenauswahl.swift in Sources */,
 				597877412933ACF000D1C086 /* Quizauswahl_Universitat.swift in Sources */,
+				680176BC29793B91002A086D /* GeneralGenderInfoButton.swift in Sources */,
 				68797AE729112C3300E1572B /* GendernAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

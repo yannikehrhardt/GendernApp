@@ -54,18 +54,24 @@ struct Themenauswahl: View {
             
             HStack{
                 NavigationLink{
-                    ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
+                    ScoreView()
                 } label: {
                     ScoreViewButton()
                         .padding(.trailing, 20.0)
                 }
-                .padding(.trailing, 50)
+                .padding(.trailing, 0)
                 
-                
+                NavigationLink{
+                    GeneralGenderInfo()
+                } label: {
+                    GeneralGenderInfoButton()
+                }
+                .padding(.trailing, 20)
                 
                 NavigationLink{
                     AddQuestionsView()
-                }label: { AddQuizButton()
+                }label: {
+                    AddQuizButton()
                 }
                 
                 
@@ -73,22 +79,7 @@ struct Themenauswahl: View {
             .padding(.top)
             
         }
-//        .toolbar{
-//            ToolbarItemGroup(placement: .bottomBar) {
-//                NavigationLink{
-//                    ScoreView(currentplayer: players.currentplayer, givenplayers: players.players, playerscore: players.currentplayer.currentscore)
-//                } label: {
-//                    ScoreViewButton()
-//                        .padding(.trailing, 20.0)
-//                }
-//
-//
-//                NavigationLink{
-//                    AddQuestionsView()
-//                }label: { AddQuizButton()
-//                }
-//            }
-//        }
+
         .frame(maxWidth: 300, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
 
@@ -101,6 +92,7 @@ struct Themenauswahl: View {
         .environmentObject(players)
         .environmentObject(questions)
         .environmentObject(rules)
+        .accentColor(.black)
     }
 }
 
