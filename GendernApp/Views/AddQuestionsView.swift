@@ -30,15 +30,15 @@ struct AddQuestionsView: View {
             
             
             
-            Text("Fill in the Textfields")
-                .font(.largeTitle)
+            Text("Lege ein eigenes Quiz an!")
+                .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(Color("TextColor"))
                 .padding(.bottom)
                 .padding(.top, 50)
             
             TextField(
-                "Please type a topic (Uni, Schule, Alltag) ...", text: $thema)
+                "Wähle ein Thema (Uni, Schule, Alltag)...", text: $thema)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -46,7 +46,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a question...", text: $frage)
+                "Formuliere eine Frage...", text: $frage)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -54,7 +54,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a correct answer...", text: $richtigeAntwort)
+                "Korrekte Antwort...", text: $richtigeAntwort)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -62,7 +62,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type the first wrong answer...", text: $falscheAntwort1)
+                "Erste falsche Antwort...", text: $falscheAntwort1)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -70,7 +70,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type the second wrong answer...", text: $falscheAntwort2)
+                "Zweite falsche Antwort...", text: $falscheAntwort2)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)
@@ -78,7 +78,7 @@ struct AddQuestionsView: View {
             .cornerRadius(20)
             
             TextField(
-                "Please type a explanation...", text: $weitereInformationen)
+                "Erklärung...", text: $weitereInformationen)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
             .background(Color.white)

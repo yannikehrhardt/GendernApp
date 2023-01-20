@@ -36,7 +36,7 @@ struct ContentView: View {
                 
                 
                 //Textfeld für den Benutzernamen
-                TextField("Username", text: $givenusername)
+                TextField("Benutzername", text: $givenusername)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5.0)
@@ -44,7 +44,7 @@ struct ContentView: View {
                     .disableAutocorrection(true)
                 
                 //Textfeld bzw. SecureFeld der die Eingabe (verdeckt für das Passwort)
-                SecureField("Password", text: $givenpassword)
+                SecureField("Passwort", text: $givenpassword)
                     .padding()
                     .background(Color.white)
                     .cornerRadius(5.0)
