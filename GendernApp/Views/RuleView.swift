@@ -12,7 +12,7 @@ struct RuleView: View {
     @EnvironmentObject var rules: Rules
     
     var body: some View {
-            VStack(spacing: 40){
+            VStack(){
                 Text("Hier kannst du Regeln kennenlernen")
                     .font(.title2)
                     .fontWeight(.bold)

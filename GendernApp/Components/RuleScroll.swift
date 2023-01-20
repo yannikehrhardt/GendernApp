@@ -13,7 +13,7 @@ struct RuleScroll: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack(spacing: 10) {
+            HStack() {
                 ForEach(givenRules, id: \.self.id) { rule in
                     VStack{
                         
@@ -23,7 +23,7 @@ struct RuleScroll: View {
                             .font(.title)
                             .multilineTextAlignment(.leading)
                             .underline()
-                            
+                        
                         
                         Text(rule.ruleText)
                             .fontWeight(.bold)
@@ -39,7 +39,7 @@ struct RuleScroll: View {
                         }
                             
                     }
-                    .frame(width: 380, height: 500)
+                    .frame(width: 380, height: 650)
                     .background(Color("ButtonColor"))
                     .cornerRadius(20)
                     
