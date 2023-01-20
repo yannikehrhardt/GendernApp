@@ -22,16 +22,19 @@ struct Quizauswahl_Schule: View {
                 .padding(.top, 50)
                 .shadow(radius: 20)
             
+            //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze also Buttons dar
             QuizButton(givenQuiz: questions.SchuleQuizze)
             
-            NavigationLink{
-                RuleView()
-            }label: {
-                RuleButton()
+            HStack{
+                CurrentScore()
+                
+                NavigationLink{
+                    RuleView()
+                }label: {
+                    RuleButton()
+                }
+                .padding(.leading, 20)
             }
-            
-            CurrentScore()
-                .padding(.bottom)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

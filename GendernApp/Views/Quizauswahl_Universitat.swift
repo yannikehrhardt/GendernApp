@@ -21,11 +21,10 @@ struct Quizauswahl_Universitat: View {
                     .padding(.top, 50)
                     .shadow(radius: 20)
                
-
+                //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze also Buttons dar
                 QuizButton(givenQuiz: questions.UniQuizze)
                 
                 HStack{
-                    
                     CurrentScore()
                     
                     NavigationLink{
@@ -34,8 +33,6 @@ struct Quizauswahl_Universitat: View {
                         RuleButton()
                     }
                     .padding(.leading, 20)
-                    
-                   
                 }
                 
             }
