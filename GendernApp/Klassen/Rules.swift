@@ -21,9 +21,56 @@ class Rules: ObservableObject {
     let rule5 = RuleTemplate(ruleName: "Ableitung und Zusammensetzung", ruleText: "", topic: "Wortebene", example: "")
     
     @Published var rules : [RuleTemplate]
+    @Published var learnedrules : [RuleTemplate]
+    @Published var openrules : [RuleTemplate]
     
     init() {
         self.rules = [rule1, rule2, rule3, rule4, rule5]
+        self.openrules = []
+        self.learnedrules = []
+    }
+    
+    //adding a rule to a given array
+    func addRule(givenRule : RuleTemplate, destination : String){
+        if(destination == "rules"){
+            self.rules.append(givenRule)
+        }
+        if(destination == "openrules"){
+            self.openrules.append(givenRule)
+        }
+        if(destination == "learnedrules"){
+            self.learnedrules.append(givenRule)
+        }
+    }
+    
+    func containsRule(givenRule: RuleTemplate, destination : String) -> Bool{
+        var contains = false
+        if(destination == "rules"){
+            for rule in rules{
+                if(rule.id == givenRule.id){
+                    contains = true
+                    break
+                }
+            }
+        }
+        if(destination == "openrules"){
+            for rule in openrules{
+                if(rule.id == givenRule.id){
+                    contains = true
+                    break
+                }
+            }
+
+        }
+        if(destination == "learnedrules"){
+            for rule in learnedrules{
+                if(rule.id == givenRule.id){
+                    contains = true
+                    break
+                }
+            }
+        }
+        return contains
     }
     
     

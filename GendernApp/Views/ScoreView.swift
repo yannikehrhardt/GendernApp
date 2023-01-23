@@ -16,7 +16,7 @@ struct ScoreView: View {
     var body: some View {
         VStack(spacing: 20){
             VStack {
-                Picker("What is your favorite color?", selection: $showBadges) {
+                Picker("Welchen Spielerspezifischen Infos möchtest du sehen?", selection: $showBadges) {
                     Text("Errungenschaften").tag(0)
                     Text("Leaderboard").tag(1)
                 }

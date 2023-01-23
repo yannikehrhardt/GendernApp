@@ -37,13 +37,36 @@ struct RuleScroll: View {
                                 .padding(.top, 10)
                                 .font(.callout)
                         }
+                        
+                        HStack{
+                            Button("Als gelernt markieren"){
+                                if(!rules.containsRule(givenRule: rule, destination: "learnedrules")){
+                                    self.rules.addRule(givenRule: rule, destination: "learnedrules")
+                                }
+                            }
+                            .foregroundColor(.black)
+                            .padding(15)
+                            .padding(.horizontal, 20)
+                            .background(.white)
+                            .cornerRadius(40)
+                            
+                            
+                            Button("Als offen markieren"){
+                                if(!rules.containsRule(givenRule: rule, destination: "openrules")){
+                                    self.rules.addRule(givenRule: rule, destination: "openrules")
+                                }
+                            }
+                            .foregroundColor(.black)
+                            .padding(15)
+                            .padding(.horizontal, 20)
+                            .background(.white)
+                            .cornerRadius(40)
+                        }
                             
                     }
                     .frame(width: 380, height: 650)
                     .background(Color("ButtonColor"))
                     .cornerRadius(20)
-                    
-                    
                 }
             }
         }
