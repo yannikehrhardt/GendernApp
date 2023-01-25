@@ -41,7 +41,7 @@ struct CreateBagdes: View {
                 }
             }
             
-            if(players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count >= Int(0.5)){
+            if((players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count) * 100 >= 50){
                 HStack{
                     Image(systemName: "battery.50")
                     Text("Du hast bereits 50% aller Fragen korrekt beantwortet")
@@ -81,7 +81,7 @@ struct CreateBagdes: View {
                 }
             }
             
-            if(players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count < Int(0.5)){
+            if((players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count) * 100 < 50){
                 HStack{
                     Image(systemName: "battery.50")
                     Text("Du hast bereits 50% aller Fragen korrekt beantwortet")

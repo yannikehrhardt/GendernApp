@@ -56,6 +56,7 @@ struct QuizView: View {
                             .shadow(radius: 20)
                     }
                 }
+                
                 //Aufruf zur Auflistung der Antwortmöglichkeiten
                 AllAnswers(answer: givenQuiz)
                 

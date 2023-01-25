@@ -97,10 +97,15 @@ class Questions : ObservableObject{
         return available
     }
     
+    func addCorrectAnswered(_ givenQuiz : Quiz){
+        var offset = getQuizOffset(givenQuiz)
+        quizze[offset].correctlySelectedAnswers += 1
+    }
+    
     func numberOfCorrectAnswers(_ givenQuiz : Quiz) -> Int {
-        var Offset = getQuizOffset(givenQuiz)
+        var offset = getQuizOffset(givenQuiz)
         var amount = 0
-        for answer in quizze[Offset].correctAnswer {
+        for answer in quizze[offset].correctAnswer {
             if(answer != ""){
                 amount += 1
             }
