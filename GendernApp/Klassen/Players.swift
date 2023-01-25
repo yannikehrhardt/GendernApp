@@ -59,6 +59,12 @@ class Players : ObservableObject{
         }
     }
     
+    //Reduziert den Score eines Spielers um einen angegebenen Wert
+    func reduceScore(amount : Int) -> Void{
+        currentplayer.currentscore = currentplayer.currentscore - amount
+        players[usernameOffset(currentplayer.username)].currentscore = players[usernameOffset(currentplayer.username)].currentscore - amount
+    }
+    
     //Prüft, ob ein Username vergeben ist. Wenn ja, wird true zurückgegeben.
     func usernameAvailable (_ givenusername: String) -> Bool {
         var correct = false
