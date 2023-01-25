@@ -15,21 +15,51 @@ struct QuizView: View {
 
     
     var body: some View {
-        VStack(spacing:40){
-            VStack(spacing:20){
-                VStack(spacing:40){
+        VStack(spacing:20){
+            VStack(spacing:30){
+                VStack(spacing:10){
                     
-                    Text(givenQuiz.question) // aus Questions quiz1
+                    //Quizfrage
+                    Text(givenQuiz.question)
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
-                        .padding(.top, 100)
+                        .padding(.top, 30)
                         .frame(width: 400, height: 300)
                         .shadow(radius: 20)
+                    
+                    //die drei nächsten if-Abfragen zeigen an, wie viele Antworten korrekt sind
+                    if(questions.numberOfCorrectAnswers(givenQuiz) == 1){
+                        Text("Wähle die korrekte Anwort aus")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .frame(width: 400, height: 10)
+                            .shadow(radius: 20)
+                    }
+                    
+                    if(questions.numberOfCorrectAnswers(givenQuiz) == 2){
+                        Text("Wähle beide korrekten Anworten aus")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .frame(width: 400, height: 10)
+                            .shadow(radius: 20)
+                    }
+                    
+                    if(questions.numberOfCorrectAnswers(givenQuiz) == 3){
+                        Text("Wähle alle drei korrekten Anworten aus")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+                            .frame(width: 400, height: 10)
+                            .shadow(radius: 20)
+                    }
                 }
+                //Aufruf zur Auflistung der Antwortmöglichkeiten
+                AllAnswers(answer: givenQuiz)
                 
-                AnswerRow(givenQuiz: givenQuiz)
-                
+                //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
                 NavigationLink {
                     InfoView(givenQuiz: givenQuiz)
                 }label: {
@@ -38,11 +68,6 @@ struct QuizView: View {
                 }
                 CurrentScore()
                     .padding(.top)
-                
-                
-                
-
-                
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
@@ -60,12 +85,3 @@ struct QuizView_Previews: PreviewProvider {
             .environmentObject(Questions())
     }
 }
-
-//TextField(
-  //  "Please type your answer...",
-  //  text: quiz1.$correctAnswer) //aus quiz1
-//.padding(.leading, 40.0)
-//.frame(width: 300.0, height: 30.0)
-//.background(Color.white)
-//.shadow(radius: 10)
-// .cornerRadius(20)

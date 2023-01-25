@@ -96,6 +96,17 @@ class Questions : ObservableObject{
         }
         return available
     }
+    
+    func numberOfCorrectAnswers(_ givenQuiz : Quiz) -> Int {
+        var Offset = getQuizOffset(givenQuiz)
+        var amount = 0
+        for answer in quizze[Offset].correctAnswer {
+            if(answer != ""){
+                amount += 1
+            }
+        }
+        return amount
+    }
 
     
 }
