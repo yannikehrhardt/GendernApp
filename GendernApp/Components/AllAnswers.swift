@@ -26,6 +26,8 @@ struct AllAnswers: View {
     
     //gibt an , wie viele korrekte Fragen der Spielende bereits beantwortet hat
     @State var questionsanswered = 0
+    
+    @State var presentPopup = false
 
     
     var body: some View {
@@ -59,6 +61,8 @@ struct AllAnswers: View {
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
                             }
+                            
+                            
                         }
 
                 }
