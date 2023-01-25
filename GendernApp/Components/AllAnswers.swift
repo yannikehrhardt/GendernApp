@@ -32,7 +32,11 @@ struct AllAnswers: View {
                 Text(answer.allAnswers[0])
                     .bold()
                // wenn der Button ausgewählt wurde und wenn die korrekte Antwort der ersten Antwort im Array allAnswers des Quiz entspricht, die immer die richtige antwort ist, dann erscheint ein grüner checkmark, ansonsten erscheint ein rotes x
-                if isSelected3 && answer.allAnswers[0] ==  answer.correctAnswer {
+                if isSelected3 &&
+                    ((answer.allAnswers[0] ==  answer.correctAnswer[0]) ||
+                     (answer.allAnswers[0] == answer.correctAnswer[1]) ||
+                     (answer.allAnswers[0] == answer.correctAnswer[2])){
+                    
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
@@ -62,7 +66,10 @@ struct AllAnswers: View {
                     .foregroundColor(isSelected3 ? Color("ButtonColor") : .gray)
                     .background(.white)
                     .cornerRadius(10)
-                    .shadow(color: isSelected3 ? ( answer.allAnswers[0] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrketen Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
+                    .shadow(color: isSelected3 ?
+                            (((answer.allAnswers[0] == answer.correctAnswer[0]) ||
+                              (answer.allAnswers[0] == answer.correctAnswer[1]) ||
+                              (answer.allAnswers[0] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrketen Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
                     .onTapGesture {
                         isSelected3 = true
                     }
@@ -76,7 +83,11 @@ struct AllAnswers: View {
                 Text(answer.allAnswers[1])
                     .bold()
                 
-                if isSelected && answer.allAnswers[1] == answer.correctAnswer {
+                if isSelected &&
+                    ((answer.allAnswers[1] ==  answer.correctAnswer[0]) ||
+                     (answer.allAnswers[1] == answer.correctAnswer[1]) ||
+                     (answer.allAnswers[1] == answer.correctAnswer[2])) {
+                    
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
@@ -106,7 +117,10 @@ struct AllAnswers: View {
             .frame(width: 400, height: 80)
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: isSelected ? (answer.allAnswers[1] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
+            .shadow(color: isSelected ?
+                    (((answer.allAnswers[1] == answer.correctAnswer[0]) ||
+                      (answer.allAnswers[1] == answer.correctAnswer[1]) ||
+                      (answer.allAnswers[1] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 isSelected = true
             }
@@ -118,7 +132,11 @@ struct AllAnswers: View {
                 Text(answer.allAnswers[2])
                     .bold()
                 
-                if isSelected2 && answer.allAnswers[2] == answer.correctAnswer {
+                if isSelected2 &&
+                    ((answer.allAnswers[2] ==  answer.correctAnswer[0]) ||
+                     (answer.allAnswers[2] == answer.correctAnswer[1]) ||
+                     (answer.allAnswers[2] == answer.correctAnswer[2])) {
+                    
                     Spacer()
                     
                     Image(systemName:  "checkmark.circle.fill")
@@ -149,7 +167,10 @@ struct AllAnswers: View {
             .foregroundColor(isSelected2 ? Color("ButtonColor") : .gray)
             .background(.white)
             .cornerRadius(10)
-            .shadow(color: isSelected2 ? (answer.allAnswers[2] == answer.correctAnswer ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
+            .shadow(color: isSelected2 ?
+                    (((answer.allAnswers[2] == answer.correctAnswer[0]) ||
+                      (answer.allAnswers[2] == answer.correctAnswer[1]) ||
+                      (answer.allAnswers[2] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 isSelected2 = true
             
@@ -162,7 +183,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: "hallo", allAnswers: ["hallo","falsch", "wrong"], furtherInformation: ""))
+            AllAnswers(answer: Quiz(type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: ["hallo", "falsch", ""], allAnswers: ["hallo","falsch", "wrong"], furtherInformation: ""))
                 .environmentObject(Players())
                 .environmentObject(Questions())
         }

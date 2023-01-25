@@ -14,7 +14,7 @@ struct Quiz {
     var type : String
     var topic : String
     var question : String
-    var correctAnswer : String
+    var correctAnswer : [String]
     var allAnswers: [String]
     
     //Erklärung, wieso die Antwort einer Frage korrekt ist -> wird im Info-Screen ausgelesen
@@ -24,7 +24,7 @@ struct Quiz {
     
     
     
-    init(type: String, topic: String, question: String, correctAnswer: String, allAnswers: [String], furtherInformation : String) {
+    init(type: String, topic: String, question: String, correctAnswer: [String], allAnswers: [String], furtherInformation : String) {
         self.id = UUID.init()
         self.type = type
         self.topic = topic
