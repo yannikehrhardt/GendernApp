@@ -17,7 +17,7 @@ struct QuizView: View {
 
     
     var body: some View {
-        VStack(spacing:30){
+        VStack(){
                 //Quizfrage
                 Text(givenQuiz.question)
                     .font(.title2)
@@ -67,15 +67,16 @@ struct QuizView: View {
                     .foregroundColor(.white)
                     .font(.title2)
                     .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
-                        Image(systemName: "gift")
-                            .background(Image("Backgrounds App"))
-                            .font(.largeTitle)
-                        
+                            
+                        Image("Image")
+                        .background(Image("Backgrounds App"))
+                            
                     }
                 }
                 .frame(width: 160, height: 50)
                 .background(Color("ButtonColor"))
                 .cornerRadius(30)
+                .padding(.top)
             }
             
             
@@ -90,13 +91,14 @@ struct QuizView: View {
                     InfoView(givenQuiz: givenQuiz)
                 }label: {
                     InfoButton()
-                        .padding(.top)
+                        
                 }
             }
+            .padding(.top, 30)
             
             
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
         .environmentObject(players)
         .environmentObject(questions)
