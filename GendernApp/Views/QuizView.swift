@@ -54,28 +54,29 @@ struct QuizView: View {
             //Aufruf zur Auflistung der Antwortmöglichkeiten
             AllAnswers(answer: givenQuiz)
             
-            
-            HStack{
-                
-                Image(systemName: "gift")
-                    .font(.title2)
-                    .frame(alignment: .leading)
-                
-                Button("Belohnung") {
-                    presentPopup = true
-                }
-                .foregroundColor(.white)
-                .font(.title2)
-                .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
-                    Image(systemName: "gift")
-                        .background(Image("Backgrounds App"))
-                        .font(.largeTitle)
+            if(questions.numberOfCorrectAnswers(givenQuiz) == self.questions.quizze[self.questions.getQuizOffset(givenQuiz)].correctlySelectedAnswers){
+                HStack{
                     
+                    Image(systemName: "gift")
+                        .font(.title2)
+                        .frame(alignment: .leading)
+                    
+                    Button("Belohnung") {
+                        presentPopup = true
+                    }
+                    .foregroundColor(.white)
+                    .font(.title2)
+                    .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                        Image(systemName: "gift")
+                            .background(Image("Backgrounds App"))
+                            .font(.largeTitle)
+                        
+                    }
                 }
+                .frame(width: 160, height: 50)
+                .background(Color("ButtonColor"))
+                .cornerRadius(30)
             }
-            .frame(width: 160, height: 50)
-            .background(Color("ButtonColor"))
-            .cornerRadius(30)
             
             
             //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
