@@ -25,9 +25,7 @@ struct AllAnswers: View {
     var red = Color ("WrongAnswer")
     
     //gibt an , wie viele korrekte Fragen der Spielende bereits beantwortet hat
-    @State var questionsanswered = 0
-    
-    @State var presentPopup = false
+  //  @State var questionsanswered = 0
 
     
     var body: some View {
@@ -52,11 +50,11 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.questionsanswered += 1
+                            self.questions.addCorrectAnswered(answer)
                             
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet (wenn alle richtigen Fragen beantwortet wurden)
                             //Diese if-Abfrage prüft, (1) ob der Spieler die Frage schon beantwortet hat und (2) alle korrekte Fragen ausgewählt wurden
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) ==  questionsanswered){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
@@ -115,9 +113,9 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.questionsanswered += 1
+                            self.questions.addCorrectAnswered(answer)
                             
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) ==  questionsanswered){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
@@ -171,9 +169,10 @@ struct AllAnswers: View {
                     Image(systemName:  "checkmark.circle.fill")
                         .foregroundColor(green)
                         .onAppear(){
-                            self.questionsanswered += 1
+                            self.questions.addCorrectAnswered(answer)
+
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) ==  questionsanswered){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)

@@ -16,6 +16,7 @@ struct Quiz {
     var question : String
     var correctAnswer : [String]
     var allAnswers: [String]
+    var correctlySelectedAnswers : Int
     
     //Erklärung, wieso die Antwort einer Frage korrekt ist -> wird im Info-Screen ausgelesen
     var furtherInformation : String
@@ -32,6 +33,7 @@ struct Quiz {
         self.correctAnswer = correctAnswer
         self.allAnswers = allAnswers.shuffled()
         self.furtherInformation = furtherInformation
+        self.correctlySelectedAnswers = 0
     }
 }
     
