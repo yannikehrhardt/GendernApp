@@ -23,8 +23,11 @@ struct ScoreView: View {
                 .pickerStyle(.segmented)
             }
             if(showBadges == 1){
+                Text("Du liegst auf Position \(players.returnOffsetInArray(givenPlayerArray: players.players.sorted{$0.currentscore > $1.currentscore}, givenPlayer: players.currentplayer) + 1)")
                 List {
-                    ScoreComparison(givenPlayers: players.players, currentplayer: players.currentplayer)
+                    ScoreComparison(givenPlayers: players.players.sorted{
+                        $0.currentscore > $1.currentscore
+                    }, currentplayer: players.currentplayer)
                     
                     //andere Farbe wäre noch gut
                         .listRowBackground(Color.white)

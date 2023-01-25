@@ -29,7 +29,7 @@ class Players : ObservableObject{
     
     init() {
         self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100)
-        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 10)
+        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 500)
         self.player3 = PlayerTemplate(username: "", password: "", currentscore: 0)
         self.players = [player1, player2, player3]
         self.currentplayer = player1
@@ -100,7 +100,17 @@ class Players : ObservableObject{
         players[usernameOffset(currentplayer.username)].createdNewQuestion = true
     }
     
+    //Anzahl der Badges setzen
     func setBadge(givenAmountOfBages : Int){
         players[usernameOffset(currentplayer.username)].badges = givenAmountOfBages
+    }
+    
+    func returnOffsetInArray(givenPlayerArray : [PlayerTemplate], givenPlayer : PlayerTemplate) -> Int{
+        if let Offset = givenPlayerArray.firstIndex(where: {$0.username == givenPlayer.username}){
+            return Offset
+        }
+        else{
+            return -1
+        }
     }
 }
