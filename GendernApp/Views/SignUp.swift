@@ -35,7 +35,7 @@ struct SignUp: View {
             .shadow(radius: 10)
             .cornerRadius(20)
             
-            TextField(
+            SecureField(
                 "Set a password", text: $givenPassword)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
@@ -43,7 +43,7 @@ struct SignUp: View {
             .shadow(radius: 10)
             .cornerRadius(20)
             
-            TextField(
+            SecureField(
                 "Type in your password again", text: $passwordRetry)
             .padding(.leading, 40.0)
             .frame(width: 350.0, height: 40.0)
@@ -51,14 +51,14 @@ struct SignUp: View {
             .shadow(radius: 10)
             .cornerRadius(20)
             
-            
+            //mit den hinterlegten Infos wird ein neuer Spieleraccount angelegt
             let newPlayer = PlayerTemplate.init(username: givenUsername, password: givenPassword, currentscore: 0)
             
             
             NewPlayerButton()
                 .onTapGesture() {
-                    
-                    
+                    //Angaben werden auf Korrektheit geprüft. Abhängig davon wird eine Nachricht angezeigt, ob das Erstellen erfolgreich war oder ob fehlerhafte Informationen vorliegen
+                    //Korrekte Angaben, wenn eingegebene Passwörter übereinstimmen, das Passwort nicht leer ist und der Username noch verfügbar ist
                     if(givenPassword == passwordRetry && givenPassword != "" && !self.players.usernameAvailable(givenUsername)){
                         players.appendPlayer(newPlayer)
                         self.hiddenFailure = true

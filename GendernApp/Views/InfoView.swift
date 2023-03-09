@@ -27,7 +27,7 @@ struct InfoView: View {
                     .foregroundColor(Color("TextColor2"))
                     .padding(.top)
                     
-                
+                //gibt weitere Informationen zum übergebenen Quiz an
                 Text(givenQuiz.furtherInformation)
                     .fontWeight(.semibold)
                     .multilineTextAlignment(.center)
@@ -46,8 +46,3 @@ struct InfoView: View {
     }
 }
 
-//struct InfoView_Previews: PreviewProvider {
- //   static var previews: some View {
- //       InfoView(givenQuiz: quiz1)
-  //  }
-//}

@@ -86,24 +86,26 @@ class Questions : ObservableObject{
     }
     
     //prüft, ob eine gegebene Frage bereits gestellt wurde
-    func questionAvailable(_ quizQuestion : String) -> Bool {
-        var available = false
+    func questionAvailable(_ givenQuiz : Quiz) -> Bool {
+        var available = true
         for quiz in quizze{
-            if(quiz.question == quizQuestion){
-                available = true
-                break
+            if(quiz.question == givenQuiz.question){
+                if(quiz.allAnswers == givenQuiz.allAnswers){
+                    available = false
+                    break
+                }
             }
         }
         return available
     }
     
     func addCorrectAnswered(_ givenQuiz : Quiz){
-        var offset = getQuizOffset(givenQuiz)
+        let offset = getQuizOffset(givenQuiz)
         quizze[offset].correctlySelectedAnswers += 1
     }
     
     func numberOfCorrectAnswers(_ givenQuiz : Quiz) -> Int {
-        var offset = getQuizOffset(givenQuiz)
+        let offset = getQuizOffset(givenQuiz)
         var amount = 0
         for answer in quizze[offset].correctAnswer {
             if(answer != ""){

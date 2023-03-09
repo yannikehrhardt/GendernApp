@@ -27,7 +27,7 @@ struct QuizView: View {
                     .frame(width: 400, height: 150)
                     .shadow(radius: 20)
                 
-                //die drei nächsten if-Abfragen zeigen an, wie viele Antworten korrekt sind
+                //Abhängig davon, wie viele korrekte Anworten vorliegen, wird der Text über den Antwortmöglichkeiten angepasst
                 if(questions.numberOfCorrectAnswers(givenQuiz) == 1){
                     Text("Wähle die korrekte Anwort aus")
                         .font(.caption)
@@ -51,9 +51,11 @@ struct QuizView: View {
                         .foregroundColor(Color.white)
                         .shadow(radius: 20)
                 }
+            
             //Aufruf zur Auflistung der Antwortmöglichkeiten
             AllAnswers(answer: givenQuiz)
             
+            //sobald die korrekten Antwortmöglichkeiten ausgewählt wurden, kann sich die spielende Person eine Belohnung abholen
             if(questions.numberOfCorrectAnswers(givenQuiz) == self.questions.quizze[self.questions.getQuizOffset(givenQuiz)].correctlySelectedAnswers){
                 HStack{
                     
@@ -78,10 +80,8 @@ struct QuizView: View {
                 .cornerRadius(30)
                 .padding(.top)
             }
-            
-            
+                        
             //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
-            
             HStack{
                 
                 CurrentScore()

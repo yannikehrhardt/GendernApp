@@ -9,12 +9,13 @@ import SwiftUI
 
 
 struct ContentView: View {
-    //hier wird der Typ Players mit den entsprechenden Variablen initialisiert und muss dann an die entsprechenden Screens weitergegeben werden
+    //hier wird der Typ Players mit den entsprechenden Variablen initialisiert und muss dann (unten) an die entsprechenden Screens weitergegeben werden
     @StateObject var players = Players()
     
-    //hier wird der Typ Questions mit den entsprechenden Variablen initialisiert und wird dann an die Screens weitergegeben
+    //hier wird der Typ Questions mit den entsprechenden Variablen initialisiert und wird dann (unten) an die Screens weitergegeben
     @StateObject var questions = Questions()
     
+    //hier wird der Typ Rules mit den entsprechenden Variablen initialisiert und wird dann (unten) an die Screens weitergegeben
     @StateObject var rules = Rules()
     
     @State var givenusername : String
@@ -88,6 +89,7 @@ struct ContentView: View {
             .background(Image("Backgrounds App"))
             
         }
+        //weitergeben
         .environmentObject(players)
         .environmentObject(questions)
         .environmentObject(rules)

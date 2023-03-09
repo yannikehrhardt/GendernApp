@@ -12,16 +12,21 @@ struct ScoreView: View {
     @EnvironmentObject var players : Players
     @EnvironmentObject var questions : Questions
     
+    //Variable, die angibt, ob der Spieler die Errungenschaften oder das Leaderboard sehen möchte
     @State var showBadges = 0
+    
     var body: some View {
         VStack(spacing: 20){
             VStack {
-                Picker("Welchen Spielerspezifischen Infos möchtest du sehen?", selection: $showBadges) {
+                //Der Picker erlaubt dem Spieler zwischen den Errungenschaften und dem Leaderboard zu wechseln. Dafür wird die Variable showBadges referenziert
+                Picker("Welchen spielerspezifischen Infos möchtest du sehen?", selection: $showBadges) {
                     Text("Errungenschaften").tag(0)
                     Text("Leaderboard").tag(1)
                 }
                 .pickerStyle(.segmented)
             }
+            
+            //für showBadges = 1 werden das Leaderboard angezeigt
             if(showBadges == 1){
                 Text("Du liegst auf Position \(players.returnOffsetInArray(givenPlayerArray: players.players.sorted{$0.currentscore > $1.currentscore}, givenPlayer: players.currentplayer) + 1)")
                 List {
@@ -34,6 +39,7 @@ struct ScoreView: View {
                 }
             }
             
+            //für showBadges = 0 werden die Errungenschaften angezeigt
             else if(showBadges == 0){
                 CreateBagdes()
             }

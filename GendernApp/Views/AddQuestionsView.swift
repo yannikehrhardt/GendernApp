@@ -21,14 +21,10 @@ struct AddQuestionsView: View {
     @State var weitereInformationen: String = ""
     @State private var hiddenFailure = true
     @State private var hiddenSuccess = true
-    
-    
     @State private var isSelected = false
     
     var body: some View {
         VStack(spacing: 30){
-            
-            
             
             Text("Lege ein eigenes Quiz an!")
                 .font(.title)
@@ -85,18 +81,20 @@ struct AddQuestionsView: View {
             .shadow(radius: 10)
             .cornerRadius(20)
             
+            //neues Quiz mit den eingegebenen Infos erstellen
             let quizNew = Quiz.init(type: "gap text", topic: thema, question: frage, correctAnswer: [richtigeAntwort, "", ""], allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], furtherInformation: weitereInformationen)
             
             AddQuizButton()
+                //
                 .shadow(color: isSelected && (thema == "Uni" || thema == "Schule" || thema == "Alltag") ? .green : .red, radius: 5, x: 0.5, y: 0.5)
                 .onTapGesture() {
                     
                     isSelected = true
                     
-                    if(thema != "" && frage != "" && richtigeAntwort != "" && falscheAntwort1 != "" && falscheAntwort2 != "" && weitereInformationen != "" && !questions.questionAvailable(frage)){
+                    if(thema != "" && frage != "" && richtigeAntwort != "" && falscheAntwort1 != "" && falscheAntwort2 != "" && weitereInformationen != "" && questions.questionAvailable(quizNew)){
                         
+                        //wenn alle Bedingungen an die Quizfrage erfüllt sind, wird das Quiz in das Array zu prüfender Quizfragen einsortiert, sobald ein Administrator das Quiz bestätigt ist es in der App für jeden zu finden
                         questions.quizze.append(quizNew)
-                        //quizze.append(quizNew)
                         players.createdQuiz()
                         
                         if (thema == "Uni") {

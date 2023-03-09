@@ -28,18 +28,21 @@ struct Themenauswahl: View {
             Image(systemName: "gamecontroller")
                 .font(.system(size: 30))
             
+            //Button zur Quizauswahl im Bereich Universität
             NavigationLink{
                 Quizauswahl_Universitat()
             }label: {
                 UniversityButton()
             }
             
+            //Button zur Quizauswahl im Bereich Schule
             NavigationLink{
                 Quizauswahl_Schule()
             }label: {
                 SchuleButton()
             }
             
+            //Button zur Quizauswahl im Bereich Allgemein
             NavigationLink{
                 Quizauswahl_Alltag()
             }label: {
@@ -49,10 +52,9 @@ struct Themenauswahl: View {
             Image(systemName: "gamecontroller")
                 .font(.system(size: 30))
             
-//            CurrentScore()
-//                .padding(.top, 10)
-            
+            //Bereich für die Buttons am unteren Bildschirmrand
             HStack{
+                //Errungenschaften und Leaderboard
                 NavigationLink{
                     ScoreView()
                 } label: {
@@ -61,6 +63,7 @@ struct Themenauswahl: View {
                 }
                 .padding(.trailing, 0)
                 
+                //Meinungsbildende Informationen
                 NavigationLink{
                     GeneralGenderInfo()
                 } label: {
@@ -68,6 +71,7 @@ struct Themenauswahl: View {
                 }
                 .padding(.trailing, 20)
                 
+                //Button zum Screen, in dem neue Quizze erstellt werden können
                 NavigationLink{
                     AddQuestionsView()
                 }label: {

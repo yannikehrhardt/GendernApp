@@ -16,7 +16,7 @@ struct CreateBagdes: View {
         List{
             HStack{
                 Image(systemName: "person.fill.checkmark")
-                Text("Erstelle einen Spieleraccount")
+                Text("Erstelle einen Nutzendenaccount")
             }
             
             if(players.players[players.usernameOffset(players.currentplayer.username)].answered.count >= 1){

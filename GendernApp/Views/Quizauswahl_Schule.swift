@@ -22,7 +22,7 @@ struct Quizauswahl_Schule: View {
                 .padding(.top, 50)
                 .shadow(radius: 20)
             
-            //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze also Buttons dar
+            //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze als Buttons dar
             QuizButton(givenQuiz: questions.SchuleQuizze)
             
             HStack{

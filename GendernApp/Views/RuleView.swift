@@ -11,12 +11,14 @@ struct RuleView: View {
     //var givenTopic : String
     @EnvironmentObject var rules: Rules
     
+    //gibt an, welche der Ansichten (alle Regeln, offene Regeln oder gemerkte Regeln) angezeigt werden
     @State var learning = 0
     
     var body: some View {
         
             VStack(){
                 VStack {
+                    //der Picker verändert die learning-Variable
                     Picker("Welchen Spielerspezifischen Infos möchtest du sehen?", selection: $learning) {
                         Text("Alle Regeln").tag(0)
                         Text("Offene Regeln").tag(1)
