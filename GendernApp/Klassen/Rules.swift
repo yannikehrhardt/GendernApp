@@ -20,6 +20,7 @@ class Rules: ObservableObject {
     
     let rule5 = RuleTemplate(ruleName: "Ableitung und Zusammensetzung", ruleText: "", topic: "Wortebene", example: "")
     
+    //Ändert sich ein Wert einer dieser Variablen, werden alle Screens in denen Rules verwendet wird, neu geladen
     @Published var rules : [RuleTemplate]
     @Published var learnedrules : [RuleTemplate]
     @Published var openrules : [RuleTemplate]
@@ -43,6 +44,7 @@ class Rules: ObservableObject {
         }
     }
     
+    //prüft, ob eine Regel in einem der Regel-Arrays (rules, openrules, learnedrules) liegt
     func containsRule(givenRule: RuleTemplate, destination : String) -> Bool{
         var contains = false
         if(destination == "rules"){

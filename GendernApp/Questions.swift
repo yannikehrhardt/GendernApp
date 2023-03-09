@@ -48,10 +48,6 @@ class Questions : ObservableObject{
     
     let quiz201 = Quiz(type: "gap text" , topic: "Alltag", question: "Was ist hier korrekte verkürzte Doppelnennung?", correctAnswer: ["Masseur/Masseurin", "", ""], allAnswers: ["Masseur/Masseurin", "Masseur/Masseuse", "Masseure"], furtherInformation: "Bei Masseure handelt es sich nicht und eine Doppelnennung, es wird nur das männliche Geschlecht angesprochen. Masseur/Masseuse ist nicht korrekte, da Masseuse heute meist die Bedeutung >Prostituierte in einem Massagesalon< hat.")
     
-    
-    
-    
-    
     @Published var quizze : [Quiz] //alle Quizze
     @Published var UniQuizze : [Quiz]   //Array mit allen Quizzen der Kategorie Uni
     @Published var SchuleQuizze : [Quiz]  //Array mit allen Quizzen der Kategorie Schule
@@ -74,6 +70,7 @@ class Questions : ObservableObject{
         return solution
     }
     
+    //Offset eines Quizes im Array quizze
     func getQuizOffset(_ givenQuiz : Quiz) -> Int {
         if let Offset = self.quizze.firstIndex(where: {$0.question == givenQuiz.question}){
             return Offset
@@ -104,6 +101,8 @@ class Questions : ObservableObject{
         quizze[offset].correctlySelectedAnswers += 1
     }
     
+    //Problematik: das correctAnswer Array umfasst neben den richtigen Quizantworten auch leere Strings (""), da die Länge des Arrays immer drei entspricht (Anzahl aller Antwortmöglichkeiten)
+    //Diese Funktion zählt alle korrekten Antworten in correctAnswer und beachtet dabei leere Strings nicht
     func numberOfCorrectAnswers(_ givenQuiz : Quiz) -> Int {
         let offset = getQuizOffset(givenQuiz)
         var amount = 0

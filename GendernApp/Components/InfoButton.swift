@@ -12,7 +12,6 @@ struct InfoButton: View {
     
     var body: some View {
         HStack{
-            
             Image(systemName: "info.circle")
                 .font(.title3)
             

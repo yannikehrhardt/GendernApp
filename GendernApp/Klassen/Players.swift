@@ -105,11 +105,13 @@ class Players : ObservableObject{
         players[usernameOffset(currentplayer.username)].badges = givenAmountOfBages
     }
     
+    //gibt Offset eines Spielers in einem übergebenen Array aus Spielern zurück
     func returnOffsetInArray(givenPlayerArray : [PlayerTemplate], givenPlayer : PlayerTemplate) -> Int{
         if let Offset = givenPlayerArray.firstIndex(where: {$0.username == givenPlayer.username}){
             return Offset
         }
         else{
+            //dieser Fall wurde durch vorherige Bedingungen ausgeschlossen
             return -1
         }
     }

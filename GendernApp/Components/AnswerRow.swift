@@ -14,10 +14,7 @@ import SwiftUI
 struct AnswerRow: View {
     @EnvironmentObject var players : Players
     @EnvironmentObject var questions : Questions
-    
     var givenQuiz : Quiz
-
-    
     @State private var isSelected = false
     
     var green = Color("CorrectAnswer")
@@ -25,9 +22,7 @@ struct AnswerRow: View {
     
     var body: some View {
         VStack{
-            
             AllAnswers(answer: givenQuiz)
-                        
         }
         .environmentObject(players)
         .environmentObject(questions)

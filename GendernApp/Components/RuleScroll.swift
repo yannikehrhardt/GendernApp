@@ -14,22 +14,22 @@ struct RuleScroll: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack() {
+                //Schleife lädt alle Regeln in die entsprechende View
                 ForEach(givenRules, id: \.self.id) { rule in
                     VStack{
-                        
                         Text(rule.ruleName)
                             .fontWeight(.bold)
                             .foregroundColor(Color("TextColor"))
                             .font(.title)
                             .multilineTextAlignment(.leading)
                             .underline()
-                        
-                        
+                                                
                         Text(rule.ruleText)
                             .fontWeight(.bold)
                             .foregroundColor(Color("TextColor"))
                             .padding([.top, .leading], 10)
                             .font(.callout)
+                        
                         if(rule.example != ""){
                             Text("Beispiel: \(rule.example)")
                                 .fontWeight(.bold)
@@ -49,8 +49,7 @@ struct RuleScroll: View {
                             .padding(.horizontal, 20)
                             .background(.white)
                             .cornerRadius(40)
-                            
-                            
+                                                        
                             Button("Als offen markieren"){
                                 if(!rules.containsRule(givenRule: rule, destination: "openrules")){
                                     self.rules.addRule(givenRule: rule, destination: "openrules")

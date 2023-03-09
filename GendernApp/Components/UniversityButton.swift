@@ -27,20 +27,12 @@ struct UniversityButton: View {
                 }
                 .padding(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                
-                
-                
-        }
+            }
             .frame(width: 200, height: 80)
             .background(Color("ButtonColor"))
             .cornerRadius(20)
             .shadow(radius: 20)
-            
-        
-  
-        
-        
-    }
+        }
     }
 
 struct UniversitatButton_Previews: PreviewProvider {

@@ -12,20 +12,11 @@ struct GeneralGenderInfoButton: View {
     
     var body: some View {
         HStack(spacing:20){
-//            Text("Neues Quiz ")
-//                .font(.title2)
-//                .fontWeight(.light)
-//                .foregroundColor(Color.white)
-//                .padding(.leading)
-                
-            
             Image(systemName: "info.circle")
                 .font(.largeTitle)
                 .foregroundColor(.white)
-
-            
-                
         }
+        
         .frame(width: 80, height: 80)
         .background(Color("ButtonColor"))
         .cornerRadius(20)

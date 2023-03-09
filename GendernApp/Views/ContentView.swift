@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     //hier wird der Typ Players mit den entsprechenden Variablen initialisiert und muss dann (unten) an die entsprechenden Screens weitergegeben werden
+    //StateObject sorgt dafür, dass alle Screens neu geladen werden, wenn sich Variablen dieses Structs verändern
     @StateObject var players = Players()
     
     //hier wird der Typ Questions mit den entsprechenden Variablen initialisiert und wird dann (unten) an die Screens weitergegeben

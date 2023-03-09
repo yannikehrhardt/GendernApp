@@ -10,8 +10,11 @@ import SwiftUI
 struct CreateBagdes: View {
     @EnvironmentObject var players : Players
     @EnvironmentObject var questions : Questions
+    
+    //Anzahl an Badges
     @State var count = 1
     var body: some View {
+        //Listet alle Errungenschaften auf, die der Spieler bereits verdient hat
         Text("Diese Errungenschaften hast du bereits verdient:")
         List{
             HStack{
@@ -64,6 +67,7 @@ struct CreateBagdes: View {
             }
         }
         
+        //Listet alle Errungenschaften auf, die dem Spieler noch fehlen
         Text("Diese Errungenschaften fehlen dir noch:")
         List{
             

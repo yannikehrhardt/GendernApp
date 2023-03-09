@@ -17,7 +17,6 @@ struct AlltagButton: View {
     var body: some View {
             VStack(spacing:20){
                 HStack{
-                    
                     Image(systemName: "arrowshape.forward")
                         .foregroundColor(.white)
                     
@@ -25,7 +24,6 @@ struct AlltagButton: View {
                         .font(.title2)
                         .fontWeight(.medium)
                         .foregroundColor(Color.white)
-                    
                 }
                 .padding(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)

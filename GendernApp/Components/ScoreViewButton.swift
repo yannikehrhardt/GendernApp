@@ -12,15 +12,9 @@ struct ScoreViewButton: View {
     
     var body: some View {
         HStack(spacing:20){
-//            Text("Score Vergleich")
-//                .font(.title2)
-//                .fontWeight(.light)
-//                .foregroundColor(Color.white)
-            
             Image(systemName: "person.3")
                 .font(.largeTitle)
                 .foregroundColor(.white)
-                
         }
         .frame(width: 80, height: 80)
         .background(Color("ButtonColor"))

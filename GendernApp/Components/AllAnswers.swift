@@ -12,6 +12,7 @@ import SwiftUI
 struct AllAnswers: View {
     //answer ist das übergebene Quizobjekt
     var answer: Quiz
+    
     @EnvironmentObject var players: Players
     @EnvironmentObject var questions : Questions
     
@@ -23,10 +24,6 @@ struct AllAnswers: View {
     //Farbe der Haken, beim Beantworten von Fragen
     var green = Color("CorrectAnswer")
     var red = Color ("WrongAnswer")
-    
-    //gibt an , wie viele korrekte Fragen der Spielende bereits beantwortet hat
-  //  @State var questionsanswered = 0
-
     
     var body: some View {
         VStack{
@@ -59,11 +56,9 @@ struct AllAnswers: View {
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
                             }
-                            
-                            
                         }
-
                 }
+                
                 //ist die Frage falsch, so wird der rote Haken gesetzt
                 else {
                     if isSelected3{
@@ -83,6 +78,7 @@ struct AllAnswers: View {
                     .foregroundColor(isSelected3 ? Color("ButtonColor") : .gray)
                     .background(.white)
                     .cornerRadius(10)
+            
                     //Farbige Umrandung der Antwortmöglichkeit
                     .shadow(color: isSelected3 ?
                             (((answer.allAnswers[0] == answer.correctAnswer[0]) ||

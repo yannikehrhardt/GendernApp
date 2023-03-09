@@ -13,6 +13,7 @@ struct CurrentScore: View {
     @EnvironmentObject var players : Players
     var background: Color = Color("ButtonColor")
     
+    //gibt den Score des aktuellen Nutzenden zurück
     var body: some View {
         Text("Score: \(players.currentplayer.currentscore)")
             .font(.title2)
@@ -22,9 +23,7 @@ struct CurrentScore: View {
             .padding(.horizontal)
             .background(.white)
             .cornerRadius(40)
-        
         }
-        
     }
 
 

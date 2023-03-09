@@ -16,7 +16,6 @@ struct SignUpButton: View {
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(Color.white)
-                
         }
         .frame(width: 150, height: 60)
         .background(Color("ButtonColor"))

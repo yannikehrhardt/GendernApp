@@ -13,16 +13,14 @@ struct RuleButton: View {
     
     var body: some View {
         HStack(spacing:20){
-            Text("Lerne die Regeln")
-                .font(.title2)
-                .fontWeight(.light)
-                .foregroundColor(Color.white)
-//
             Image(systemName: "book")
                 .font(.largeTitle)
                 .foregroundColor(.white)
             
-                
+            Text("Lerne die Regeln")
+                .font(.title2)
+                .fontWeight(.light)
+                .foregroundColor(Color.white)
         }
         .frame(width: 200, height: 80)
         .background(Color("ButtonColor"))

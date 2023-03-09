@@ -28,9 +28,9 @@ struct QuizButton: View {
                                 .foregroundColor(Color.white)
                                 .padding()
                                 .padding(.horizontal)
-                                
+                            
+                            //wenn die Frage vom Spielenden bereits korrekt beantwortet wurde (dann ist die ID des Quizzes teil des Arrays aswered (in Players)), dann wird ein Haken hinter der Frage gesetzt
                             if(players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(quiz.id)){
-
                                 Image(systemName: "checkmark.circle.fill")
                             }
                             
