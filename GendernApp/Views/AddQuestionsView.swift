@@ -12,7 +12,7 @@ struct AddQuestionsView: View {
     @EnvironmentObject var questions : Questions
     
     @EnvironmentObject var players: Players
-    
+    let themaOptions = ["Option wählen" ,"Uni", "Schule", "Alltag"]
     @State var thema: String = ""
     @State var frage: String = ""
     @State var richtigeAntwort: String = ""
@@ -33,53 +33,72 @@ struct AddQuestionsView: View {
                 .padding(.bottom)
                 .padding(.top, 50)
             
-            TextField(
-                "Wähle ein Thema (Uni, Schule, Alltag)...", text: $thema)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
+            HStack{
+                Text("Wähle ein Thema")
+                    .font(.body)
+                    .background(Color.white)
+                    .multilineTextAlignment(.leading)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 1)
+                    .padding(.trailing, 30.0)
+                    .disableAutocorrection(true)
+                
+                Picker("Wähle ein Thema", selection: $thema) {
+                    ForEach(themaOptions, id: \.self) { option in
+                        Text(option)
+                    }
+                }
+                .pickerStyle(.menu)
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+            }
+            .frame(width: 320)
+            .padding()
             .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+            .cornerRadius(5.0)
+            
+            
             
             TextField(
                 "Formuliere eine Frage...", text: $frage)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
-            .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+                .disableAutocorrection(true)
             
             TextField(
                 "Korrekte Antwort...", text: $richtigeAntwort)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
-            .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+                .disableAutocorrection(true)
             
             TextField(
                 "Erste falsche Antwort...", text: $falscheAntwort1)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
-            .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+                .disableAutocorrection(true)
             
             TextField(
                 "Zweite falsche Antwort...", text: $falscheAntwort2)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
-            .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+                .disableAutocorrection(true)
             
             TextField(
                 "Erklärung...", text: $weitereInformationen)
-            .padding(.leading, 40.0)
-            .frame(width: 350.0, height: 40.0)
-            .background(Color.white)
-            .shadow(radius: 10)
-            .cornerRadius(20)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(5.0)
+                .padding(.bottom, 1)
+                .disableAutocorrection(true)
             
             //neues Quiz mit den eingegebenen Infos erstellen
             let quizNew = Quiz.init(type: "gap text", topic: thema, question: frage, correctAnswer: [richtigeAntwort, "", ""], allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], furtherInformation: weitereInformationen)
@@ -123,12 +142,12 @@ struct AddQuestionsView: View {
             if (self.hiddenFailure == false) {
                 Text("Falsche Eingaben: Deine neue Quizfrage wurde nicht erstellt. Versuche es erneut.")
             }   
-            if (!self.hiddenSuccess){
+            if(!self.hiddenSuccess){
                 Text("Dein Quizfrage wurde erfolgreich erstellt.")
             }
             
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(maxWidth: 350, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
         .environmentObject(players)
         

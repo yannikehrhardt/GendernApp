@@ -56,7 +56,6 @@ struct QuizView: View {
             AllAnswers(answer: givenQuiz)
             
             //sobald die korrekten Antwortmöglichkeiten ausgewählt wurden, kann sich die spielende Person eine Belohnung abholen
-            //if(questions.numberOfCorrectAnswers(givenQuiz) == self.questions.quizze[self.questions.getQuizOffset(givenQuiz)].correctlySelectedAnswers){
             if(players.currentplayer.answered.contains(givenQuiz.id)){
                 HStack{
                     Image(systemName: "gift")
@@ -72,7 +71,6 @@ struct QuizView: View {
                             
                         Image("Image")
                         .background(Image("Backgrounds App"))
-                            
                     }
                 }
                 .frame(width: 160, height: 50)
