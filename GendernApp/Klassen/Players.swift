@@ -92,6 +92,7 @@ class Players : ObservableObject{
     //in den Quizauswahl-Views wird die Frage dann mit einem Haken versehen
     func setQuizAnswered(_ givenQuiz : Quiz){
         players[usernameOffset(currentplayer.username)].answered.append(givenQuiz.id)
+        currentplayer.answered.append(givenQuiz.id)
     }
     
     //Reicht der aktuelle Spieler eine neue Frage ein, so wird über diese Funktion der createdNewQuestion -Wert auf true gesetzt
