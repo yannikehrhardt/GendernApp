@@ -20,23 +20,33 @@ struct RuleScroll: View {
                         Text(rule.ruleName)
                             .fontWeight(.bold)
                             .foregroundColor(Color("TextColor"))
-                            .font(.title)
-                            .multilineTextAlignment(.leading)
+                            .font(.title2)
                             .underline()
-                                                
-                        Text(rule.ruleText)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color("TextColor"))
-                            .padding([.top, .leading], 10)
-                            .font(.callout)
-                        
-                        if(rule.example != ""){
-                            Text("Beispiel: \(rule.example)")
-                                .fontWeight(.bold)
+                            .padding(.bottom, 20)
+                            
+                            
+                        VStack{
+                            
+                            Text(rule.ruleText)
+                                .fontWeight(.medium)
                                 .foregroundColor(Color("TextColor"))
-                                .padding(.top, 10)
-                                .font(.callout)
+                                .multilineTextAlignment(.leading)
+                                .font(.body)
+                                .padding(.horizontal)
+                            
+                            if(rule.example != ""){
+                                Text("Beispiel: \(rule.example)")
+                                    .fontWeight(.medium)
+                                    .foregroundColor(Color("TextColor"))
+                                    .font(.body)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.top, 10)
+                            }
+                            
+                            Spacer()
                         }
+                        .frame(width: 380, height: 420)
+                        
                         
                         HStack{
                             Button("Als gelernt markieren"){
@@ -61,6 +71,7 @@ struct RuleScroll: View {
                             .background(.white)
                             .cornerRadius(40)
                         }
+                        
                             
                     }
                     .frame(width: 380, height: 650)
@@ -69,7 +80,7 @@ struct RuleScroll: View {
                 }
             }
         }
-        .padding(.leading, 7.0)
+        .padding(.leading, 1.0)
         .environmentObject(rules)
     }
 }

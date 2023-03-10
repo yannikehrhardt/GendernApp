@@ -26,9 +26,11 @@ struct RuleView: View {
                     }
                     .pickerStyle(.segmented)
                 }
+                Spacer()
+                
                 if(learning == 0){
                     RuleScroll(givenRules: rules.rules)
-                        .padding(.bottom)
+                        
                 }
                 
                 if(learning == 1){
@@ -38,8 +40,6 @@ struct RuleView: View {
                 else if(learning == 2){
                     RuleScroll(givenRules: rules.learnedrules)
                 }
-                
-                Text("Scrolle nach rechts um weitere Regeln kennenzulernen")
                 
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
