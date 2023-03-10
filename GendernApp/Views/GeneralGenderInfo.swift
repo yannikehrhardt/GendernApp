@@ -19,8 +19,9 @@ struct GeneralGenderInfo: View {
                     Text("Links").tag(1)
                 }
                 .pickerStyle(.segmented)
+                
+                Spacer()
             }
-            .padding(.bottom)
             
             if(showArguments == 0) {
                 GeneralInfoPageControl()
@@ -33,7 +34,7 @@ struct GeneralGenderInfo: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .frame(width: 400, height: 710)
         .background(Image("Backgrounds App"))
     }
     

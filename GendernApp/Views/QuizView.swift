@@ -45,7 +45,7 @@ struct QuizView: View {
                 }
                 
                 if(questions.numberOfCorrectAnswers(givenQuiz) == 3){
-                    Text("Wähle alle drei korrekten Anworten aus")
+                    Text("Wähle die korrekten Anworten aus")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(Color.white)
