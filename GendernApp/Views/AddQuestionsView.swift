@@ -40,8 +40,9 @@ struct AddQuestionsView: View {
                     .multilineTextAlignment(.leading)
                     .cornerRadius(5.0)
                     .padding(.bottom, 1)
-                    .padding(.trailing, 30.0)
                     .disableAutocorrection(true)
+                
+                Spacer()
                 
                 Picker("Wähle ein Thema", selection: $thema) {
                     ForEach(themaOptions, id: \.self) { option in
