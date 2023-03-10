@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewPlayerButton: View {
     var body: some View {
-        Text("Create a new player account")
+        Text("Jetzt registieren")
             .font(.title2)
             .fontWeight(.light)
             .foregroundColor(Color.white)

@@ -12,7 +12,7 @@ struct SignUpButton: View {
     
     var body: some View {
         VStack(spacing:20){
-            Text("Sign up")
+            Text("Registrieren")
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(Color.white)

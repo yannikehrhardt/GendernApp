@@ -15,7 +15,7 @@ struct PlayButton: View {
     
     var body: some View {
         VStack(spacing:20){
-            Text("Log In")
+            Text("Anmelden")
                 .font(.title2)
                 .fontWeight(.medium)
                 .foregroundColor(Color.white)

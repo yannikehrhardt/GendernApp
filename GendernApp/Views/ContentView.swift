@@ -74,7 +74,7 @@ struct ContentView: View {
                     PlayButton()
                 }
                 
-               Text("or")
+               Text("oder")
                 .foregroundColor(Color("TextColor"))
                 
                 //Button zum Sign-Up-Screen
@@ -83,8 +83,6 @@ struct ContentView: View {
                 } label:{
                     SignUpButton()
                 }
-                
-                
             }
             .frame(maxWidth: 300, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
