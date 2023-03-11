@@ -22,7 +22,10 @@ struct PlayerTemplate {
     //gibt an, welche Fragen der Spieler schon beantwortet hat. Wenn ein Spieler die Frage beantwortet hat, so wird die (einzigartige) UUID des beantworteten Quizzes zum Array hinzugefügt
     var answered : [UUID]
     
-    init(username: String, password: String, currentscore: Int) {
+    //gibt an, ob der Nutzer ein Admin ist
+    var admin : Bool
+    
+    init(username: String, password: String, currentscore: Int, admin: Bool) {
         self.id = UUID.init()
         self.username = username
         self.password = password
@@ -30,5 +33,6 @@ struct PlayerTemplate {
         self.createdNewQuestion = false
         self.badges = 1
         self.answered = []
+        self.admin = admin
     }
 }

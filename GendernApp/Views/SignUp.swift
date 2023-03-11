@@ -61,7 +61,7 @@ struct SignUp: View {
                     y: 0.5)
             
             //mit den hinterlegten Infos wird ein neuer Spieleraccount angelegt
-            let newPlayer = PlayerTemplate.init(username: givenUsername, password: givenPassword, currentscore: 0)
+            let newPlayer = PlayerTemplate.init(username: givenUsername, password: givenPassword, currentscore: 0, admin: false)
             
             
             NewPlayerButton()

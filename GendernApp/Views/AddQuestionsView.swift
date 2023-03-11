@@ -10,7 +10,6 @@ import SwiftUI
 struct AddQuestionsView: View {
     
     @EnvironmentObject var questions : Questions
-    
     @EnvironmentObject var players: Players
     let themaOptions = ["Option wählen" ,"Uni", "Schule", "Alltag"]
     @State var thema: String = ""
@@ -102,56 +101,57 @@ struct AddQuestionsView: View {
                 .disableAutocorrection(true)
             
             //neues Quiz mit den eingegebenen Infos erstellen
-            let quizNew = Quiz.init(type: "gap text", topic: thema, question: frage, correctAnswer: [richtigeAntwort, "", ""], allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], furtherInformation: weitereInformationen)
+            let quizNew = Quiz.init(type: "gap text", topic: thema, question: frage, correctAnswer: [richtigeAntwort, "", ""], allAnswers: [richtigeAntwort, falscheAntwort1, falscheAntwort2], furtherInformation: weitereInformationen, createdBy: players.currentplayer.username)
             
-            AddQuizButton()
-                //
-                .shadow(color: isSelected && (thema == "Uni" || thema == "Schule" || thema == "Alltag") ? .green : .red, radius: 5, x: 0.5, y: 0.5)
-                .onTapGesture() {
-                    
-                    isSelected = true
-                    
-                    if(thema != "" && frage != "" && richtigeAntwort != "" && falscheAntwort1 != "" && falscheAntwort2 != "" && weitereInformationen != "" && questions.questionAvailable(quizNew)){
+            HStack{
+                AddQuizButton()
+                    .shadow(color: isSelected && (thema == "Uni" || thema == "Schule" || thema == "Alltag") ? .green : .red, radius: 5, x: 0.5, y: 0.5)
+                    .onTapGesture() {
                         
-                        //wenn alle Bedingungen an die Quizfrage erfüllt sind, wird das Quiz in das Array zu prüfender Quizfragen einsortiert, sobald ein Administrator das Quiz bestätigt ist es in der App für jeden zu finden
-                        questions.quizze.append(quizNew)
-                        players.createdQuiz()
+                        isSelected = true
                         
-                        if (thema == "Uni") {
-                            questions.UniQuizze = questions.addQuizze("Uni")
-                            //UniQuizze = addQuizze("Uni")
+                        if(thema != "" && frage != "" && richtigeAntwort != "" && falscheAntwort1 != "" && falscheAntwort2 != "" && weitereInformationen != "" && questions.questionAvailable(quizNew)){
+                            
+                            //wenn alle Bedingungen an die Quizfrage erfüllt sind, wird das Quiz in das Array zu prüfender Quizfragen einsortiert, sobald ein Administrator das Quiz bestätigt ist es in der App für jeden zu finden
+                            questions.toBeTested.append(quizNew)
+                            players.createdQuiz()
+                            
+                            self.hiddenSuccess = false
+                            self.hiddenFailure = true
                         }
-                        else if (thema == "Schule"){
-                            questions.SchuleQuizze = questions.addQuizze("Schule")
-                            //SchuleQuizze = addQuizze("Schule")
+                        else {
+                            self.hiddenFailure = false
+                            self.hiddenSuccess = true
+                            
                         }
-                        else if (thema == "Alltag") {
-                            questions.AlltagQuizze = questions.addQuizze("Alltag")
-                            //AlltagQuizze = addQuizze("Alltag")
-                        }
-                        
-                        self.hiddenSuccess = false
-                        self.hiddenFailure = true
                     }
-                    else {
-                        self.hiddenFailure = false
-                        self.hiddenSuccess = true
-                        
+        
+                if(players.currentplayer.admin){
+                    Spacer()
+                    
+                    NavigationLink{
+                        AdminQuizCheck()
+                    }label: {
+                        CheckQuestionsButton()
                     }
                 }
+            }
             
             if (self.hiddenFailure == false) {
                 Text("Falsche Eingaben: Deine neue Quizfrage wurde nicht erstellt. Versuche es erneut.")
+                    .font(.footnote)
+                    .frame(width: 300, height: 60)
             }   
             if(!self.hiddenSuccess){
                 Text("Dein Quizfrage wurde erfolgreich erstellt.")
+                    .font(.footnote)
+                    .frame(width: 300, height: 60)
             }
-            
         }
         .frame(maxWidth: 350, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
         .environmentObject(players)
-        
+        .environmentObject(questions)
     }
 }
 

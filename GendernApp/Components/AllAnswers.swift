@@ -51,7 +51,7 @@ struct AllAnswers: View {
                             
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet (wenn alle richtigen Fragen beantwortet wurden)
                             //Diese if-Abfrage prüft, (1) ob der Spieler die Frage schon beantwortet hat und (2) alle korrekte Fragen ausgewählt wurden
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
@@ -111,7 +111,7 @@ struct AllAnswers: View {
                         .onAppear(){
                             self.questions.addCorrectAnswered(answer)
                             
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
@@ -168,7 +168,7 @@ struct AllAnswers: View {
                             self.questions.addCorrectAnswered(answer)
 
                             //wenn Frage vom aktuellen Spieler noch nicht beantwortet wurde, dann setze den Score hoch und die Frage auf beantwortet
-                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer)].correctlySelectedAnswers){
+                            if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id) && questions.numberOfCorrectAnswers(answer) == self.questions.quizze[self.questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers){
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
@@ -210,7 +210,7 @@ struct AllAnswers: View {
     
     struct IncorrectAnswer_Previews: PreviewProvider {
         static var previews: some View {
-            AllAnswers(answer: Quiz(type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: ["hallo", "falsch", ""], allAnswers: ["hallo","falsch", "wrong"], furtherInformation: ""))
+            AllAnswers(answer: Quiz(type: "gap text" , topic: "Uni", question: "hallo1?", correctAnswer: ["hallo", "falsch", ""], allAnswers: ["hallo","falsch", "wrong"], furtherInformation: "", createdBy: "test"))
                 .environmentObject(Players())
                 .environmentObject(Questions())
         }

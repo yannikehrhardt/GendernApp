@@ -28,9 +28,9 @@ class Players : ObservableObject{
     //
     
     init() {
-        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100)
-        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 500)
-        self.player3 = PlayerTemplate(username: "", password: "", currentscore: 0)
+        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100, admin: true)
+        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 500, admin: true)
+        self.player3 = PlayerTemplate(username: "", password: "", currentscore: 0, admin: false)
         self.players = [player1, player2, player3]
         self.currentplayer = player1
     }
