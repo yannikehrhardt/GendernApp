@@ -26,56 +26,46 @@ struct GeneralInfoPageControl: View {
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Argument 1")
+                    Text("Gendern macht Frauen in der Sprache sichtbar")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Argument 2")
+                    Text("Gendern kann potenziell Geschlechtsstereotype reduzieren")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Argument 3")
+                    Text("Sprache verändert sich ständig")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Argument 4")
+                    Text("Ein gutes Viertel (26%) der Deutschen befürwortet das Gendern.")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
-                HStack{
-                    Image(systemName: "plus")
-                        .foregroundColor(Color("CorrectAnswer"))
-                        .padding(.leading)
-                    Text("Argument 5")
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
-                .background(.white)
-                .cornerRadius(30)
             }
             .padding(.top)
             
@@ -89,57 +79,47 @@ struct GeneralInfoPageControl: View {
                     Image(systemName: "minus")
                         .foregroundColor(Color("WrongAnswer"))
                         .padding(.leading)
-                    Text("Argument 1")
+                    Text("Sprache hat nur begrenzten Einfluss auf reale Verhältnisse")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "minus")
                         .foregroundColor(Color("WrongAnswer"))
                         .padding(.leading)
-                    Text("Argument 2")
+                    Text("Gendern lenkt von den Inhalten ab, indem es den Lesefluss behindert")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "minus")
                         .foregroundColor(Color("WrongAnswer"))
                         .padding(.leading)
-                    Text("Argument 3")
+                    Text("Gendern kann Barrieren schaffen")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
                 HStack{
                     Image(systemName: "minus")
                         .foregroundColor(Color("WrongAnswer"))
                         .padding(.leading)
                     
-                    Text("Argument 4")
+                    Text("Fast zwei Drittel der Deutschen (65%) lehnen das Gendern ab.")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
+                .frame(width: 350, height: 50)
                 .background(.white)
-                .cornerRadius(30)
+                .cornerRadius(20)
                 
-                HStack{
-                    Image(systemName: "minus")
-                        .foregroundColor(Color("WrongAnswer"))
-                        .padding(.leading)
-                    Text("Argument 5")
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .frame(width: 300, height: 40)
-                .background(.white)
-                .cornerRadius(30)
             }
             .padding(.top)
             

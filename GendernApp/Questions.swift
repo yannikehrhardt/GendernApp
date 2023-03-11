@@ -77,10 +77,10 @@ class Questions : ObservableObject{
     @Published var toBeTested : [Quiz]   //Array mit Quizzen, die durch Admins bestätigt werden müssen
     
     init() {
-        quizze = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz100, quiz101, quiz102, quiz103, quiz104, quiz105, quiz200, quiz201, quiz202, quiz203, quiz204]
+        quizze = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11, quiz100, quiz101, quiz102, quiz103, quiz104, quiz105, quiz200, quiz201, quiz202, quiz203, quiz204, quiz205]
         UniQuizze = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11]
         SchuleQuizze = [quiz100, quiz101, quiz102, quiz103, quiz104, quiz105]
-        AlltagQuizze = [quiz200, quiz201, quiz202, quiz203, quiz204]
+        AlltagQuizze = [quiz200, quiz201, quiz202, quiz203, quiz204, quiz205]
         toBeTested = [quiz400, quiz401]
     }
     
