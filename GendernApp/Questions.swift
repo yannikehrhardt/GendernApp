@@ -50,7 +50,7 @@ class Questions : ObservableObject{
     
     
     let quiz400 = Quiz(type: "gap text", topic: "Uni", question: "Testfrage zu überprüfen", correctAnswer: ["korrekt","",""], allAnswers: ["falsch", "falsch", "korrekt"], furtherInformation: "weil, du opfer", createdBy: "test")
-    let quiz401 = Quiz(type: "gap text", topic: "Schule", question: "Testfrage zu überprüfen2", correctAnswer: ["korrekt2","",""], allAnswers: ["falsch", "falsch", "korrekt"], furtherInformation: "weil, du opfer", createdBy: "test")
+    let quiz401 = Quiz(type: "gap text", topic: "Schule", question: "Testfrage zu überprüfen2", correctAnswer: ["korrekt2","",""], allAnswers: ["falsch", "falsch", "korrekt2"], furtherInformation: "weil, du opfer", createdBy: "test")
     
     @Published var quizze : [Quiz] //alle Quizze
     @Published var UniQuizze : [Quiz]   //Array mit allen Quizzen der Kategorie Uni
