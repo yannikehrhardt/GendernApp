@@ -33,7 +33,7 @@ struct InfoView: View {
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("TextColor2"))
                     .padding(.horizontal)
-                    .frame(width: 380.0, height: 250.0)
+                    .frame(width: 380.0, height: 300.0)
                 
             }
             .background(.white)
