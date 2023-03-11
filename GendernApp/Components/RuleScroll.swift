@@ -45,7 +45,7 @@ struct RuleScroll: View {
                             
                             Spacer()
                         }
-                        .frame(width: 380, height: 420)
+                        .frame(width: 380, height: 430)
                         
                         
                         HStack{
