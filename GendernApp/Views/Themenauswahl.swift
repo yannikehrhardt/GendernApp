@@ -17,6 +17,7 @@ struct Themenauswahl: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            
             Text("Wähle ein Thema!")
                 .font(.largeTitle)
                 .fontWeight(.bold)

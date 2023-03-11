@@ -26,6 +26,7 @@ struct RuleView: View {
                     }
                     .pickerStyle(.segmented)
                 }
+                
                 Spacer()
                 
                 if(learning == 0){

@@ -16,6 +16,7 @@ struct InfoView: View {
     
     var body: some View {
         VStack(spacing:20){
+            
             Text("Info")
                 .font(.largeTitle)
                 .fontWeight(.heavy)

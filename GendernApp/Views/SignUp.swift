@@ -28,7 +28,8 @@ struct SignUp: View {
                 .padding(.top, 50)
                 .shadow(radius: 20)
                 .multilineTextAlignment(.center)
-            
+          
+            //Textfeld in das der Benutzernamen eingegeben werden kann
             TextField("Gib deinen neuen Nutzernamen ein", text: $givenUsername)
                 .padding()
                 .background(Color.white)
@@ -36,6 +37,8 @@ struct SignUp: View {
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)
             
+            
+            //Textfeld in das das Passwort eingebeben werden kann
             SecureField("Dein neues Passwort", text: $givenPassword)
                 .padding()
                 .background(Color.white)
@@ -48,6 +51,7 @@ struct SignUp: View {
                     x: 0.5,
                     y: 0.5)
             
+            //Textfeld in das das Passwort eingebeben werden kann
             SecureField("Passwort wiederholen", text: $passwordRetry)
                 .padding()
                 .background(Color.white)
@@ -62,7 +66,6 @@ struct SignUp: View {
             
             //mit den hinterlegten Infos wird ein neuer Spieleraccount angelegt
             let newPlayer = PlayerTemplate.init(username: givenUsername, password: givenPassword, currentscore: 0, admin: false)
-            
             
             NewPlayerButton()
                 .onTapGesture() {
@@ -83,10 +86,11 @@ struct SignUp: View {
                     }
                     
                 }
-                
+            // wenn Erstellen fehlgeschlagen ist
             if(!self.hiddenFailure) {
                 Text("Erstellen fehlgeschlagen! Dein gewählter Nutzername ist bereits vergeben oder die Passwörter stimmten nicht überein.")
             }
+            //wenn Erstellen erfolgreich war
             if(!self.hiddenSuccess){
                 Text("Dein Account wurde erstellt. Kehre in den Log-In Screen zurück um dich anzumelden!")
             }

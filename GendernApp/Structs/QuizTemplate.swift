@@ -3,7 +3,8 @@
 //  GendernApp
 //
 //  Created by Yannik Ehrhardt on 02.11.22.
-//struct for creating quizes that will be loaded on the different level depending on their topic and their difficulty
+
+// In dieser Struct wird die Struktur eines Quizzes festgeleft
 
 import Foundation
 import SwiftUI

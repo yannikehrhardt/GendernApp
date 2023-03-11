@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 06.12.22.
 //
+// In dieser Struct wird die Struktur für einen Player festgelegt
 
 import SwiftUI
 

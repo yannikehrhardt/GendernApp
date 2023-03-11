@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
+//UIView zur Darstellung der der Regeln bzw. der Scroll View mit Regeln
 
 import SwiftUI
 
@@ -16,6 +17,7 @@ struct RuleScroll: View {
             HStack() {
                 //Schleife lädt alle Regeln in die entsprechende View
                 ForEach(givenRules, id: \.self.id) { rule in
+                   //Stapel der den Regelnamen, den Text und die Beispiele untereinander darstellt
                     VStack{
                         Text(rule.ruleName)
                             .fontWeight(.bold)
@@ -24,7 +26,7 @@ struct RuleScroll: View {
                             .underline()
                             .padding(.bottom, 20)
                             
-                            
+                        
                         VStack{
                             
                             Text(rule.ruleText)
@@ -47,7 +49,7 @@ struct RuleScroll: View {
                         }
                         .frame(width: 380, height: 430)
                         
-                        
+                        //Stabel der die Buttons gelernt und offen nebeneinander darstellt
                         HStack{
                             Button("Als gelernt markieren"){
                                 if(!rules.containsRule(givenRule: rule, destination: "learnedrules")){

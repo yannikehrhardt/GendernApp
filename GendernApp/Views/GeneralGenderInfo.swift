@@ -22,10 +22,11 @@ struct GeneralGenderInfo: View {
                 
                 Spacer()
             }
-            
+            // für showArguments == 0 werden die Argumnete aufgezeigt
             if(showArguments == 0) {
                 GeneralInfoPageControl()
             }
+            //für showArguments == 1 werden die Links angezeigt
             else if (showArguments == 1){
                 VStack{
                     

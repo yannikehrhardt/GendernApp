@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 07.12.22.
 //
+//UI View für die die ScoreComparison je Spieler darstellt
 
 import SwiftUI
 

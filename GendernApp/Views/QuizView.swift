@@ -79,12 +79,12 @@ struct QuizView: View {
                 .padding(.top)
             }
                         
-            //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
+            
             HStack{
-                
+                //Anzeige des aktuellen Scores
                 CurrentScore()
                     .padding(.trailing, 20)
-                
+                //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
                 NavigationLink {
                     InfoView(givenQuiz: givenQuiz)
                 }label: {

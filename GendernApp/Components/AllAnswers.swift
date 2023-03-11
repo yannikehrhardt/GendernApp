@@ -5,7 +5,7 @@
 //  Created by Hannah Gürsching on 30.11.22.
 //
 
-// In dieser SwiftUIFile wird die Darstellung und Interaktion der Antwortmöglichkeiten implementiert. Es gibt eine richtige und zwei falsche Antworten.
+// In dieser SwiftUIFile wird die Darstellung und Interaktion der Antwortmöglichkeiten implementiert.
 
 import SwiftUI
 

@@ -9,7 +9,6 @@ import SwiftUI
 
 class Rules: ObservableObject {
     
-    
     let rule1 = RuleTemplate(ruleName: "Gendern", ruleText: "Gendern bezeichnet ein sprachliches Verfahren, bei dem es um die Gleichberechtigung von Männern und Frauen im Sprachgebrauch geht. Das Gendern folgt keinen vorgegbenen Regeln, es gibt also kein richtig Gendern nach vorgegeben Regeln. Stattdessen bedeutet gendern situations- und sachangemessen die geschlechtergerechte Sprache in der eigenen Sprachproduktion umzustetzen. Hierfür gibt es verschiedene Hilfestellungen alle Geschlechtsidentitäten anzusprechen, die im Folgenden aufeglistet werden. ", topic: "Wortebene", example: "Scrolle nach rechts, um einige Möglichkeiten kennenzulernen")
     
     let rule2 = RuleTemplate(ruleName: "Ausführliche Doppelnennung", ruleText: "Die Doppelnennung nennt männliche und weibliche Personen gleichermaßen und ist damit die eindeutigste und höflichste Form der sprachlichen Gleichstellung. Sie wird in der Regel dann als sinnvoll erachtet, wenn es explizit um beide Geschlechter geht. Die Doppelnennung kann in der Praxis je nach Kontext mit unterschiedlichsten Konjunktionen verbunden werden und in der Reihenfolge der Nennung variabel sein. Der Vorteil der Doppelnennung liegt darin, dass explizit Männer und Frauen angesprochen werden. Der Nachteil dieser sprachlichen Gleichstellung ist zum einen der enorme Platzaufwand, sowie eventuelle Störungen in der gesprochenen Sprache.", topic: "Wortebene", example: "Feuerwehrmänner und Feuerwehrfrauen, Friseur oder Friseurin")
@@ -31,7 +30,7 @@ class Rules: ObservableObject {
         self.learnedrules = []
     }
     
-    //adding a rule to a given array
+    //Fügt Regeln zu einem given Array hinzu
     func addRule(givenRule : RuleTemplate, destination : String){
         if(destination == "rules"){
             self.rules.append(givenRule)

@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 09.12.22.
 //
+//UIView die den InfoButton darstellt
 
 import SwiftUI
 

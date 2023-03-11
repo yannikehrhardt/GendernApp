@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
+//In dieser struct wird die Struktur für eine Regel festgelegt
 
 import SwiftUI
 

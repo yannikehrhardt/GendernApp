@@ -14,6 +14,7 @@ struct Quizauswahl_Universitat: View {
     
     var body: some View {
             VStack(spacing: 20){
+                
                 Text("Wähle ein Quiz aus!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
@@ -23,10 +24,11 @@ struct Quizauswahl_Universitat: View {
                
                 //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze als Buttons dar
                 QuizButton(givenQuiz: questions.UniQuizze)
-                
+              
+                // Darstellung des Scores und de Button am unteren Bildschrimrand
                 HStack{
                     CurrentScore()
-                    
+                  //Button führt zur Regelübersicht
                     NavigationLink{
                         RuleView()
                     }label: {

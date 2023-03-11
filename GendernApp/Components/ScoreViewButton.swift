@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 06.12.22.
 //
+//UIView die den ScoreViewButton darstellt
 
 import SwiftUI
 

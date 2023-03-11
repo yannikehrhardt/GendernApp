@@ -25,9 +25,10 @@ struct Quizauswahl_Schule: View {
             //Die Logik im QuizButton stellt alle zum Themenbereich passenden Quizze als Buttons dar
             QuizButton(givenQuiz: questions.SchuleQuizze)
             
+            // Darstellung des Scores und de Button am unteren Bildschrimrand
             HStack{
                 CurrentScore()
-                
+                //Button führt zur Regelübersicht
                 NavigationLink{
                     RuleView()
                 }label: {

@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 23.01.23.
 //
+//UIView zur Darstellung von Pro und Contra Argumenten in der Genderdebatte
 
 import SwiftUI
 
@@ -11,7 +12,7 @@ struct GeneralInfoPageControl: View {
     var body: some View {
         VStack{
             
-            Text("Es gibt verschiedene Meinungen zum Gendern. Im Folgenden sind einige beispielhafte Argumente aufgelistet")
+            Text("Es gibt verschiedene Meinungen zum Gendern. Im Folgenden sind einige beispielhafte Argumente aufgelistet:")
                 .frame(width: 350, height: 100)
                 .shadow(radius: 30)
                 .cornerRadius(20)
@@ -21,6 +22,7 @@ struct GeneralInfoPageControl: View {
                 .shadow(radius: 30)
                 .cornerRadius(20)
             
+            // Stapel der alle Pro Argumente beinhaltet
             VStack{
                 HStack{
                     Image(systemName: "plus")
@@ -73,7 +75,7 @@ struct GeneralInfoPageControl: View {
                 .padding(.top)
                 .font(.title)
                 
-            
+            //Stabel der alle Contra Argumente beinhaltet
             VStack{
                 HStack{
                     Image(systemName: "minus")
