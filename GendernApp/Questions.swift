@@ -5,7 +5,7 @@
 //  Created by Hannah Gürsching on 24.11.22.
 //
 
-// In diesem Klasse werden die hard gecodeden Quizze angelegt. Alle Quizze werden in einem Array namens quizze gespeichert. Weiterhin werden in dieser Klasse Funktionen implementiert, die auf die Quizze angewendet weredn
+// In diesem Klasse werden die hard gecodeden Quizze angelegt. Alle Quizze werden in einem Array namens quizze gespeichert. Weiterhin werden in dieser Klasse Funktionen implementiert, die auf die Quizze angewendet weredn.
 
 import Foundation
 import SwiftUI
