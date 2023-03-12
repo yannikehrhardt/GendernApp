@@ -40,17 +40,15 @@ struct ContentView: View {
                 //Textfeld für den Benutzernamen
                 TextField("Benutzername", text: $givenusername)
                     .padding()
-                    .background(Color.white)
+                    .background(Color("Color 1"))
                     .cornerRadius(5.0)
-                    .padding(.bottom, 1)
                     .disableAutocorrection(true)
                 
                 //Textfeld bzw. SecureFeld der die Eingabe (verdeckt für das Passwort)
                 SecureField("Passwort", text: $givenpassword)
                     .padding()
-                    .background(Color.white)
+                    .background(Color("Color 1"))
                     .cornerRadius(5.0)
-                    .padding(.bottom, 1)
                     .disableAutocorrection(true)
                 
                 NavigationLink {

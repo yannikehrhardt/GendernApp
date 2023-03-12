@@ -20,7 +20,7 @@ struct adminQuizView: View {
             VStack{
                 Text(givenQuiz.question)
                     .frame(width: 380, height: 260)
-                    .background(Color(.white))
+                    .background(Color("Color 1"))
                     .cornerRadius(20)
                 
                 Spacer()
@@ -42,7 +42,7 @@ struct adminQuizView: View {
                         .padding()
                         .frame(width: 380, height: 80)
                         .foregroundColor(.gray)
-                        .background(.white)
+                        .background(Color("Color 1"))
                         .cornerRadius(10)
                     }
                 
