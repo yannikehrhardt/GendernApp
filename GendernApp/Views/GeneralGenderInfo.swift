@@ -12,28 +12,25 @@ struct GeneralGenderInfo: View {
     @State var showArguments = 0
     var body: some View {
         VStack{
-            VStack{
-                //Picker verändert Variable showArguments
-                Picker("Welchen Spielerspezifischen Infos möchtest du sehen?", selection: $showArguments) {
-                    Text("Pro/Contra").tag(0)
-                    Text("Links").tag(1)
+            
+            //Picker verändert Variable showArguments
+            Picker("Welchen Spielerspezifischen Infos möchtest du sehen?", selection: $showArguments) {
+                Text("Pro/Contra").tag(0)
+                Text("Links").tag(1)
                 }
-                .pickerStyle(.segmented)
+            .pickerStyle(.segmented)
+            .padding(.bottom)
                 
-                Spacer()
-            }
             // für showArguments == 0 werden die Argumnete aufgezeigt
             if(showArguments == 0) {
                 GeneralInfoPageControl()
             }
             //für showArguments == 1 werden die Links angezeigt
             else if (showArguments == 1){
-                VStack{
-                    
-                    Text("hier sollen zukünftig Links zu spannenden Artikeln plaziert werden")
-                    
-                }
+               InfoLinkView()
+               
             }
+            Spacer()
         }
         .frame(width: 400, height: 710)
         .background(Image("Backgrounds App"))
