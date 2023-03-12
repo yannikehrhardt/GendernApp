@@ -12,6 +12,7 @@ struct QuizView: View {
     @EnvironmentObject var questions : Questions
     
     @State var presentPopup = false
+    let images = [Image("Image 1"), Image("Image 2"), Image("Image 3"), Image("Image 4"), Image("Image 5")]
     
     var givenQuiz : Quiz
 
@@ -68,9 +69,21 @@ struct QuizView: View {
                     .foregroundColor(.white)
                     .font(.title2)
                     .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                        
+                        VStack{
+                          
+                            Text("Glückwunsch!!!")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                                .padding(.top, 20)
+                                .shadow(radius: 20)
                             
-                        Image("Image")
+                            images.randomElement()
+                            
+                        }
                         .background(Image("Backgrounds App"))
+                        
                     }
                 }
                 .frame(width: 160, height: 50)
@@ -101,11 +114,11 @@ struct QuizView: View {
     }
 }
 
-struct QuizView_Previews: PreviewProvider {
-    static var previews: some View {
-        QuizView(givenQuiz: Questions().quiz1)
-            .environmentObject(Players())
-            .environmentObject(Questions())
-    }
-}
+//struct QuizView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QuizView(givenQuiz: Questions().quiz1)
+ //           .environmentObject(Players())
+//            .environmentObject(Questions())
+//    }
+//}
 
