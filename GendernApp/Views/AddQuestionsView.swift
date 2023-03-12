@@ -23,7 +23,7 @@ struct AddQuestionsView: View {
     @State private var isSelected = false
     
     var body: some View {
-        VStack(spacing: 30){
+        VStack(spacing: 25){
             
             Text("Lege ein eigenes Quiz an!")
                 .font(.title)

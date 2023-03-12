@@ -17,7 +17,7 @@ struct SignUp: View {
     @State private var emptyPassword = false
     
     var body: some View {
-        VStack(spacing: 30){
+        VStack(spacing: 25){
             
             
             Text("Registrierung für die Gender App")
