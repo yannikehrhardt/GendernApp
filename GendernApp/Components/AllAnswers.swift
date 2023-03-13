@@ -37,10 +37,7 @@ struct AllAnswers: View {
                 
                 //wenn die Frage gewählt wurde und korrekt ist, wird später ein Haken gesetzt (immer), der Score wird erhöht und die Frage als beantwortet gesetzt (jeweils sobald alle richtigen Fragen beantwortet wurden)
                 //in dieser if-Abfrage werden dafür alle Elemente im Array correctAnswers mit der aktuellen Frage abgeglichen
-                if isSelected3 &&
-                    ((answer.allAnswers[0] ==  answer.correctAnswer[0]) ||
-                     (answer.allAnswers[0] == answer.correctAnswer[1]) ||
-                     (answer.allAnswers[0] == answer.correctAnswer[2])){
+                if (isSelected3 && answer.correctAnswer.contains(answer.allAnswers[0])){
                     
                     Spacer()
                     
@@ -81,9 +78,7 @@ struct AllAnswers: View {
             
                     //Farbige Umrandung der Antwortmöglichkeit
                     .shadow(color: isSelected3 ?
-                            (((answer.allAnswers[0] == answer.correctAnswer[0]) ||
-                              (answer.allAnswers[0] == answer.correctAnswer[1]) ||
-                              (answer.allAnswers[0] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrekten Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
+                            (answer.correctAnswer.contains(answer.allAnswers[0]) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5) // wenn der Button ausgewählt wurde und die erste Antwort des Arrays allAnswers der korrekten Antwort des Quiz entspricht, dann wird der Schatten des Buttons grün, ansonsten rot. Unausgewählt bleibt der Schatte des Button grau.
                     .onTapGesture {
                         isSelected3 = true
                     }
@@ -99,10 +94,7 @@ struct AllAnswers: View {
                     .bold()
                 
                 //wie oben: Haken, Punkte und auf beantwortet setzen
-                if isSelected &&
-                    ((answer.allAnswers[1] ==  answer.correctAnswer[0]) ||
-                     (answer.allAnswers[1] == answer.correctAnswer[1]) ||
-                     (answer.allAnswers[1] == answer.correctAnswer[2])) {
+                if (isSelected && answer.correctAnswer.contains(answer.allAnswers[1])) {
                     
                     Spacer()
                     
@@ -138,9 +130,7 @@ struct AllAnswers: View {
             .background(.white)
             .cornerRadius(10)
             .shadow(color: isSelected ?
-                    (((answer.allAnswers[1] == answer.correctAnswer[0]) ||
-                      (answer.allAnswers[1] == answer.correctAnswer[1]) ||
-                      (answer.allAnswers[1] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
+                    (answer.correctAnswer.contains(answer.allAnswers[1]) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 isSelected = true
             }
@@ -155,10 +145,8 @@ struct AllAnswers: View {
                 Text(answer.allAnswers[2])
                     .bold()
                 
-                if isSelected2 &&
-                    ((answer.allAnswers[2] ==  answer.correctAnswer[0]) ||
-                     (answer.allAnswers[2] == answer.correctAnswer[1]) ||
-                     (answer.allAnswers[2] == answer.correctAnswer[2])) {
+                if (isSelected2 &&
+                    answer.correctAnswer.contains(answer.allAnswers[2])) {
                     
                     Spacer()
                     
@@ -195,9 +183,7 @@ struct AllAnswers: View {
             .background(.white)
             .cornerRadius(10)
             .shadow(color: isSelected2 ?
-                    (((answer.allAnswers[2] == answer.correctAnswer[0]) ||
-                      (answer.allAnswers[2] == answer.correctAnswer[1]) ||
-                      (answer.allAnswers[2] == answer.correctAnswer[2])) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
+                    (answer.correctAnswer.contains(answer.allAnswers[2]) ?  green : red) : .gray, radius: 5, x: 0.5, y: 0.5)
             .onTapGesture {
                 isSelected2 = true
             
