@@ -35,7 +35,7 @@ struct AddQuestionsView: View {
             HStack{
                 Text("Wähle ein Thema")
                     .font(.body)
-                    .background(Color.white)
+                    .background(Color("Color 1"))
                     .multilineTextAlignment(.leading)
                     .cornerRadius(5.0)
                     .padding(.bottom, 1)
@@ -49,13 +49,13 @@ struct AddQuestionsView: View {
                     }
                 }
                 .pickerStyle(.menu)
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
             }
             .frame(width: 320)
             .padding()
-            .background(Color.white)
+            .background(Color("Color 1"))
             .cornerRadius(5.0)
             
             
@@ -63,7 +63,7 @@ struct AddQuestionsView: View {
             TextField(
                 "Formuliere eine Frage...", text: $frage)
                 .padding()
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)
@@ -71,7 +71,7 @@ struct AddQuestionsView: View {
             TextField(
                 "Korrekte Antwort...", text: $richtigeAntwort)
                 .padding()
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)
@@ -79,7 +79,7 @@ struct AddQuestionsView: View {
             TextField(
                 "Erste falsche Antwort...", text: $falscheAntwort1)
                 .padding()
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)
@@ -87,7 +87,7 @@ struct AddQuestionsView: View {
             TextField(
                 "Zweite falsche Antwort...", text: $falscheAntwort2)
                 .padding()
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)
@@ -95,7 +95,7 @@ struct AddQuestionsView: View {
             TextField(
                 "Erklärung...", text: $weitereInformationen)
                 .padding()
-                .background(Color.white)
+                .background(Color("Color 1"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 1)
                 .disableAutocorrection(true)

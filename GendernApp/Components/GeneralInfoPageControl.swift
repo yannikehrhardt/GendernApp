@@ -32,7 +32,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -43,7 +43,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -54,7 +54,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -65,7 +65,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
             }
@@ -85,7 +85,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -96,7 +96,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -107,7 +107,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
                 HStack{
@@ -119,7 +119,7 @@ struct GeneralInfoPageControl: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
-                .background(.white)
+                .background(Color("Color 1"))
                 .cornerRadius(20)
                 
             }

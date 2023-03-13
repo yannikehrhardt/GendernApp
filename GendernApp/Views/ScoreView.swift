@@ -35,7 +35,7 @@ struct ScoreView: View {
                     }, currentplayer: players.currentplayer)
                     
                     //andere Farbe wäre noch gut
-                        .listRowBackground(Color.white)
+                     //   .listRowBackground(Color("Color 1"))
                 }
             }
             
