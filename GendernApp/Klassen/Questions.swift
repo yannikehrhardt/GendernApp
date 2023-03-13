@@ -5,7 +5,7 @@
 //  Created by Hannah Gürsching on 24.11.22.
 //
 
-// In diesem Klasse werden die hard gecodeden Quizze angelegt. Alle Quizze werden in einem Array namens quizze gespeichert. Weiterhin werden in dieser Klasse Funktionen implementiert, die auf die Quizze angewendet weredn.
+// In dieser Klasse werden die hard gecodeden Quizze angelegt. Alle Quizze werden in einem Array namens quizze gespeichert. Weiterhin werden in dieser Klasse Funktionen implementiert, die auf die Quizze angewendet weredn.
 
 import Foundation
 import SwiftUI
@@ -17,7 +17,7 @@ class Questions : ObservableObject{
     
     let quiz2 = Quiz(type: "gap text" , topic: "Uni", question: "Wie können alle Geschlechtsidentitäten angesprochen werden?", correctAnswer: ["Student*innen","Student_innen", ""], allAnswers: ["Student*innen", "Student_innen", "Studenten und Studentinnen"], furtherInformation: "Die Sternchenlösung wird zunehmend verwendet, da das Geschlecht nicht mehr nur als binäres System verstanden wird. Auch die Gender-Gap dient diesem Zweck. Diese Lösungen stehen allerdings nicht im Einklang mit der amtlichen Orthographie und können zu einigen praktischen Problemen führen.", createdBy: "")
     
-    let quiz3 = Quiz(type: "gap text" , topic: "Uni", question: "Wie kann man Mitarbeiter richtig gendern, um alle Geschlechtsidentitäten anzusprechen?", correctAnswer: ["Mitarbieter_innen", "", ""], allAnswers: ["Mitarbieter_innen","Mitarbeiter und Mitarbeiterinnen", "MitarbeiterInnen"], furtherInformation: "Ähnlich wie das Sternchen hat der Unterstrich die Intention, alle existierenden Geschlechter anzusprechen. Ziel ist es, das normale Schriftbild bewusst zu irritieren. Allerdings kann diese unkonventionelle Lösung zu einigen praktischen Problemen führen. Ein Beispiel hierfür ist die Internetsuche.", createdBy: "")
+    let quiz3 = Quiz(type: "gap text" , topic: "Uni", question: "Wie kann man Mitarbeiter richtig gendern, um alle Geschlechtsidentitäten anzusprechen?", correctAnswer: ["Mitarbieter_innen", "", ""], allAnswers: ["Mitarbeiter_innen","Mitarbeiter und Mitarbeiterinnen", "MitarbeiterInnen"], furtherInformation: "Ähnlich wie das Sternchen hat der Unterstrich die Intention, alle existierenden Geschlechter anzusprechen. Ziel ist es, das normale Schriftbild bewusst zu irritieren. Allerdings kann diese unkonventionelle Lösung zu einigen praktischen Problemen führen. Ein Beispiel hierfür ist die Internetsuche.", createdBy: "")
     
     let quiz4 = Quiz(type: "gap text" , topic: "Uni", question: "Welche Berufsbezeichung ist geschlechtsindifferent?", correctAnswer: ["Reinigungskraft", "", ""], allAnswers: ["Reinigungskraft", "Doktorant", "Professor"], furtherInformation: "Reinigungskraft ist geschlechtsindifferent. Geschlechtsneutrale oder geschlechtsindifferente Wörte sind solche, deren grammatikalisches Geschlecht nicht zwingend mit dem natürlichen Geschlecht übereinstimmt und damit eindeutig alle Geschlechter bezeichnen. Sowohl Doktorant als auch Professor beziehen sich nur auf das männliche Geschlecht.", createdBy: "")
     
@@ -84,7 +84,8 @@ class Questions : ObservableObject{
         toBeTested = [quiz400, quiz401]
     }
     
-    func addQuizze(_ givenTopic : String) -> [Quiz] { //Diese Funktion sortiert die Quizze im Array quizze in den passenden Array mit dem entprechend angegebenen Topic ein
+    //Diese Funktion gibt ein Array aus Quiz-Fragen mit übergebenem Topic zurück, die aus dem quizze-Array einsortiert werden
+    func addQuizze(_ givenTopic : String) -> [Quiz] {
         var solution : [Quiz] = []
         for element in quizze {
             if (element.topic == givenTopic){
@@ -94,7 +95,7 @@ class Questions : ObservableObject{
         return solution
     }
     
-    //Offset eines Quizes im Array quizze
+    //Diese Funktion gibt den Offset eines Quizes aus einem ausgewählten Quiz-Array zurück, dies geschieht für die Werte "quizze" und "toBeTested"
     func getQuizOffset(_ givenQuiz : Quiz, whichQuiz: String) -> Int {
         if(whichQuiz == "quizze"){
             if let Offset = self.quizze.firstIndex(where: {$0.id == givenQuiz.id}){
@@ -108,10 +109,11 @@ class Questions : ObservableObject{
             }
         }
         
-        //else sollte nicht benötigt werden, wenn der Aufruf dann erfolgt, wenn klar ist, dass das übergebene Quiz exisitert.
+        //else sollte nicht benötigt werden, wenn der Aufruf dann erfolgt, wenn klar ist, dass das übergebene Quiz exisitert (sollte vorher geprüft werden).
         else{
             return -1
         }
+        //wird benötigt, da der Compiler nicht versteht, dass durch das else alle Fälle abgedeckt sind
         return -1
     }
     
@@ -129,6 +131,7 @@ class Questions : ObservableObject{
         return available
     }
     
+    //gibt an, wie viele Fragen bereits korrekt angetippt wurden und erhöht den entsprechenden Wert
     func addCorrectAnswered(_ givenQuiz : Quiz){
         let offset = getQuizOffset(givenQuiz, whichQuiz: "quizze")
         quizze[offset].correctlySelectedAnswers += 1

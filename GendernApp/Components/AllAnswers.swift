@@ -52,6 +52,7 @@ struct AllAnswers: View {
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
+                                questions.quizze[questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers = 0
                             }
                         }
                 }
@@ -107,6 +108,7 @@ struct AllAnswers: View {
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
+                                questions.quizze[questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers = 0
                             }
                         }
                 }
@@ -160,6 +162,7 @@ struct AllAnswers: View {
                            
                                 self.players.addScore()
                                 players.setQuizAnswered(answer)
+                                questions.quizze[questions.getQuizOffset(answer, whichQuiz: "quizze")].correctlySelectedAnswers = 0
                             }
                         }
                 }
