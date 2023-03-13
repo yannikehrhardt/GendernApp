@@ -61,7 +61,7 @@ struct GeneralInfoPageControl: View {
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Ein gutes Viertel (26%) der Deutschen befürwortet das Gendern.")
+                    Text("Ein gutes Viertel (26%) der Deutschen befürwortet das Gendern")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
