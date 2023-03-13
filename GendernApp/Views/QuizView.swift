@@ -25,7 +25,7 @@ struct QuizView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                     .padding(.top, 20)
-                    .frame(width: 400, height: 150)
+                    .frame(width: 380, height: 300)
                     .shadow(radius: 20)
                 
                 //Abhängig davon, wie viele korrekte Anworten vorliegen, wird der Text über den Antwortmöglichkeiten angepasst
@@ -71,15 +71,23 @@ struct QuizView: View {
                     .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
                         
                         VStack{
-                          
-                            Text("Glückwunsch!!!")
+                            Image(systemName: "chevron.down")
                                 .font(.title2)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color.white)
-                                .padding(.top, 20)
-                                .shadow(radius: 20)
+                                .frame(alignment: .leading)
                             
-                            images.randomElement()
+                            Spacer()
+                            
+                            VStack{
+                                Text("Glückwunsch!!!")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color.white)
+                                    .padding(.top, 20)
+                                    .shadow(radius: 20)
+                                
+                                images.randomElement()
+                            }
+                            .frame(width: 400, height: 600)
                             
                         }
                         .background(Image("Backgrounds App"))

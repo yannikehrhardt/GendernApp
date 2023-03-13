@@ -82,7 +82,7 @@ struct ContentView: View {
                     SignUpButton()
                 }
             }
-            .frame(maxWidth: 300, maxHeight: .infinity)
+            .frame(maxWidth: 350, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
             
         }

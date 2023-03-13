@@ -14,7 +14,7 @@ struct InfoLinkView: View {
                 Image(systemName: "arrowshape.forward")
                     .foregroundColor(.black)
                 
-                Link("geschicktgendern", destination: URL(string: "https://geschicktgendern.de/")!)
+                Link("Geschickt gendern", destination: URL(string: "https://geschicktgendern.de/")!)
                     
                 Spacer()
             }
@@ -59,7 +59,7 @@ struct InfoLinkView: View {
                 Image(systemName: "arrowshape.forward")
                     .foregroundColor(.black)
                 
-                Link("Aktuelles zum Thema Gender bei FAZ", destination: URL(string: "https://www.faz.net/aktuell/gesellschaft/thema/gender")!)
+                Link("Aktuelles zum Thema Gendern bei FAZ", destination: URL(string: "https://www.faz.net/aktuell/gesellschaft/thema/gender")!)
                 Spacer()
                     
             }
@@ -70,13 +70,13 @@ struct InfoLinkView: View {
                 Image(systemName: "arrowshape.forward")
                     .foregroundColor(.black)
                 
-                Link("Aktuelles zum Thema Gender bei Spiegel", destination: URL(string: "https://www.spiegel.de/thema/gender/")!)
+                Link("Aktuelles zum Thema Gendern bei Spiegel", destination: URL(string: "https://www.spiegel.de/thema/gender/")!)
                 Spacer()
                     
             }
             .frame(width: 350, height: 60)
         }
-        .frame(width: 350, height: 500)
+        .frame(width: 350, height: 450)
         .background(Color("Color 1"))
         .cornerRadius(10)
     }

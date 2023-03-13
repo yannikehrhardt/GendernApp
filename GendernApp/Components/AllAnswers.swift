@@ -59,13 +59,16 @@ struct AllAnswers: View {
                 
                 //ist die Frage falsch, so wird der rote Haken gesetzt
                 else {
-                    if isSelected3{
+                    if (isSelected3){
                         Spacer()
                         
                         Image(systemName:  "x.circle.fill")
                             .foregroundColor(red)
                             .onAppear(){
-                                self.players.reduceScore(amount: 5)
+                                //wenn der Spielende die Frage schon korrekt beantwortet hat, dann werden keine Punkte mehr abgezogen
+                                if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                                    self.players.reduceScore(amount: 5)
+                                }
                             }
                     }
                 }
@@ -113,13 +116,16 @@ struct AllAnswers: View {
                         }
                 }
                 else {
-                    if isSelected{
+                    if (isSelected){
                         Spacer()
                         
                         Image(systemName:  "x.circle.fill")
                             .foregroundColor(red)
                             .onAppear(){
-                                self.players.reduceScore(amount: 5)
+                                //wenn der Spielende die Frage schon korrekt beantwortet hat, dann werden keine Punkte mehr abgezogen
+                                if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                                    self.players.reduceScore(amount: 5)
+                                }
                             }
                     }
                 }
@@ -167,13 +173,16 @@ struct AllAnswers: View {
                         }
                 }
                 else {
-                    if isSelected2{
+                    if (isSelected2){
                         Spacer()
                         
                         Image(systemName:  "x.circle.fill")
                             .foregroundColor(red)
                             .onAppear(){
-                                self.players.reduceScore(amount: 5)
+                                //wenn der Spielende die Frage schon korrekt beantwortet hat, dann werden keine Punkte mehr abgezogen
+                                if(!players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(answer.id)){
+                                    self.players.reduceScore(amount: 5)
+                                }
                             }
                     }
                 }
