@@ -19,7 +19,6 @@ struct SignUp: View {
     var body: some View {
         VStack(spacing: 25){
             
-            
             Text("Registrierung für die Gender App")
                 .font(.largeTitle)
                 .fontWeight(.bold)
@@ -84,7 +83,6 @@ struct SignUp: View {
                         self.hiddenFailure = false
                         self.hiddenSuccess = true
                     }
-                    
                 }
             // wenn Erstellen fehlgeschlagen ist
             if(!self.hiddenFailure) {

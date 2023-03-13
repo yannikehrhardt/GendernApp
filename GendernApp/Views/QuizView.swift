@@ -21,7 +21,6 @@ struct QuizView: View {
     
     var body: some View {
         VStack(){
-            
             Image("Genderzeichen groß")
             
                 //Quizfrage
@@ -30,7 +29,7 @@ struct QuizView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
                     .padding(.top, 20)
-                    .frame(width: 380, height: 300)
+                    .frame(width: 380, height: 250)
                     .shadow(radius: 20)
                 
                 //Abhängig davon, wie viele korrekte Anworten vorliegen, wird der Text über den Antwortmöglichkeiten angepasst
@@ -110,26 +109,19 @@ struct QuizView: View {
                 //Anzeige des aktuellen Scores
                 CurrentScore()
                     .padding(.trailing, 20)
-                //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
-                //NavigationLink {
-                 //   InfoView(givenQuiz: givenQuiz)
-               // }label: {
-                 //   InfoButton()
                
                 HStack{
-                    
                     Image(systemName: "info.circle")
                         .font(.title3)
                     
+                    //Nach dem Anklicken des Buttons Info erscheint ein Popup mit dem Lösungsansatz zur Frage (Variable furtherInformation eines Quizzes)
                     Button("Info"){
                         presentPopup = true
                     }
                     .font(.title3)
                     .fontWeight(.medium)
                     .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
-                        
                         InfoView(givenQuiz: givenQuiz)
-                        
                     }
                 }
                 .foregroundColor(Color.white)
@@ -138,7 +130,7 @@ struct QuizView: View {
                 .cornerRadius(200)
                 .shadow(radius: 20)
             }
-            .padding(.top, 30)
+            .padding(.top, 15)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))
@@ -147,11 +139,4 @@ struct QuizView: View {
     }
 }
 
-//struct QuizView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QuizView(givenQuiz: Questions().quiz1)
- //           .environmentObject(Players())
-//            .environmentObject(Questions())
-//    }
-//}
 

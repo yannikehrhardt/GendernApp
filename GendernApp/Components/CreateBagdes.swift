@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+//Listet alle Errungenschaften auf, die der Spieler bereits verdient hat
 struct CreateBagdes: View {
     @EnvironmentObject var players : Players
     @EnvironmentObject var questions : Questions
@@ -14,7 +15,6 @@ struct CreateBagdes: View {
     //Anzahl an Badges
     @State var count = 1
     var body: some View {
-        //Listet alle Errungenschaften auf, die der Spieler bereits verdient hat
         Text("Diese Errungenschaften hast du bereits verdient:")
         List{
             HStack{
@@ -44,7 +44,7 @@ struct CreateBagdes: View {
                 }
             }
             
-            if((players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count) * 100 >= 50){
+            if(Double(players.players[players.usernameOffset(players.currentplayer.username)].answered.endIndex) / Double(questions.quizze.endIndex) > 0.5){
                 HStack{
                     Image(systemName: "battery.50")
                     Text("Du hast bereits 50% aller Fragen korrekt beantwortet")
@@ -85,7 +85,7 @@ struct CreateBagdes: View {
                 }
             }
             
-            if((players.players[players.usernameOffset(players.currentplayer.username)].answered.count / questions.quizze.count) * 100 < 50){
+            if(Double(players.players[players.usernameOffset(players.currentplayer.username)].answered.endIndex) / Double(questions.quizze.endIndex) < 0.50){
                 HStack{
                     Image(systemName: "battery.50")
                     Text("Du hast bereits 50% aller Fragen korrekt beantwortet")

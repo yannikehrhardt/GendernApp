@@ -25,8 +25,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 25) {
-                    
-                    //Image("Genderzeichen Alternative")
                 
                 HStack{
                     Image("Genderzeichen")
@@ -95,13 +93,11 @@ struct ContentView: View {
             }
             .frame(maxWidth: 350, maxHeight: .infinity)
             .background(Image("Backgrounds App"))
-            
         }
         //weitergeben
         .environmentObject(players)
         .environmentObject(questions)
         .environmentObject(rules)
-        
     }
 
 }
