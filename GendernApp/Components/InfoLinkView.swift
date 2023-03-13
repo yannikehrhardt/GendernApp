@@ -10,6 +10,13 @@ import SwiftUI
 struct InfoLinkView: View {
     var body: some View {
         VStack(){
+            
+            Image(systemName: "info.circle")
+                .font(.title3)
+                .foregroundColor(Color("ButtonColor"))
+                .font(.system(size: 80))
+            
+            
             HStack{
                 Image(systemName: "arrowshape.forward")
                     .foregroundColor(.black)
@@ -18,18 +25,7 @@ struct InfoLinkView: View {
                     
                 Spacer()
             }
-            .frame(width: 350, height: 50)
-            
-            
-            HStack{
-                Image(systemName: "arrowshape.forward")
-                    .foregroundColor(.black)
-                
-                Link("Gendern polarisiert auch in der jungen Generation", destination: URL(string: "https://www.spiegel.de/kultur/gendern-als-stolperfalle-gendern-polarisiert-auch-in-der-jungen-generation-a-2608c97f-9aeb-4859-b173-0d1a7a91e3d4")!)
-                Spacer()
-                    
-            }
-            .frame(width: 350, height: 60)
+            .frame(width: 350, height: 50)            
             
             HStack{
                 

@@ -20,7 +20,7 @@ struct GeneralInfoPageControl: View {
                 .foregroundColor(.white)
                 .frame(width: 350, height: 100)
                 .shadow(radius: 30)
-                .cornerRadius(20)
+                .cornerRadius(10)
             
             // Stapel der alle Pro Argumente beinhaltet
             VStack{
@@ -33,7 +33,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "plus")
@@ -44,7 +44,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "plus")
@@ -55,18 +55,18 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "plus")
                         .foregroundColor(Color("CorrectAnswer"))
                         .padding(.leading)
-                    Text("Ein gutes Viertel (26%) der Deutschen befürwortet das Gendern.")
+                    Text("Ein gutes Viertel (26%) der Deutschen befürwortet das Gendern")
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
             }
             .padding(.top)
@@ -86,7 +86,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "minus")
@@ -97,7 +97,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "minus")
@@ -108,7 +108,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
                 HStack{
                     Image(systemName: "minus")
@@ -120,7 +120,7 @@ struct GeneralInfoPageControl: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .frame(width: 350, height: 50)
                 .background(Color("Color 1"))
-                .cornerRadius(20)
+                .cornerRadius(10)
                 
             }
             .padding(.top)

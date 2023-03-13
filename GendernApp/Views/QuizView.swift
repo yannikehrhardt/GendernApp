@@ -12,6 +12,8 @@ struct QuizView: View {
     @EnvironmentObject var questions : Questions
     
     @State var presentPopup = false
+    @State var presentPopup2 = true
+    
     let images = [Image("Image 1"), Image("Image 2"), Image("Image 3"), Image("Image 4"), Image("Image 5")]
     
     var givenQuiz : Quiz
@@ -19,6 +21,9 @@ struct QuizView: View {
     
     var body: some View {
         VStack(){
+            
+            Image("Genderzeichen groß")
+            
                 //Quizfrage
                 Text(givenQuiz.question)
                     .font(.title2)
@@ -64,11 +69,11 @@ struct QuizView: View {
                         .frame(alignment: .leading)
                     
                     Button("Belohnung") {
-                        presentPopup = true
+                        presentPopup2 = true
                     }
                     .foregroundColor(.white)
                     .font(.title2)
-                    .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
+                    .popover(isPresented: $presentPopup2, arrowEdge: .bottom) {
                         
                         VStack{
                             Image(systemName: "chevron.down")
@@ -106,12 +111,32 @@ struct QuizView: View {
                 CurrentScore()
                     .padding(.trailing, 20)
                 //mit dem Info-Button erhält der Spielende weitere Hinweise zur korrekten Antwort
-                NavigationLink {
-                    InfoView(givenQuiz: givenQuiz)
-                }label: {
-                    InfoButton()
+                //NavigationLink {
+                 //   InfoView(givenQuiz: givenQuiz)
+               // }label: {
+                 //   InfoButton()
+               
+                HStack{
+                    
+                    Image(systemName: "info.circle")
+                        .font(.title3)
+                    
+                    Button("Info"){
+                        presentPopup = true
+                    }
+                    .font(.title3)
+                    .fontWeight(.medium)
+                    .popover(isPresented: $presentPopup, arrowEdge: .bottom) {
                         
+                        InfoView(givenQuiz: givenQuiz)
+                        
+                    }
                 }
+                .foregroundColor(Color.white)
+                .padding()
+                .background(Color("ButtonColor"))
+                .cornerRadius(200)
+                .shadow(radius: 20)
             }
             .padding(.top, 30)
         }
