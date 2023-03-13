@@ -26,7 +26,18 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 25) {
                     
+                    //Image("Genderzeichen Alternative")
+                
+                HStack{
+                    Image("Genderzeichen")
                     Image("Genderzeichen 1")
+                    Image("Genderzeichen 2")
+                    Image("Genderzeichen 3")
+                    Image("Genderzeichen 4")
+                    Image("Genderzeichen 5")
+                    Image("Genderzeichen 6")
+                    Image("Genderzeichen 7")
+                }
                     
                     Text("GendernApp")
                         .font(.largeTitle)

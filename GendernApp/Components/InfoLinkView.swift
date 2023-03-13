@@ -10,6 +10,13 @@ import SwiftUI
 struct InfoLinkView: View {
     var body: some View {
         VStack(){
+            
+            Image(systemName: "info.circle")
+                .font(.title3)
+                .foregroundColor(Color("ButtonColor"))
+                .font(.system(size: 80))
+            
+            
             HStack{
                 Image(systemName: "arrowshape.forward")
                     .foregroundColor(.black)
@@ -65,7 +72,7 @@ struct InfoLinkView: View {
             }
             .frame(width: 350, height: 60)
         }
-        .frame(width: 350, height: 500)
+        .frame(width: 350, height: 450)
         .background(Color("Color 1"))
         .cornerRadius(10)
     }

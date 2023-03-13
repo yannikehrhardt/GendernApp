@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "genderqueer.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "gender.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

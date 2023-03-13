@@ -21,6 +21,9 @@ struct QuizView: View {
     
     var body: some View {
         VStack(){
+            
+            Image("Genderzeichen groß")
+            
                 //Quizfrage
                 Text(givenQuiz.question)
                     .font(.title2)
