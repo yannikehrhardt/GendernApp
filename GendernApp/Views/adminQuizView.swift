@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 10.03.23.
 //
+// In dieser View können Admins erstellte Fragen freigeben oder löschen.
 
 import SwiftUI
 
