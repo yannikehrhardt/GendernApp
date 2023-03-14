@@ -4,7 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
-//UIView zur Darstellung der der Regeln bzw. der Scroll View mit Regeln
+//UIView zur Darstellung der der Regeln bzw. der Scroll View mit Regeln.
 
 import SwiftUI
 

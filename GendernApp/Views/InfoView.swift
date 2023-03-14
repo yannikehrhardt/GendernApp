@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 09.12.22.
 //
+//In dieser View werden die furtherinformations eines Quizzes dargestellt
 
 import SwiftUI
 

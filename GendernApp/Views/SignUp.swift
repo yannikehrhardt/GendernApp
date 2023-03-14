@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 06.12.22.
 //
+//Über diese View können sich Spielende registrieren
 
 import SwiftUI
 

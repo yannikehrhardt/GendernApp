@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 24.11.22.
 //
+// In dieser View wird der Aufbau eines spielbaren Quiz dargestellt 
 
 import SwiftUI
 

@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 13.12.22.
 //
+// In dieser View können Spielende neue Fragen anlegen
 
 import SwiftUI
 

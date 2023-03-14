@@ -75,7 +75,7 @@ struct GeneralInfoPageControl: View {
                 .padding(.top)
                 .font(.title)
                 
-            //Stabel der alle Contra Argumente beinhaltet
+            //Stapel der alle Contra Argumente beinhaltet
             VStack{
                 HStack{
                     Image(systemName: "minus")

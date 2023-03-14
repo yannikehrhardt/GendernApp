@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 24.11.22.
 //
+//Diese view stellt die Startseite der App dar
 
 import SwiftUI
 

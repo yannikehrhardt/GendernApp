@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
+//Diese View stellt alle Regeln dar
 
 import SwiftUI
 

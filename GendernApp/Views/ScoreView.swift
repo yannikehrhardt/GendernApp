@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 06.12.22.
 //
+// In dieser View werden die Errungenschaften und der Scorevergleich dargestellt
 
 import SwiftUI
 

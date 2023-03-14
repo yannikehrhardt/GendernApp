@@ -5,7 +5,7 @@
 //  Created by Yannik Ehrhardt on 10.03.23.
 //
 
-//UIView für den AdminConfirmButton
+//UIView für den AdminConfirmButton.
 
 import SwiftUI
 

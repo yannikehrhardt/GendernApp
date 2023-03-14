@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 19.01.23.
 //
+// In dieser View werden Pro und Contra Argumente sowie nützliche Links dargestellt
 
 import SwiftUI
 

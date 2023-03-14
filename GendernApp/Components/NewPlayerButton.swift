@@ -4,7 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 20.12.22.
 //
-//UIView die den NewPlayerButton darstellt
+//UIView die den NewPlayerButton darstellt.
 
 import SwiftUI
 

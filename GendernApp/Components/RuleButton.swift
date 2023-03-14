@@ -4,7 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
-//UIView zur Darstellung des Rule Button
+//UIView zur Darstellung des Rule Button.
 
 import SwiftUI
 

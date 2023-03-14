@@ -5,6 +5,9 @@
 //  Created by Yannik Ehrhardt on 17.01.23.
 //
 
+// In dieser Klasse werden einige Regeln fürs gendern hard gecoded angelegt. Weiterhin werden in dieser Klasse Funktionen implementiert, die auf die Regeln angewendet werden.
+
+
 import SwiftUI
 
 class Rules: ObservableObject {

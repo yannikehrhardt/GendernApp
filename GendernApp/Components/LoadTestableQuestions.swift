@@ -4,7 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 10.03.23.
 //
-//UIView zur Darstellung der von Usern erstelletn Quizze
+//UIView zur Darstellung der von Usern erstelletn Quizze.
 
 import SwiftUI
 

@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 27.11.22.
 //
+//Diese View stellt alle Schul Quizze dar
 
 import SwiftUI
 

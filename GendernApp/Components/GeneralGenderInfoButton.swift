@@ -4,7 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 19.01.23.
 //
-//Ui View zur Darstellung des GeneralGenderInfoButton
+//UIView zur Darstellung des GeneralGenderInfoButton.
 
 import SwiftUI
 

@@ -4,6 +4,7 @@
 //
 //  Created by Hannah Gürsching on 12.03.23.
 //
+//UIView für die Darstellung von Links die zu Artikeln im Internet führen
 
 import SwiftUI
 

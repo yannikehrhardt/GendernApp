@@ -4,6 +4,7 @@
 //
 //  Created by Yannik Ehrhardt on 10.03.23.
 //
+// In dieser View können Admins erstellte Fragen von anderen Nutzenden einsehen
 
 import SwiftUI
 

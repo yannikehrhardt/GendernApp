@@ -5,6 +5,8 @@
 //  Created by Yannik Ehrhardt on 06.12.22.
 //
 
+// Diese Klasse beninhaltet Funktionen die auf Player angewendet werden.
+
 import SwiftUI
 
 //der Typ ObservableObject sorgt dafür, dass Änderungen an einer mit dem Tag "published" versehenen Variablen ein Neuladen aller Views, die dieses Objekt nutzen erzwungen wird.
