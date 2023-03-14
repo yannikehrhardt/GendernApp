@@ -65,11 +65,6 @@ class Questions : ObservableObject{
     let quiz205 = Quiz(type: "gap text" , topic: "Alltag", question: "Was ist in diesem Fall ein guter Ausweg?", correctAnswer: ["Gehweg", "", ""], allAnswers: ["Gehweg", "Bürgersteig", "Bürgerinnensteig"], furtherInformation: "Bürgersteig ist zwar die übliche Lösung, wenn man aber genderneutral formulieren möchte, gibt es den Fachtermini Gehweg als Ausweg. Bürgerinnensteig ist nicht sinnvoll.", createdBy: "")
     
     
-    
-//Testfragen zur Überprüfung
-    let quiz400 = Quiz(type: "gap text", topic: "Uni", question: "Testfrage zu überprüfen", correctAnswer: ["korrekt","",""], allAnswers: ["falsch", "falsch", "korrekt"], furtherInformation: "weil, du opfer", createdBy: "test")
-    let quiz401 = Quiz(type: "gap text", topic: "Schule", question: "Testfrage zu überprüfen2", correctAnswer: ["korrekt2","",""], allAnswers: ["falsch", "falsch", "korrekt2"], furtherInformation: "weil, du opfer", createdBy: "test")
-    
     @Published var quizze : [Quiz] //alle Quizze
     @Published var UniQuizze : [Quiz]   //Array mit allen Quizzen der Kategorie Uni
     @Published var SchuleQuizze : [Quiz]  //Array mit allen Quizzen der Kategorie Schule
@@ -81,7 +76,7 @@ class Questions : ObservableObject{
         UniQuizze = [quiz1, quiz2, quiz3, quiz4, quiz5, quiz6, quiz7, quiz8, quiz9, quiz10, quiz11]
         SchuleQuizze = [quiz100, quiz101, quiz102, quiz103, quiz104, quiz105]
         AlltagQuizze = [quiz200, quiz201, quiz202, quiz203, quiz204, quiz205]
-        toBeTested = [quiz400, quiz401]
+        toBeTested = []
     }
     
     //Diese Funktion gibt ein Array aus Quiz-Fragen mit übergebenem Topic zurück, die aus dem quizze-Array einsortiert werden

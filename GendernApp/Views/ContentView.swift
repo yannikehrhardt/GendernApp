@@ -53,7 +53,7 @@ struct ContentView: View {
                     .cornerRadius(5.0)
                     .disableAutocorrection(true)
                 
-                //Textfeld bzw. SecureFeld der die Eingabe (verdeckt für das Passwort)
+                //Textfeld bzw. SecureFeld, das die Eingabe verdeckt, für das Passwort)
                 SecureField("Passwort", text: $givenpassword)
                     .padding()
                     .background(Color("Color 1"))

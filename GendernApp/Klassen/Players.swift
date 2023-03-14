@@ -14,29 +14,21 @@ class Players : ObservableObject{
     //Konrekt: in QuizTemplate muss das Array der Variable answeredFromPlayer der Anzahl der Spieler entsprechen
     var player1 : PlayerTemplate
     var player2: PlayerTemplate
-    var player3: PlayerTemplate
     
     //s.o.: wenn eine der Variablen verändert wird, laden die Views neu:
-    
     //Array mit allen existierenden Spielern
     @Published var players : [PlayerTemplate]
     
     //Aktueller Spieler: wird für den Score referenziert. Wird beim Einloggen neu gesetzt (in ContentView)
     @Published var currentplayer : PlayerTemplate
     
-    
-    //
-    
     init() {
-        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 100, admin: true)
-        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 500, admin: true)
-        self.player3 = PlayerTemplate(username: "", password: "", currentscore: 0, admin: false)
-        self.players = [player1, player2, player3]
+        self.player1 = PlayerTemplate(username: "Yannik", password: "1234", currentscore: 140, admin: true)
+        self.player2 = PlayerTemplate(username: "Hannah", password: "1234", currentscore: 140, admin: true)
+        self.players = [player1, player2]
         self.currentplayer = player1
     }
 
-    
-    
     //Neuen Spieler anfügen
     func appendPlayer(_ newPlayer: PlayerTemplate) -> Void {
         players.append(newPlayer)
