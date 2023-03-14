@@ -28,7 +28,7 @@ struct QuizView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(Color.white)
-                    .padding(.top, 20)
+                    //.padding(.top, 20)
                     .frame(width: 380, height: 250)
                     .shadow(radius: 20)
                 
