@@ -22,21 +22,29 @@ struct QuizButton: View {
                 ForEach(givenQuiz, id: \.self.id) { quiz in   // foreach-Schleife zum durchsuchen des Array givenQuiz, der mit Quizzen beladen ist. Für jedes Quiz in givenquiz wird ein Button erstellt, den die question des Quizzes als Text übergeben bekommt
                     VStack(spacing: 20){
                         NavigationLink(destination: QuizView(givenQuiz: quiz)){ //NavigationLink der beim Klicken des Buttons zur QuizView führt
-                            Text(quiz.question)
-                                .font(.title3)
-                                .fontWeight(.medium)
-                                .foregroundColor(Color.white)
-                                .padding()
-                                .padding(.horizontal)
                             
-                            //wenn die Frage vom Spielenden bereits korrekt beantwortet wurde (dann ist die ID des Quizzes teil des Arrays aswered (in Players)), dann wird ein Haken hinter der Frage gesetzt
-                            if(players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(quiz.id)){
+                            HStack{
+                                Text(quiz.question)
+                                    .font(.title3)
+                                    .fontWeight(.medium)
+                                    .foregroundColor(Color.white)
+                                    .padding()
+                                    .padding(.horizontal)
                                 
-                                Image(systemName: "checkmark.circle.fill")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 30))
+                                
+                                
+                                //wenn die Frage vom Spielenden bereits korrekt beantwortet wurde (dann ist die ID des Quizzes teil des Arrays aswered (in Players)), dann wird ein Haken hinter der Frage gesetzt
+                                if(players.players[players.usernameOffset(players.currentplayer.username)].answered.contains(quiz.id)){
+                                    
+                                    Spacer()
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 20))
+                                        .padding(.trailing)
+                                        
+                                }
+                                
                             }
-                            
                         }
                     }
                     .frame(width:350, height: 150)
