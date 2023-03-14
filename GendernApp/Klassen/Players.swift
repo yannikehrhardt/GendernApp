@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//der Typ ObservableObject sorgt dafür, dass Änderungen an einer mit dem Tag "published" versehenen Variablen ein Neuladen aller Views, die dieses Objekt nutzen erzwungen wird
+//der Typ ObservableObject sorgt dafür, dass Änderungen an einer mit dem Tag "published" versehenen Variablen ein Neuladen aller Views, die dieses Objekt nutzen erzwungen wird.
 class Players : ObservableObject{
     
     //wenn neue Spieler hinzugefügt werden, muss der Initializer von Quiz-Template angepasst werden
