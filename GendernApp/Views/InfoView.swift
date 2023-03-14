@@ -16,6 +16,11 @@ struct InfoView: View {
     
     var body: some View {
         VStack(spacing:20){
+            Image(systemName: "chevron.down")
+                .font(.title2)
+                .frame(alignment: .leading)
+            
+            Spacer()
             
             Text("Info")
                 .font(.largeTitle)
@@ -41,6 +46,8 @@ struct InfoView: View {
             .cornerRadius(20)
             .shadow(radius:10)
             .frame(width: 380.0, height: 400.0)
+            
+            Spacer()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("Backgrounds App"))

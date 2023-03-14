@@ -78,6 +78,7 @@ struct QuizView: View {
                             Image(systemName: "chevron.down")
                                 .font(.title2)
                                 .frame(alignment: .leading)
+                                .foregroundColor(.white)
                             
                             Spacer()
                             
