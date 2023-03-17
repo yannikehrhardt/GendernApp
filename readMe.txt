@@ -32,7 +32,7 @@ Die App ist in der Lage, dem Nutzenden die Grundprinzipien des Genderns in Form 
 Aus Sicht des Projektteams sollte in Zukunft zunächst eine Datenbank angebunden werden, die Anpassungen und Erweiterungen zentral speichert und jederzeit abrufbar macht. Aktuell verfallen Änderungen beim Neustart der App. Weitere Funktionen wie neue Fragentypen wie Lückentexte könnten folgen.
 
 6) Quellen:
-Für das Erstellen der Quizfragen wurde folgendes Buch genutzt: “Richtig gendern: Wie Sie angemessen und verständlich schreiben” von Anja Steinhauer und Gabriele Diewlad
+Für das Erstellen der Quizfragen wurde folgendes Buch genutzt: “Richtig gendern: Wie Sie angemessen und verständlich schreiben” von Anja Steinhauer und Gabriele Diewlad. Für die grafischen Inhalte in der App dienen Objekte der Website elements.envato.com, beachte bei der Weiternutzung den dort hinterlegten Lizenzvertrag.
 
 ---------------------------------- english version ----------------------------------
 Table of Contents:
@@ -67,4 +67,4 @@ The app is able to teach the user the basic principles of gender in the form of 
 From the project team's point of view, a database should first be connected in the future, which stores adjustments and extensions centrally and makes them accessible at any time. Currently, changes expire when the app is restarted. Other functions such as new question types like cloze texts could follow.
 
 6) Sources:
-The following book was used to create the quiz questions: “Richtig gendern: Wie Sie angemessen und verständlich schreiben” von Anja Steinhauer und Gabriele Diewlad.
+The following book was used to create the quiz questions: “Richtig gendern: Wie Sie angemessen und verständlich schreiben” von Anja Steinhauer und Gabriele Diewlad. For the graphical content in the app, objects from the website elements.envato.com are used, please note the license agreement deposited there for further use.
